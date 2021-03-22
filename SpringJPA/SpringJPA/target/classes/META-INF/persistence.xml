@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+	<persistence-unit name="SpringJPA" transaction-type="RESOURCE_LOCAL">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<class>net.sathyan.model.NewsFeedApprovers</class>
+		<class>net.sathyan.model.NewsFeeds</class>
+			<class>net.sathyan.model.RtPtrDeductions</class>
+			<class>net.sathyan.model.RtPtrAttendanceBonus</class>
+		
+		<exclude-unlisted-classes>false</exclude-unlisted-classes>
+		<properties>
+			<property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@pmuw2-stdbd001.corp.trueblueinc.com/stndev"/>
+			<property name="javax.persistence.jdbc.user" value="st_web"></property>
+			<property name="javax.persistence.jdbc.driver" value="oracle.jdbc.driver.OracleDriver"/>
+			<property name="javax.persistence.jdbc.password" value="JDP7ArWepa68jCeS#"/>
+			<property name="eclipselink.logging.level.sql" value="FINE"/>
+			
+			
+		</properties>
+	</persistence-unit>
+</persistence>
