@@ -1,0 +1,328 @@
+<ui:composition
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:pa="http://primefaces.org/barcelona"
+    xmlns:c="http://java.sun.com/jsp/jstl/core"
+    >
+
+    <p:importEnum type="net.stafftrack.fw.security.bl.constants.LtCountryIdTypeConstants" var="countryConstants" />
+
+   	<style>
+   	    .testSystemInfo
+   	    {
+   	        display:inline-block;
+   	        color:red;
+   	        font-size:25px; 
+   	        width:auto
+   	    }
+   	   
+   	    @media(max-width:1280px)
+   	    {
+	   	    .testSystemInfo
+	   	    {
+                display:inline-block;
+                position: relative;
+	   	        font-size: 20px;
+	   	    }
+	    }
+
+   	    @media(max-width:1190px)
+   	    {
+	   	    .testSystemInfo
+	   	    {
+                display:inline-flex;
+	   	        top: -10px;
+                position: relative;
+	   	        font-size: 20px;
+	   	        max-width: 175px
+	   	    }
+	    }
+
+   	    @media(max-width:768px)
+   	    {
+	   	    .testSystemInfo
+	   	    {
+	   	        position: absolute;
+	   	        left: 5px;
+	   	        top: initial;
+	   	        font-size: 20px; 
+	   	        max-width: 175px
+	   	    }
+   	    }
+   	</style>
+
+    <div class="topbar">
+        <div class="logo">
+            <h:link outcome="crewDeskMain">
+                <p:graphicImage name="images/logos/stafftrack-shadow.svg" library="barcelona-layout-stn" />
+                <f:param name="officeId" value="#{param.officeId}" />
+            </h:link>
+        </div>
+
+        <a id="topbar-menu-button" href="#">
+            <i class="material-icons">menu</i>
+        </a>
+
+		<c:if test="#{request.serverName ne 'stafftrack.net' and request.serverName ne 'www.stafftrack.net' }">
+			<div class="testSystemInfo">
+				This is TEST SYSTEM #{request.serverName}
+			</div>
+		</c:if>
+
+		<ul class="topbar-menu">
+         	<li class="search-item">
+                <h:form id="assocSearchForm" prependId="false">
+                	<h:inputHidden id="mode" value="#{stAppController.searchMode}" />
+
+                    <span class="md-inputfield search" style="display:inline-block">
+						<span class="ui-autocomplete">
+	                        <p:inputText id="simpleLastName" 
+	                        	value="#{stAppController.simpleLastName}"
+	                        	onkeypress="if (event.keyCode == 13) { simpleSearchRC(); return false; }" 
+	                        />
+                        </span>
+                    </span>
+                    <span class="md-inputfield search" style="display:inline-block">
+						<span class="ui-autocomplete">
+	                        <p:inputText id="simpleFirstName" 
+	                        	value="#{stAppController.simpleFirstName}"
+	                        	onkeypress="if (event.keyCode == 13) { simpleSearchRC(); return false; }" 
+	                        />
+                        </span>
+                        <p:watermark for="simpleLastName" value="Last Name" />
+                        <p:watermark for="simpleFirstName" value="First Name" />
+                    	<p:remoteCommand name="simpleSearchRC" 
+                    		action="#{stAppController.onSearchForAssociate}"
+                    		onstart="$('#mode')[0].value = 'simple';" 
+                    		process="@form"
+                   			update="@form"
+                   		/>
+                    </span>
+	                <span class="search-icon" style="display:inline-block; vertical-align:top; margin-left:-5px">
+	                    <p:commandButton id="assocSearchIcon" 
+	                    	type="button" 
+	                    	styleClass="primary" 
+	                    	icon="fa fa-search"
+	                    	onclick="simpleSearchRC(); " 
+	                    	title="Search by Name only" 
+                    	/>
+	                </span>
+	                <span class="search-icon" style="display:inline-block; vertical-align:top; margin-left:-3px">
+	                    <p:commandButton id="assocAdvSearchIcon" type="button" styleClass="primary" icon="fa fa-search-plus" title="Advanced Search" />
+	                </span>
+
+	                <script type="text/javascript">
+	                	var _elementsByMode = { 
+	                		name:  ['searchLastName', 'searchFirstName', 'searchMiddleName', 'searchLastFour', 'searchStatus'], 
+	                		phone: ['searchLastName', 'searchFirstName', 'searchPhone'],
+	                		email: ['searchLastName', 'searchFirstName', 'searchEmail'], 
+	                		nationalId: ['searchLastName', 'searchFirstName', 'searchId']
+	               		} ;
+	               		var _searchMode = "#{stAppController.searchMode}" ;
+	
+	               		function selectFields( m )
+	               		{
+	               			var activeElements = _elementsByMode[m] ;
+	               			
+	               			if ( activeElements )
+	               			{
+	               				var inputs = $("form[id='assocAdvSearchForm'] input[id^='search']") ;
+	               				
+	               				inputs.each( function (i,e) {
+	               						if ( activeElements.indexOf( e.id ) >= 0 )
+	               						{
+	               							$(e).show();
+	               							e.disabled = false ;
+	               						}
+	               						else
+	               						{
+	               							$(e).hide();
+	               							e.disabled = true ;
+	               						}
+	               					} 
+	               				) ;
+	               				
+	               				_searchMode = m ;
+	               			}
+	               		}
+	               		
+	               		function selectMode( m )
+	               		{
+	               			var btns = PF('searchModeBtns') ;
+	               			var i = 0 ;
+
+							try
+							{
+		               			i = btns.inputs.index( btns.inputs.filter( function( i, e ) { return (e.value == m) } )[0] ) ;
+	
+		               			var btn ;
+		               			btn = btns.buttons[i] ;
+							}
+							catch (e)
+							{
+								btn = btns.buttons[0] ;
+							}
+	               			$(btn).addClass( "ui-state-active" ) ;
+	               			btn = null ;
+	               		}
+
+						jQuery(document).ready( function () {
+		               		if ( _searchMode.length == 0 || _searchMode == "simple" )
+		               		{
+		               			_searchMode = "name" ;
+		               		}
+	               			selectFields( _searchMode ) ;
+	               			selectMode( _searchMode ) ;
+						}) ;	               		
+	                </script>
+                </h:form>
+                <p:overlayPanel  id="assocSearchPanel" 
+                   	for=":assocSearchForm:assocAdvSearchIcon" 
+                   	at="right bottom" 
+                   	my="right top"
+                   	style=""
+                   	showEffect="slide"
+                   	hideEffect="fold"
+                   	styleClass="assocSearchPanel"
+                   	appendToBody="true" >
+					<h:form id="assocAdvSearchForm" prependId="false" >
+                		<h:inputHidden id="advSearchMode" value="#{stAppController.searchMode}" />
+
+                    	<p:selectOneButton 
+                    		onchange="selectFields(event.currentTarget.firstElementChild.value)" 
+                    		widgetVar="searchModeBtns">
+                    		<f:selectItem itemLabel="Name" itemValue="name" noSelectionOption="true"/>
+                    		<f:selectItem itemLabel="Phone" itemValue="phone" />
+                    		<f:selectItem itemLabel="Email" itemValue="email" />
+                    		<f:selectItem itemLabel="National Id" itemValue="nationalId" />
+                    	</p:selectOneButton>
+
+						<div class="assocSearchBody" >
+	                    	<p:selectOneRadio id="officeMode" 
+	                    		required="true" 
+	                    		requiredMessage="Please indicate if this search is for the Current Office or All Offices"
+	                    		style="margin:10px 0px"
+	                    		value="#{stAppController.allOffices}"
+                    		>
+	                    		<f:selectItem itemLabel="Current Office" itemValue="N" />
+	                    		<f:selectItem itemLabel="All Offices" itemValue="Y" />
+	                    	</p:selectOneRadio>
+	                    	<p:messages />
+
+							<p:inputText id="searchLastName" 
+								value="#{stAppController.lastName}"
+                        		onkeypress="if (event.keyCode == 13) { associateSearchRC(); return false; }" 
+							/>
+							<p:watermark for="searchLastName" value="Last Name"/>
+
+							<p:inputText id="searchFirstName" 
+								value="#{stAppController.firstName}"
+                        		onkeypress="if (event.keyCode == 13) { associateSearchRC(); return false; }" 
+							/>
+							<p:watermark for="searchFirstName" value="First Name"/>
+
+							<p:inputText id="searchMiddleName" 
+								value="#{stAppController.middleName}"
+                        		onkeypress="if (event.keyCode == 13) { associateSearchRC(); return false; }" 
+							/>
+							<p:watermark for="searchMiddleName" value="Middle Name"/>
+
+							<p:inputText id="searchLastFour" maxlength="4"
+								value="#{stAppController.idLast4}"
+                        		onkeypress="if (event.keyCode == 13) { associateSearchRC(); return false; }" 
+							/>
+							<p:watermark for="searchLastFour" value="Last 4 of SSN/SIN" />
+
+							<p:selectOneMenu id="searchStatus"
+								value="#{stAppController.status}"
+								>
+								<f:selectItem itemLabel="All Statuses" itemValue="0" noSelectionOption="true" />
+								<f:selectItem itemLabel="Active" itemValue="1" />
+								<f:selectItem itemLabel="Inactive" itemValue="2" />
+								<f:selectItem itemLabel="Pending" itemValue="3" />
+								<f:selectItem itemLabel="Disqualified" itemValue="4" />
+								<f:selectItem itemLabel="Applicant" itemValue="5" />
+							</p:selectOneMenu>
+							
+							<!-- Phone -->
+							<p:inputMask id="searchPhone" mask="(999) 999-9999" style="display:none"
+							    value="#{stAppController.phone}"
+							    onkeypress="if (event.keyCode == 13) { associateSearchRC(); return false; }"  
+							/>
+							<p:watermark for="searchPhone" value="(800) 555-1234"/>
+							
+							<!-- Email -->	                        		 
+							<p:inputText id="searchEmail" style="display:none"
+							    value="#{stAppController.emailAddress}" 
+								onkeypress="if (event.keyCode == 13) { associateSearchRC(); return false; }"
+							/>
+							<p:watermark for="searchEmail" value="john.doe@email.com"/>
+
+							<!-- National Id -->
+							<p:inputMask id="searchId#{countryConstants.UNITED_STATES_COUNTRY_ID.countryTypeId eq USER_CONTEXT.currentOfficeInfo.ltCountryId ? '' : '_USA' }"
+								value="#{stAppController.nationalId}"
+								onkeypress="if (event.keyCode == 13) { associateSearchRC(); return false; }" 
+								mask="999-99-9999" style="display:none" />
+							<p:watermark for="searchId#{countryConstants.UNITED_STATES_COUNTRY_ID.countryTypeId eq USER_CONTEXT.currentOfficeInfo.ltCountryId ? '' : '_USA' }" 
+								value="123-45-6789"/>
+							<p:inputMask id="searchId#{countryConstants.UNITED_STATES_COUNTRY_ID.countryTypeId eq USER_CONTEXT.currentOfficeInfo.ltCountryId ? '_CA' : '' }"
+								value="#{stAppController.nationalId}"
+								onkeypress="if (event.keyCode == 13) { associateSearchRC(); return false; }" 
+								mask="999-999-999" style="display:none" />
+							<p:watermark for="searchId#{countryConstants.UNITED_STATES_COUNTRY_ID.countryTypeId eq USER_CONTEXT.currentOfficeInfo.ltCountryId ? '_CA' : '' }" 
+								value="123-456-789"/>
+
+							<br/>
+							<p:commandButton value="Search" styleClass="center primary" onclick="associateSearchRC(); return false;" />
+						</div>
+                   		<p:remoteCommand name="associateSearchRC" 
+                   			action="#{stAppController.onSearchForAssociate}" 
+                    		onstart="$('#advSearchMode')[0].value = _searchMode;" 
+                   			process="@form"
+                   			update="@form"
+                  			/>
+					</h:form>
+               	</p:overlayPanel>
+            </li>
+            <li class="search-item">
+				<h:form id="officeSelectionForm">
+                	<span class="md-inputfield location">
+                    	<p:graphicImage name="images/icons/location.svg" library="barcelona-layout-stn" />
+        				<ui:include src="/views/common/officeSelectionView.xhtml" />
+                	</span>
+				</h:form>
+            </li>
+            <li class="profile-item">
+                <a href="#">
+                    <div class="profile-image">
+                        <p:graphicImage name="images/icons/user-icon.svg" library="barcelona-layout-stn" />
+                    </div>
+                </a>
+
+                <ul class="animated">
+                	<li role="menuitem">
+                        <a onclick="PF('contactHelpDlg').show()">
+                            <span>Help Desk</span>
+                        </a>
+                    </li>
+                	<li role="menuitem">
+                        <a href="/common/setUIMode.jsp?m=v1&amp;officeId=#{param.officeId}">
+                            <span>Return to original Stafftrack look</span>
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="/security/logoff.do?officeId=#{param.officeId}">
+                            <i class="fa fa-fw fa-sign-out"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <ui:include src="./contactHelp.xhtml" />
+
+</ui:composition>

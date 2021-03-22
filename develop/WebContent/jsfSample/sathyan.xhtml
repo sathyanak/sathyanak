@@ -1,0 +1,260 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:st-ui="http://stafftrack.net/ui"
+	xmlns:o="http://omnifaces.org/ui"
+	xmlns:of="http://omnifaces.org/functions"
+	xmlns:st-jsf="http://stafftrack.net/jsfext"
+	template="/WEB-INF/templates/ultima-stn/template.xhtml">
+	
+		<f:metadata>
+		<f:loadBundle basename="net.stafftrack.resources.CrmActivityMessages" var="crmActivityMsgs" />      
+		
+	</f:metadata>
+
+	<ui:define name="head">
+	
+	<style type="text/css">
+		
+		
+		 .filterSection.ui-fluid .ui-selectonemenu
+            {
+                width: auto;
+            }
+            
+		.ui-datepicker-trigger
+		 {
+				border: none !important;
+			border-radius: 4px !important;
+			padding: 1px !important;
+			margin: 0px 0px 0px 0px !important;
+			margin-top: -2px !important;
+			margin-left: -2px !important;
+			margin-right: 4px !important;
+		}
+		
+		.ui-calendar .ui-inputfield {
+			border: 1px solid #A8B7C7 !important;
+			border-radius: 4px !important;
+			width: 110px !important;
+			margin: 0px 0px 0px 10px !important;
+			height: 30px !important;
+			font-size: 14px !important;
+	}
+	</style>
+	</ui:define>
+
+	<ui:define name="content">
+
+		<p:panel id="weekFiles" styleClass="smallerBlack">
+
+			<f:facet name="header">
+				<h:outputText value="Pay Rates 123" />
+				<div class="right-actions">
+					<h:panelGrid id="payRateButtons" border="0" columns="3">
+						<p:commandButton id="historyButton" value="history"
+							styleClass="secondary" />
+
+						<p:commandButton id="addButton"
+							value="#{msgs['stn.common.save.label']}"
+							styleClass="primary success" icon="ui-icon-save"
+							style="vertical-align: middle;">
+						</p:commandButton>
+
+						<p:commandButton id="cancelBtnTop" styleClass="primary dismiss"
+							value="Cancel" onclick="history.go(-1)" />
+					</h:panelGrid>
+				</div>
+			</f:facet>
+
+			<h:panelGrid columns="1">
+				<ui:repeat id="weekFilesList" var="weekFiles" value="">
+					<p:link styleClass="ui-g-12 ui-md-12 ui-lg-12 list-cell">
+						<f:param name="var" value="" />
+						<div class="ui-g-6 ui-md-6 ui-lg-6 detail">
+							<h:outputText value="1" styleClass="badge" />
+							<h:outputText value="Download Payroll File"
+								styleClass="title inline" />
+						</div>
+						<div class="ui-g-6 ui-md-6 ui-lg-6 status align-right">
+
+							<p:commandButton value="ui-icon-check" icon="icon" />
+						</div>
+					</p:link>
+					<p:link styleClass="ui-g-12 ui-md-12 ui-lg-12 list-cell disabled">
+						<f:param name="var" value="" />
+						<div class="ui-g-6 ui-md-6 ui-lg-6 detail">
+							<h:outputText value="2" styleClass="badge" />
+							<h:outputText value="Download Bonus Hours"
+								styleClass="title inline" />
+						</div>
+						<div class="ui-g-6 ui-md-6 ui-lg-6 status align-right">
+							<p:commandButton icon="ui-icon-file-download" styleClass="icon"></p:commandButton>
+						</div>
+					</p:link>
+					<p:link styleClass="ui-g-12 ui-md-12 ui-lg-12 list-cell disabled">
+						<f:param name="var" value="" />
+						<div class="ui-g-6 ui-md-6 ui-lg-6 detail">
+							<h:outputText value="2" styleClass="badge" />
+							<h:outputText value="#{crmActivityMsgs['crmActivity.officeId.label']}"
+								styleClass="title inline" />
+						</div>
+						<div class="ui-g-6 ui-md-6 ui-lg-6 status align-right">
+							<p:commandButton icon="ui-icon-file-download" styleClass="icon"></p:commandButton>
+						</div>
+					</p:link>
+					<p:link styleClass="ui-g-12 ui-md-12 ui-lg-12 list-cell disabled">
+						<f:param name="var" value="" />
+						<div class="ui-g-6 ui-md-6 ui-lg-6 detail">
+							<h:outputText value="2" styleClass="badge" />
+							<h:outputText value="Download Deductions"
+								styleClass="title inline" />
+						</div>
+						<div class="ui-g-6 ui-md-6 ui-lg-6 status align-right">
+							<p:commandButton icon="ui-icon-file-download" styleClass="icon"></p:commandButton>
+						</div>
+					</p:link>
+					<p:link styleClass="ui-g-12 ui-md-12 ui-lg-12 list-cell disabled">
+						<f:param name="var" value="" />
+						<div class="ui-g-6 ui-md-6 ui-lg-6 detail">
+							<h:outputText value="2" styleClass="badge" />
+							<h:outputText value="Download Multi-Step Deductions"
+								styleClass="title inline" />
+						</div>
+						<div class="ui-g-6 ui-md-6 ui-lg-6 status align-right">
+							<p:commandButton icon="ui-icon-file-download" styleClass="icon"></p:commandButton>
+						</div>
+					</p:link>
+				</ui:repeat>
+			</h:panelGrid>
+		</p:panel>
+
+
+		<p:panel id="weekFiles" styleClass="smallerBlack">
+			<f:facet name="header">
+				<h:outputText value="General Form" />
+				<div class="right-actions">
+					<h:panelGrid id="payRateButtons" border="0" columns="3">
+						<p:commandButton id="historyButton" value="history"
+							styleClass="secondary" />
+
+						<p:commandButton id="addButton"
+							value="#{msgs['stn.common.save.label']}"
+							styleClass="primary success" icon="ui-icon-save"
+							style="vertical-align: middle;">
+						</p:commandButton>
+
+						<p:commandButton id="cancelBtnTop" styleClass="primary dismiss"
+							value="Cancel" onclick="history.go(-1)" />
+					</h:panelGrid>
+				</div>
+			</f:facet>
+
+			<h:panelGrid columns="4" layout="flex">
+				<p:outputLabel for="text1" value="First Name" />
+				<p:inputText id="text1" />
+
+				<p:outputLabel for="text2" value="Last Name" />
+				<p:inputText id="text2" />
+
+				<p:outputLabel for="date" value="Date" />
+				<p:datePicker id="date" showIcon="true" style="width:auto" />
+
+				<p:outputLabel for="checkbox" value="First Time" />
+				<p:selectBooleanCheckbox id="checkbox" itemLabel="Checkbox" />
+
+				<p:outputLabel for="text3" value="Select" />
+				<p:inputText id="text3" />
+
+
+			</h:panelGrid>
+		</p:panel>
+
+
+		<div class="ui-g-12">
+			<p:panel id="pnl" styleClass="smallerBlack">
+				<f:facet name="header">
+					<h:outputText value="Responsive Form" />
+				</f:facet>
+
+
+				<div class="ui-g-12">
+					<div class="ui-g-12 ui-md-6 ui-lg-4">
+						<p:outputLabel value="First Name" for="fName" />
+						<p:inputText placeholder="Enter text here" id="fName" />
+					</div>
+					<div class="ui-g-12 ui-md-6 ui-lg-4">
+						<p:outputLabel value="Last Name" for="lName" />
+						<p:inputText id="lName" />
+					</div>
+
+					<div class="ui-g-12 ui-md-6 ui-lg-4">
+						<p:outputLabel value="Initial Name" for="initial" />
+						<p:inputText id="initial" />
+					</div>
+
+					<div class="ui-g-12 ui-md-6 ui-lg-4">
+						<p:outputLabel value="DOB" for="followUpDate" />
+						<p:calendar id="followUpDate" showOn="button" pattern="MM/dd/yyyy" size="10">
+						</p:calendar>
+					</div>
+
+					<div class="ui-g-12 ui-md-6 ui-lg-4">
+						<p:outputLabel value="Employer" for="initial" />
+						<p:inputText id="initial" />
+					</div>
+
+					<div class="ui-g-12 ui-md-6 ui-lg-4">
+						<p:outputLabel value="City" for="initial" />
+						<p:inputText id="initial" />
+					</div>
+
+					<div class="ui-g-12 ui-md-12 ui-lg-12">
+						<p:outputLabel value="Address" for="address" />
+						<p:inputText id="address" size="50" maxlength="50" />
+					</div>
+
+
+					<div class="ui-g-12 ui-md-12 ui-lg-12">
+						<p:outputLabel value="Notes" for="area" />
+						<p:inputTextarea id="area" cols="53" size="50" maxlength="50" />
+					</div>
+
+				</div>
+
+				<div class="ui-g-12 ui-md-6 ui-lg-6" align="right">
+					<p:commandButton id="historyButton" value="history"
+						styleClass="secondary" />
+
+					<p:commandButton id="addButton" value="Save" align="right"
+						styleClass="primary success" icon="ui-icon-save"
+						style="vertical-align: middle;">
+					</p:commandButton>
+				</div>
+
+			</p:panel>
+		</div>
+	
+	<div class="card ui-g-12 ui-fluid filterSection smallerBlue1Semibold noMargin">	
+	<p:panel id="pnl" styleClass="smallerBlack">
+
+				 <div class="caps ui-g-3 ui-md-3 ui-lg-3 smallerBlue1Semibold">				 
+				 	From:<p:calendar  showOn="button" pattern="MM/dd/yyyy" size="10">
+							</p:calendar>
+				 </div>				 
+				  <div class="caps  ui-g-3 ui-md-3 ui-lg-3">				  
+				  	To: <p:calendar  showOn="button" pattern="MM/dd/yyyy" size="10">
+							</p:calendar>
+				 </div>			
+				 
+				 
+				  <div class="caps  ui-g-3 ui-md-3 ui-lg-3">				  
+				  	To: 	<p:inputText id="initial" maxlength="10" size="10"/>
+				 </div>		
+	</p:panel>
+</div>
+
+</ui:define>
+</ui:composition>

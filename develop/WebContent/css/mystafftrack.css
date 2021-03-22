@@ -1,0 +1,210 @@
+BODY {
+	BACKGROUND-COLOR: #ffffff
+}
+.scroll {
+	SCROLLBAR-FACE-COLOR: #999966; SCROLLBAR-HIGHLIGHT-COLOR: #000000; SCROLLBAR-SHADOW-COLOR: #000000; SCROLLBAR-3DLIGHT-COLOR: #ffffff; SCROLLBAR-ARROW-COLOR: #666633; SCROLLBAR-TRACK-COLOR: #666633; SCROLLBAR-DARKSHADOW-COLOR: #000000
+}
+.scroll2 {
+	SCROLLBAR-FACE-COLOR: #999966; SCROLLBAR-HIGHLIGHT-COLOR: #000000; SCROLLBAR-SHADOW-COLOR: #000000; SCROLLBAR-3DLIGHT-COLOR: #ffffff; SCROLLBAR-ARROW-COLOR: #666633; SCROLLBAR-TRACK-COLOR: #666633; SCROLLBAR-DARKSHADOW-COLOR: #000000; BACKGROUND-COLOR: #dedeac
+}
+TD.SectionTitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #ffffff; LINE-HEIGHT: 14px; FONT-FAMILY: Verdana, arial, helvetica, sans-serif
+}
+TD.bottom_pipes {
+	FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: #000066; LINE-HEIGHT: 6px; FONT-FAMILY: Verdana, arial, helvetica, sans-serif
+}
+TD.SectionTitle2 {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ffffff; LINE-HEIGHT: 14px; FONT-FAMILY: Verdana, arial, helvetica, sans-serif
+}
+TD.SectionContentTopLarge {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Verdana, arial, helvetica, sans-serif
+}
+TD.SectionContentTop {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #000000; LINE-HEIGHT: 12px; FONT-FAMILY: Verdana, arial, helvetica, sans-serif
+}
+TD.SectionContent {
+	FONT-SIZE: 10px; COLOR: #000000; LINE-HEIGHT: 12px; FONT-FAMILY: Verdana, arial, helvetica, sans-serif
+}
+TD.SectionContentHalf {
+	FONT-SIZE: 6.3pt; COLOR: #000000; LINE-HEIGHT: 11px; FONT-FAMILY: Verdana, arial, helvetica, sans-serif
+}
+TD.SectionContentRed {
+	FONT-SIZE: 10px; COLOR: #000000; LINE-HEIGHT: 12px; FONT-FAMILY: Verdana, arial, helvetica, sans-serif
+}
+TD.SectionContentGreen {
+	FONT-SIZE: 10px; COLOR: #000000; LINE-HEIGHT: 12px; FONT-FAMILY: Verdana, arial, helvetica, sans-serif
+}
+TD.SectionContent12 {
+	FONT-SIZE: 9px; COLOR: #000000; FONT-FAMILY: Verdana, arial, helvetica, sans-serif
+}
+TD.SectionContent7 {
+	FONT-SIZE: 12px; COLOR: #000000; LINE-HEIGHT: 12px; FONT-FAMILY: Verdana, arial, helvetica, sans-serif
+}
+TD.SectionContent11 {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: #000066; FONT-FAMILY: Verdana, arial, helvetica, sans-serif
+}
+TD.SectionContent10 {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: Verdana, arial, helvetica, sans-serif
+}
+TD.SectionContent9 {
+	COLOR: #000000; FONT-FAMILY: Verdana, arial, helvetica, sans-serif
+}
+TD.SectionContent8 {
+	FONT-SIZE: 11px; COLOR: #000000; FONT-FAMILY: Verdana, arial, helvetica, sans-serif
+}
+TD.SectionContent6 {
+	BACKGROUND-COLOR: #d0d0d0
+}
+TD.SectionContent60 {
+	BACKGROUND-COLOR: #000000
+}
+TD.SectionContent5 {
+	FONT-SIZE: 10px; COLOR: #000000; LINE-HEIGHT: 14px; FONT-FAMILY: Verdana, arial, helvetica, sans-serif
+}
+TD.SectionContent5a {
+	FONT-WEIGHT: bold; FONT-SIZE: 13px; COLOR: #000000; LINE-HEIGHT: 14px; FONT-FAMILY: Verdana, arial, helvetica, sans-serif
+}
+TD.SectionContent4 {
+	FONT-SIZE: 10px; COLOR: #ffffff; LINE-HEIGHT: 12px; FONT-FAMILY: Verdana, arial, helvetica, sans-serif
+}
+TD.SectionContent3 {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #000000; LINE-HEIGHT: 12px; FONT-FAMILY: Verdana, arial, helvetica, sans-serif
+}
+TD.SectionContent30 {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #000000; LINE-HEIGHT: 12px; FONT-FAMILY: Verdana, arial, helvetica, sans-serif
+}
+TD.SectionContent2 {
+	FONT-SIZE: 10px; LINE-HEIGHT: 12px; FONT-FAMILY: Verdana, arial, helvetica, sans-serif; BACKGROUND-COLOR: #d0d0d0
+}
+TD.SectionContentRed {
+	FONT-SIZE: 10px; COLOR: #ff0000; LINE-HEIGHT: 12px; FONT-FAMILY: Verdana, arial, helvetica, sans-serif
+}
+TD.SectionContentGrey {
+	FONT-SIZE: 10px; COLOR: #a0a0a0; LINE-HEIGHT: 12px; FONT-FAMILY: Verdana, arial, helvetica, sans-serif
+}
+SELECT {
+	FONT-SIZE: 10px; COLOR: #000000; LINE-HEIGHT: 10px; FONT-FAMILY: Verdana, arial, helvetica, sans-serif
+}
+INPUT {
+	FONT-SIZE: 10px; COLOR: #000000; LINE-HEIGHT: 10px; FONT-FAMILY: Verdana, arial, helvetica, sans-serif
+}
+TD.TitleContent {
+	FONT-WEIGHT: bold; FONT-SIZE: 20px; COLOR: #000066; FONT-FAMILY: Verdana, arial, helvetica, sans-serif
+}
+TD.SectionContentWhite {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #ffffff; FONT-FAMILY: Verdana, arial, helvetica, sans-serif
+}
+TD.SectionContentFlag {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #ffffff; FONT-FAMILY: Verdana, arial, helvetica, sans-serif
+}
+TD.SectionContentFlagOff {
+	FONT-SIZE: 10px; COLOR: #888888; FONT-FAMILY: Verdana, arial, helvetica, sans-serif
+}
+TD.SectionContent1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: verdana, helvetica, sans-serif
+}
+TD.SectionContentSmall {
+	FONT-SIZE: 10px; COLOR: #000000; LINE-HEIGHT: 12px; FONT-FAMILY: Verdana, arial, helvetica, sans-serif
+}
+TD.SectionContentReallySmall {
+	FONT-SIZE: 10px; COLOR: #000000; LINE-HEIGHT: 10px; FONT-FAMILY: Verdana, arial, helvetica, sans-serif
+}
+TD.SectionContentReallySmall2 {
+	FONT-SIZE: 10px; COLOR: #f0f0f0; LINE-HEIGHT: 10px; FONT-FAMILY: Verdana, arial, helvetica, sans-serif
+}
+TD.PageTitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #000088; LINE-HEIGHT: 16px; FONT-FAMILY: Verdana, arial, helvetica, sans-serif
+}
+TD.SectionContentHalfBlack {
+	FONT-WEIGHT: bold; FONT-SIZE: 5.2pt; VERTICAL-ALIGN: text-top; COLOR: black; FONT-FAMILY: Verdana, arial, helvetica, sans-serif
+}
+.leftButtonOn {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; WIDTH: 115px; COLOR: #ffffff; FONT-FAMILY: verdana, arial; BACKGROUND-COLOR: #999999; TEXT-ALIGN: center
+}
+.leftButtonOff {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; WIDTH: 115px; COLOR: #ffffff; FONT-FAMILY: verdana, arial; BACKGROUND-COLOR: #666633; TEXT-ALIGN: center
+}
+.ButtonBar {
+	BACKGROUND-COLOR: #ffffff
+}
+.ButtonBar2 {
+	BACKGROUND-COLOR: #313100
+}
+.ButtonBar3 {
+	BACKGROUND-COLOR: #f7a569
+}
+.LeftPageTitle {
+	BACKGROUND-COLOR: #bcbdad
+}
+.LeftTitleUnderline {
+	BACKGROUND-COLOR: #000000
+}
+.MainTitleUnderline {
+	BACKGROUND-COLOR: #000000
+}
+.DividerBlack {
+	BACKGROUND-COLOR: #000000
+}
+.InputColor1 {
+	FONT-SIZE: 10px; COLOR: #000000; LINE-HEIGHT: 10px; BACKGROUND-COLOR: #ffffff
+}
+.BoxBack {
+	BACKGROUND-COLOR: #f1f1f1
+}
+.TableEdge {
+	BORDER-RIGHT: #495259 thin solid; BORDER-TOP: #495259 thin solid; BORDER-LEFT: #495259 thin solid; BORDER-BOTTOM: #495259 thin solid
+}
+A:link {
+	FONT-SIZE: 10px; COLOR: #000088; LINE-HEIGHT: 12px; FONT-FAMILY: Verdana, arial, helvetica, sans-serif; TEXT-DECORATION: none
+}
+A:visited {
+	FONT-SIZE: 10px; COLOR: #000088; LINE-HEIGHT: 12px; FONT-FAMILY: Verdana, arial, helvetica, sans-serif; TEXT-DECORATION: none
+}
+A:active {
+	FONT-SIZE: 10px; COLOR: #000088; LINE-HEIGHT: 12px; FONT-FAMILY: Verdana, arial, helvetica, sans-serif; TEXT-DECORATION: none
+}
+A:hover {
+	FONT-SIZE: 10px; COLOR: #000088; LINE-HEIGHT: 12px; FONT-FAMILY: Verdana, arial, helvetica, sans-serif; TEXT-DECORATION: underline
+}
+.textArea {
+	FONT-SIZE: 10px; COLOR: black; LINE-HEIGHT: 12px; FONT-FAMILY: Verdana, arial, helvetica, sans-serif
+}
+.TileBottomLinks {
+	FONT-SIZE: 7pt; COLOR: #000066; FONT-FAMILY: verdana; TEXT-DECORATION: underline
+}
+.reportWriterViewLink {
+	FONT-SIZE: 8pt; COLOR: #000066; FONT-FAMILY: Lucida Console,American Typewriter,Courier New,Courier,monospace; TEXT-DECORATION: underline
+}
+.hideable {
+	VISIBILITY: hidden; POSITION: relative
+}
+.TopPageLinks {
+	FONT-WEIGHT: bold; TEXT-DECORATION: underline
+}
+.simpleLinks {
+	FONT-SIZE: 10px; COLOR: #000066; LINE-HEIGHT: 12px; FONT-FAMILY: Verdana, arial, helvetica, sans-serif; TEXT-DECORATION: underline
+}
+.linksNoDeco {
+	FONT-SIZE: 7pt; COLOR: #000066; FONT-FAMILY: verdana; TEXT-DECORATION: none
+}
+.reserveFlagText {
+	FONT-WEIGHT: bold; FONT-SIZE: 5.2pt; VERTICAL-ALIGN: super; COLOR: black; FONT-FAMILY: Verdana, arial, helvetica, sans-serif
+}
+.numberLinkText {
+	FONT-WEIGHT: bold; FONT-SIZE: 13pt
+}
+.floater {
+	PADDING-RIGHT: 0px; DISPLAY: none; PADDING-LEFT: 0px; Z-INDEX: 2; LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; POSITION: absolute; TOP: 0px
+}
+.floater TD {
+	BORDER-RIGHT: #979797 1px inset; BORDER-TOP: #979797 1px inset; BORDER-LEFT: #979797 1px inset; COLOR: black; BORDER-BOTTOM: #979797 1px inset; FONT-FAMILY: gill, helvetica, sans-serif; BACKGROUND-COLOR: white
+}
+.matchedSmartInputItem {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 5px; FONT-SIZE: 0.8em; PADDING-BOTTOM: 1px; MARGIN: 0px; CURSOR: pointer; PADDING-TOP: 5px
+}
+.selectedSmartInputItem {
+	COLOR: white; BACKGROUND-COLOR: #3875d7
+}
+#smartInputResults {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}

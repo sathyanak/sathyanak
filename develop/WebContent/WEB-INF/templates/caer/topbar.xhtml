@@ -1,0 +1,34 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:pa="http://primefaces.org/barcelona">
+
+    <div class="topbar">
+    	<div class="ui-g">
+    		<div class="ui-g-12">
+		        <div class="logo fadeInDown animated">
+		            <h:link outcome="dashboardHome">
+		                <p:graphicImage name="images/smx-logo.png" library="barcelona-layout-caer" styleClass="ui-button-mar" />
+		            </h:link>
+		        </div>
+		                
+		        <a id="topbar-menu-button" href="#">
+		            <i class="fa fa-bars"></i>
+		        </a>
+		        
+		        <ul class="topbar-menu fadeInDown animated">
+					<li class="mar-small"><p:button outcome="dashboardExport" value="Export" styleClass="navy-btn ui-button-mar" icon="ui-icon-file-download"/></li>
+				</ul>
+		        
+		        <p:menubar styleClass="topbar-menu fadeInDown animated">
+		        	<p:menuitem value="Dashboard" outcome="dashboardHome" /> 
+		        	<p:menuitem value="Candidates" outcome="dashboardCandidates" /> 
+		        </p:menubar>
+			</div>
+        </div>
+    </div>
+	
+</ui:composition>

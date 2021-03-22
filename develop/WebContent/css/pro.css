@@ -1,0 +1,3286 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body {
+    font-family: Arial, Helvetica, Sans-serif;
+}
+
+	html {
+	    height : 100%;
+    	overflow : auto;
+	}
+
+	body {
+    	height : 100%;
+	}
+
+.SeatonPROApp {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+
+.contentarea {
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#userInfo {
+    float: left;
+    padding: 25px 0px 0px 0px;
+}
+
+.welcomeMsg {
+    color: #003366
+}
+
+.formContents {
+    background-color : white ;
+    padding : 5px
+}
+
+.largeForm {
+    overflow:auto
+}
+
+span.nextButton {
+    display : inline-block;
+    width: 70px;
+    float: right;
+    margin-right : 20px ;
+}
+
+a.nextButton {
+    display : inline-block;
+    float: right;
+    margin-right : 20px ;
+}
+
+span.previousButton {
+    min-width: 70px;
+    float: left;
+    margin-left: 5px;
+    margin-bottom: 5px
+}
+
+.forkliftExperienceLayout {
+    margin-left:20px
+}
+
+.forkliftExperienceLevel {
+    margin-left:20px
+}
+
+INPUT,
+.z-textbox,.z-decimalbox,.z-intbox,.z-longbox,.z-doublebox {
+    LINE-HEIGHT: 14px;
+}
+
+.z-datebox > input
+{
+	height: 18px;
+    padding: 0 2px 0 2px;
+}
+
+.z-datebox > .z-datebox-btn
+{
+	height: 18px;
+}
+
+span.nextButton > table {
+    width : 100%
+}
+
+.jobSelectionWindow {
+    background-image: url(/pro/images/app_bkground_whole.jpg);
+    background-size:100%;
+}
+
+.jobSelectionWindowR {
+    background-image: url(/pro/images/app_bkground_whole.jpg);
+    background-size:100%;
+}
+
+.jobSelectionPage {
+	height: 100%;
+	background-image: url(/pro/images/brandingv2/pro_wallpaper-s.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+aaa.z-loading {
+background-color: transparent;
+border: 0px;
+padding: 0px;
+height: 35px;
+width: 35px;
+-background-image: url(${c:encodeURL(c:cat3('~./',project,'/zk/images/redX.png'))});
+}
+
+aaa.z-loading-indicator {
+border: 0px;
+display:none;
+}
+
+aaa.z-loading {
+    background-color: yellow
+}
+
+aaa.z-loading-indicator {
+    display : none;
+    width : 200px;
+    height : 200px;
+    background-color : blue;
+    content : 'Hello'
+}
+
+aaa*.z-loading:after {
+    content:"I'm doing something..."
+}
+
+input[type="radio"] {
+	height : 18px;
+    width : 18px;
+}
+
+input[type="radio"]+label {
+    vertical-align : middle
+}
+
+input[type="checkbox"] {
+    width : 18px;
+}
+
+input[type="checkbox"]+label {
+    vertical-align : middle
+}
+
+.oddRow {
+    background-color : white
+}
+
+a:link {
+    text-decoration : underline
+}
+
+tr.z-row-over > td.z-row-inner, tr.z-row-over > td.z-cell {
+    background-image: none
+}
+
+.plaingrid tr.z-row td.z-row-inner, .plaingrid tr.z-row .z-cell, div.z-grid.plaingrid, .plaingrid tr.z-grid-odd td.z-row-inner, .plaingrid tr.z-grid-odd .z-cell, .plaingrid tr.z-grid-odd, .plaingrid tr.z-row-over > td.z-row-inner {
+    border: none;
+    overflow: hidden;
+    zoom: 1;
+    background: white none repeat scroll 0 0;
+    border-top: none;
+    border-top-style: none;
+    border-top-width: 0px;
+    padding-top: 1px;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-bottom-style: none;
+    border-bottom-width: 0px;
+    padding-bottom: 1px;
+}
+.plaingrid div.z-grid-header-bg {
+    display: none
+}
+
+.centered {
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.centeredText {
+    text-align : center
+}
+
+.rightText {
+	text-align: right
+}
+
+.noJobsFoundMsg {
+    margin-top:5px;
+    padding:5px 2px;
+    text-align:center;
+    border:solid thin darkgray
+}
+
+span.jobSearchReturningUser {
+    font-size:12px ;
+    font-weight: bold;
+    color: white;
+}
+
+span.jobDescription {
+    font-size:12px ;
+    font-weight: bold;
+}
+
+.errorMessage {
+    color: red;
+    font-size:12px
+}
+
+.z-toolbar a.toolbarLink, .z-toolbar a:hover.toolbarLink {
+    background-color : transparent ;
+    font-size : 12px ;
+    font-family : Verdana,arial,helvetica,sans-serif ;
+    text-decoration : underline ;
+    border : none;
+}
+
+.z-toolbar a.toolbarLink.toolbarLink-disd, .z-toolbar a:hover.toolbarLink-disd {
+    color: gray
+}
+
+.z-div > a.toolbarLink {
+    font-family : Verdana,arial,helvetica,sans-serif ;
+	font-size : 11px ;
+	color: white;
+    font-weight:bold ;
+}
+
+.relativePosition {
+    position:relative;
+}
+
+.instructions {
+    font-weight:bold ;
+}
+
+.largeInstructions {
+    font-weight:bold ;
+    font-size:14px
+}
+
+.thinBorder {
+    border : thin solid black;
+}
+
+.borderAll1px {
+    border : 1px solid black;
+}
+
+.borderAll2px {
+    border : 2px solid black;
+}
+
+.borderRight {
+    border-top : none ;
+    border-right : 2px solid black ;
+    border-bottom : none;
+    border-left : none ;
+}
+
+.borderLeft {
+    border-left : 2px solid black ;
+}
+
+.borderTop {
+    border-top : 2px solid black ;
+}
+
+.borderBottom {
+    border-bottom : 2px solid black ;
+}
+
+.padding5px {
+    padding : 5px
+}
+
+.padding10px {
+    padding : 10px
+}
+
+.padding20px {
+    padding : 20px
+}
+
+.paddingSides5px {
+	padding: 0px 5px
+}
+
+.paddingTop10px {
+	padding-top: 10px !important;
+}
+
+.paddingNone {
+    padding : 0px
+}
+
+span.instructions table tr td {
+	padding:5px;
+}
+
+.i9Instructions { }
+
+.i9Instructions .z-label { font-family:"Times New Roman",serif; font-size:14pt; }
+
+.i9InstSectionHeading {
+	font-weight:bold;
+	font-size:15pt;
+	font-family : Times New Roman,Arial;
+	background:#BEBEBE; 
+	border:solid 1px black;
+	padding:5px;
+	display:inline-block;
+	width:98.5%
+}
+
+.i9InstSubsectionHeading {
+	font-weight:bold;
+	font-size:11px;
+	font-family : Times New Roman,Arial;
+}
+
+.i9InstMainHeading {
+	font-weight:bold;
+	font-size:14px;
+	font-family : Times New Roman,Arial;	
+}
+
+.i9InstHeaderText {
+	font-size:8px;
+	font-family : Times New Roman,Arial;
+}
+
+.i9InstNote {
+	font-size:12px;
+	font-weight:bold;
+	font-family : Times New Roman,Arial;
+	text-align : center
+}
+
+.i9InstParaHeading {
+	font-size:15pt;
+	font-family : Times New Roman,Arial;
+	font-weight:bold;
+	text-align:justify;
+}
+
+.i9Form { background-color:white }
+
+.i9Form .z-label { font-family:Helvetica,sans-serif; font-size:11pt; }
+        
+.i9FormMajorSection {
+    border : 2px solid black;
+    padding : 5px;
+    margin-top:10px;
+    background-color : #F5F5F5;
+}
+
+.i9FormMajorSectionBlack {
+    border : 2px solid black;
+    padding : 5px;
+    margin-top:10px;
+    background-color : black;
+}
+
+.i9FormMajorSectionHeading {
+    font: bold 16pt sans-serif
+}
+
+.i9FormMajorSectionSubHeading {
+    font-size: 14pt;
+    font-family: sans-serif;
+    font-style:italic
+}
+
+.i9FormGridRow {
+	height : 44px;
+    border-top : none ;
+    border-right : 2px solid black ;
+    border-bottom : 2px solid black ;
+    border-left : 2px solid black ;
+}
+.i9FormGridCell {
+	position:relative;
+	display:inline-block;
+	height:100%; 
+}
+.i9DocListRow {
+	position: relative ;
+	height : 44px;
+    border-top : none ;
+    border-right : none ;
+    border-bottom : 2px solid black ;
+    border-left : none ;
+}
+
+.i9InstPage9NumberLabel
+{
+    display : inline-block;
+    width : 20px ;
+    height : 100% ;
+    vertical-align: top;
+    font-family : sans-serif ;
+    font-size : 16px ;
+    font-weight : bold
+}
+.i9InstPage9Label
+{
+    display : inline-block ;
+    width : 90% ;
+    height : 100% ;
+    vertical-align: top;
+    font-family : sans-serif ;
+    font-size : 16px ;
+}
+
+.headerText10 {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 10pt
+}
+
+.headerText14 {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 14pt
+}
+
+.headerText16 {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 16pt
+}
+
+.headerText20 {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 20pt;
+	line-height: 18px ;
+}
+
+.formFont12Pt { font-size:12pt }
+
+.formFont14Pt { font-size:14pt }
+		
+.bold {
+	font-weight: bold
+}
+
+.italics {
+	font-style: italic
+}
+
+.inlineBlock {
+	display: inline-block
+}
+
+.lineHalfPixelBlack {
+	border: 0.5px solid #000
+}
+
+.lineOnePixelBlack {
+	border: 1px solid #000
+}
+
+.lineTwoPixelBlack {
+	border: 2px solid #000
+}
+
+.doubleLineDivider {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border-width: 10px 0px 2px 0px;
+	border-style: solid;
+	border-color: #000;
+	width: 100%;
+	height: 17px
+}
+
+.thinDoubleLineDivider {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border-width: 2px 0px 2px 0px;
+	border-style: solid;
+	border-color: #000;
+	width: 100%;
+	height: 17px
+}
+
+.cellIndent {
+	padding: 0em 3em 0em 4em;
+	text-align:justify;
+}
+
+.footerTextBold { 
+	font-weight:bold; 
+	font-size:14pt;
+	font-family : Times New Roman,Arial;	
+}
+
+ol.numberList, ol.numberParanthesisList, ol.alphaList {     
+	counter-reset:li; /* Initiate a counter */
+   	margin-left:0; /* Remove the default left margin */
+   	padding-left:0; /* Remove the default left padding */ 
+   }
+ol.numberList > li, ol.numberParanthesisList > li, ol.alphaList > li {
+    position:relative; /* Create a positioning context */
+    margin:0 0 2px 2em; /* Give each list item a left margin to make room for the numbers */
+    padding:2px; /* Add some spacing around the content */
+    list-style:none; /* Disable the normal item numbering */
+    font-family:"Times New Roman",serif;
+    font-size:14pt;
+}
+ol.numberList > li:before {
+    content:counter(li) ". "; /* Use the counter as content */
+    counter-increment:li; /* Increment the counter by 1 */
+    /* Position and style the number */
+    position:absolute;
+    top:opx;
+    left:-2em;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    width:2em;
+    /* Some space between the number and the content in browsers that support
+       generated content but not positioning it (Camino 2 is one example) */
+    margin-right:0px;
+    padding:2px;
+    font-size:14pt;
+    font-weight:bold;
+    font-family:"Times New Roman",serif;
+    text-align:center;
+}
+ol.numberParanthesisList > li:before {
+    content:"(" counter(li) ")"; /* Use the counter as content */
+    counter-increment:li; /* Increment the counter by 1 */
+    /* Position and style the number */
+    position:absolute;
+    top:0px;
+    left:-2em;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    width:2em;
+    /* Some space between the number and the content in browsers that support
+       generated content but not positioning it (Camino 2 is one example) */
+    margin-right:0px;
+    padding:2px;
+    font-size:14pt;
+    font-weight:bold;
+    font-family:"Times New Roman",serif;
+    text-align:center;
+}
+ol.alphaList > li:before {
+    content:counter(li,lower-latin) ". "; /* Use the counter as content */
+    counter-increment:li; /* Increment the counter by 1 */
+    /* Position and style the number */
+    position:absolute;
+    top:0px;
+    left:-2em;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    width:2em;
+    /* Some space between the number and the content in browsers that support
+       generated content but not positioning it (Camino 2 is one example) */
+    margin-right:0px;
+    padding:2px;
+    font-size:14pt;
+    font-weight:bold;
+    font-family:"Times New Roman",serif;
+    text-align:center;
+}
+li ol,
+li ul {margin-top:0px;}
+ol ol li:last-child {margin-bottom:0;}
+            
+	.border-radius {
+	    /* W3C standard */
+	    border-radius: 6px 6px 6px 6px;
+	    /* Mozilla Firefox 4.0 and earlier */
+	    -moz-border-radius: 6px 6px 6px 6px;
+	}
+            
+	.jobsNearMe {
+		color: white ;
+		background: orange ;
+		text-shadow: 0 0px #000000 ;
+		font-size: 1.5em ;
+	}
+
+	.jobsNearMe:hover {
+		color: white ;
+		background: orange ;
+		text-shadow: 0 0px #000000 ;
+		font-size: 1.5em ;
+	}
+
+	.jobsNearMe:hover {
+		color: white ;
+		background: orange ;
+		text-shadow: 0 0px #000000 ;
+		font-size: 1.5em ;
+	}
+
+	.jobsNearMe:after {
+		border-color: #ffffff transparent transparent transparent ;
+	}
+	
+	.vertical-align {
+	  position: relative;
+	  top: 50%;
+	  -webkit-transform: translateY(-50%);
+	  -ms-transform: translateY(-50%);
+	  transform: translateY(-50%);
+	}
+
+	.infoWindow {
+        width: 45% ;
+        height: 360px ;
+	}
+    .infoWindowLayout {
+    	width: 100%; 
+    	height: 320px;
+    }
+    .searchGridLayout {
+    	height: 70% ;
+    }
+	div[id*='mediaSelector']::after { 
+		display: hidden ;
+	}
+
+	@media {
+		div[id*='mediaSelector']::after { 
+			content: "default"
+		}
+		.stateProvinceLabel::before { 
+			content: "State/Province"
+		}
+	    .formLabel {
+	        font-size: 1em;
+	    }
+	    .formLabel2 {
+	        font-size: 1em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 12px;
+	    }
+		.nextBackIcon {
+	    	font-size: 2em; 
+	    }
+	    .nextBackWord {
+	    	font-size: 20px; 
+	    	font-weight: bold; 
+	    }
+		.infoIcon {
+	    	font-size: 2em; 
+	    }
+		.infoWindow {
+	        width: 45% ;
+	        height: 360px ;
+		}
+	    .infoWindowLayout {
+	    	width: 100%; 
+	    	height: 320px;
+	    }
+	   .listboxMax {
+	        width: 180px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 20px ;
+	        padding: 1px ;
+	        font-height: 12px ;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-50%; 
+			width: 100%;
+		}
+	    .searchIcon {
+	    	color: navy;
+	    	background-color: #fcfcfc;
+	    	font-size: 1.75em; 
+	    }
+		.searchButton {
+			 width: 50%;
+			 height: 35px;
+			 color: navy; 
+			 font-size: 22px; 
+			 font-weight: bold;
+		}
+		.searchGrid {
+			width: 65% !important;
+			min-width: 95% !important;
+			margin-left: auto ;
+			margin-right: auto ;
+			border: 0px dashed red !important;
+		}
+		.searchGridCol1 {
+			width: 20px !important;
+		}
+		.searchGridCol2 {
+			width: 20px !important;
+		}
+		.searchGridCol3 {
+			width: 40px !important;
+		}
+		.searchGridCol3 {
+			width: 40px !important;
+		}
+            
+        .infoForm
+        {
+        	width: 75%;
+        	margin-left: 7.5%; 
+        	margin-right: 7.5%; 
+        	border: 0px solid red;
+        }
+	}
+
+/*  Google Nexus 10  */
+	@media (max-width: 800px) and (orientation: portrait) {
+		div[id*='mediaSelector']::after { 
+			content: "800 portrait"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 1.0em;
+	    }
+		.infoWindow {
+	        width: 50%;
+	        height: 315px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+	    	height: 255px;
+	    }
+	   .listboxMax {
+	        width: 250px ;
+	        height: 32px ;
+	        font-size: 18px;
+	    }
+	    .textbox {
+	        height: 32px ;
+	        padding: 1px ;
+	        font-size: 2.5em;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-50%; 
+			width: 100%;
+		}
+		.searchButton {
+			 width: 50%;
+			 height: 35px;
+			 color: navy; 
+			 font-size: 18px; 
+			 font-weight: bold;
+		}
+		.searchGrid {
+			width: 65% !important;
+			min-width: 95% !important;
+			margin-left: auto ;
+			margin-right: auto ;
+			border: 0px dotted olive !important;
+		}
+		.searchGridCol1 {
+			width: 25px !important;
+		}
+		.searchGridCol2 {
+			width: 30px !important;
+		}
+		.searchGridCol3 {
+			width: 12px !important;
+		}
+
+		.infoForm
+		{
+			width: 40%; 
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+	}
+
+/*  iPad  */
+	@media (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
+		div[id*='mediaSelector']::after { 
+			content: "768 x 1024 portrait"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .infoWindow {
+	        width: 50%;
+	        height: 445px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 385px ;
+	    }
+	   .listboxMax {
+	        width: 150px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-50%; 
+			width: 100%;
+		}
+		.searchButton {
+			 width: 40%;
+			 height: 35px;
+			 color: navy; 
+			 font-size: 18px; 
+			 font-weight: bold;
+		}
+		.searchGrid {
+			width: 65% !important;
+			min-width: 95% !important;
+			margin-left: auto ;
+			margin-right: auto ;
+			border: 0px dotted gold !important;
+		}
+		.searchGridCol1 {
+			width: 25px !important;
+		}
+		.searchGridCol2 {
+			width: 30px !important;
+		}
+		.searchGridCol3 {
+			width: 42px !important;
+		}
+            
+        .infoForm
+        {
+        	width: 35%;
+			margin-left: auto !important;
+			margin-right: auto !important;
+        	border: 0px solid red;
+        }
+	}
+
+/*  Droid Razr  */
+	@media (max-width: 720px) and (max-height: 1280px) and  (orientation: portrait) {
+		div[id*='mediaSelector']::after { 
+			content: "720 x 1280 portrait"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+		.infoWindow {
+	        width: 50%;
+	        height: 475px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 410px ;
+	    }
+	   .listboxMax {
+	        width: 150px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-50%; 
+			width: 100%;
+		}
+		.searchButton {
+			 width: 50%;
+			 height: 35px;
+			 color: navy; 
+			 font-size: 18px; 
+			 font-weight: bold;
+		}
+		.searchGrid {
+			width: 65% !important;
+			min-width: 95% !important;
+			margin-left: auto ;
+			margin-right: auto ;
+			border: 0px dotted gold !important;
+		}
+		.searchGridCol1 {
+			width: 25px !important;
+		}
+		.searchGridCol2 {
+			width: 30px !important;
+		}
+		.searchGridCol3 {
+			width: 42px !important;
+		}
+	}
+	
+/*   Google Nexus 4  */	
+	@media (max-width: 640px) and (max-height: 384px) and (orientation: portrait) {
+		div[id*='mediaSelector']::after { 
+			content: "640 x 384 portrait"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .listboxMax {
+	        width: 160px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em;
+	    }
+		.searchGrid {
+			width: 65% !important;
+			min-width: 95% !important;
+			margin-left: auto ;
+			margin-right: auto ;
+			border: 0px solid MediumVioletRed !important;
+		}
+		.searchGridRow {
+			width: 75% !important;
+			border: 0px solid black !important;
+		}
+		.searchGridCol1 {
+			width: 20px !important;
+		}
+		.searchGridCol2 {
+			width: 30px !important;
+		}
+		.searchGridCol3 {
+			width: 40px !important;
+		}
+	}
+
+/*  Google Nexus 7's  */
+	@media (max-width: 600px) and (orientation: portrait), (max-width: 604px) and (orientation: portrait) {
+		div[id*='mediaSelector']::after { 
+			content: "600 portrait, 604 portrait"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .infoWindow {
+	        width: 75%;
+	        height: 358px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 295px ;
+	    }
+	   .listboxMax {
+	        width: 255px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-50%; 
+			width: 100%;
+		}
+		.searchButton {
+			 width: 50%;
+			 height: 35px;
+			 color: navy; 
+			 font-size: 18px; 
+			 font-weight: bold;
+		}
+		.searchGrid {
+			width: 65% !important;
+			min-width: 95% !important;
+			margin-left: auto ;
+			margin-right: auto ;
+			border: 0px dotted SlateBlue !important;
+		}
+		.searchGridCol1 {
+			width: 25px !important;
+		}
+		.searchGridCol2 {
+			width: 30px !important;
+		}
+		.searchGridCol3 {
+			width: 42px !important;
+		}
+	}
+
+
+/*  Sony Xperia Sola, U  */
+	@media (max-width: 480px) and (orientation: portrait) {
+		div[id*='mediaSelector']::after { 
+			content: "480 portrait"
+		}
+	    .formLabel {
+	        font-size: 1.4em;
+	    }
+	    .formLabel2 {
+	        font-size: 1.4em;
+	    }
+		.infoWindow {
+	        width: 350px;
+	        height: 360px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 300px ;
+	    }
+	   .listboxMax {
+	        width: 245px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-50%; 
+			width: 100%;
+		}
+		.searchButton {
+			 width: 50%;
+			 height: 35px;
+			 color: navy; 
+			 font-size: 20px; 
+			 font-weight: bold;
+		}
+		.searchGrid {
+			width: 80% !important;
+			min-width: 95% !important;
+			margin-left: auto ;
+			margin-right: auto ;
+			border: 0px solid DarkSeaGreen !important;
+		}
+		.searchGridCol1 {
+			width: 25px !important;
+		}
+		.searchGridCol2 {
+			width: 45px !important;
+		}
+		.searchGridCol3 {
+			width: 30px !important;
+		}
+	}
+
+
+/*  LG Optimus LTE, Optimus 4X HD  */
+	@media (max-width: 424px) and (orientation: portrait) {
+		div[id*='mediaSelector']::after { 
+			content: "424 portrait"
+		}
+		.stateProvinceLabel::before { 
+			content: "State/Prov"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .infoWindow {
+	        width: 75%;
+	        height: 315px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 245px ;
+	    }
+	   .listboxMax {
+	        width: 210px ;
+	        height: 25px ;
+	        font-size: 14px;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-50%; 
+			width: 100%;
+		}
+		.searchButton {
+			 width: 50%;
+			 height: 35px;
+			 color: navy; 
+			 font-size: 20px; 
+			 font-weight: bold;
+		}
+		.searchGrid {
+			width: 80% !important;
+			min-width: 95% !important;
+			margin-left: auto ;
+			margin-right: auto ;
+			border: 0px solid darkcyan !important;
+		}
+		.searchGridCol1 {
+			width: 25px !important;
+		}
+		.searchGridCol2 {
+			width: 45px !important;
+		}
+		.searchGridCol3 {
+			width: 30px !important;
+		}
+	}
+
+
+/*  iPhone 6 Plus  */
+	@media (max-width: 414px) and (max-height: 736px) and (orientation: portrait) {
+		div[id*='mediaSelector']::after { 
+			content: "414 x 736 portrait"
+		}
+		.stateProvinceLabel::before { 
+			content: "State/Prov"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .infoWindow {
+	        width: 75%;
+	        height: 315px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 245px ;
+	    }
+	   .listboxMax {
+	        width: 205px ;
+	        height: 25px ;
+	        font-size: 14px;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-50%; 
+			width: 100%;
+		}
+		.searchButton {
+			 width: 50%;
+			 height: 35px;
+			 color: navy; 
+			 font-size: 20px; 
+			 font-weight: bold;
+		}
+		.searchGrid {
+			width: 80% !important;
+			min-width: 95% !important;
+			margin-left: auto ;
+			margin-right: auto ;
+			border: 0px solid darkcyan !important;
+		}
+		.searchGridCol1 {
+			width: 25px !important;
+		}
+		.searchGridCol2 {
+			width: 45px !important;
+		}
+		.searchGridCol3 {
+			width: 30px !important;
+		}
+	}
+
+/*  Samsung Galaxy Note  */
+	@media (max-width: 400px) and (orientation: portrait) {
+		div[id*='mediaSelector']::after { 
+			content: "400 portrait"
+		}
+		.stateProvinceLabel::before { 
+			content: "State/Prov"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .infoWindow {
+	        width: 80%;
+	        height: 455px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 390px ;
+	    }
+	   .listboxMax {
+	        width: 150px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-50%; 
+			width: 100%;
+		}
+		.searchButton {
+			 width: 50%;
+			 height: 35px;
+			 color: navy; 
+			 font-size: 20px; 
+			 font-weight: bold;
+		}
+		.searchGrid {
+			width: 80% !important;
+			min-width: 95% !important;
+			margin-left: auto ;
+			margin-right: auto ;
+			border: 0px solid darkcyan !important;
+		}
+		.searchGridCol1 {
+			width: 25px !important;
+		}
+		.searchGridCol2 {
+			width: 45px !important;
+		}
+		.searchGridCol3 {
+			width: 30px !important;
+		}
+	}
+
+/*  Google Nexus 4  */
+	@media (max-width: 384px) and (orientation: portrait) {
+		div[id*='mediaSelector']::after { 
+			content: "384 portrait"
+		}
+	    .formLabel {
+	        font-size: 1.25em;
+	    }
+	    .infoWindow {
+	        width: 90%;
+	        height: 398px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 335px ;
+	    }
+	   .listboxMax {
+	        width: 150px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 22px ;
+	        padding: 2px ;
+	        font-size: 1.25em;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-50%; 
+			width: 100%;
+		}
+		.searchButton {
+			 width: 50%;
+			 height: 35px;
+			 color: navy; 
+			 font-size: 20px; 
+			 font-weight: bold;
+		}
+		.searchGrid {
+			width: 80% !important;
+			min-width: 95% !important;
+			margin-left: auto ;
+			margin-right: auto ;
+			border: 0px dashed Maroon !important;
+		}
+		.searchGridCol1 {
+			width: 25px !important;
+		}
+		.searchGridCol2 {
+			width: 45px !important;
+		}
+		.searchGridCol3 {
+			width: 30px !important;
+		}
+	}
+
+/*  iPhone 6 + */
+	@media (max-width: 414px) and (max-height: 736px) and (orientation: portrait) {
+		div[id*='mediaSelector']::after { 
+			content: "414 x 736 portrait"
+		}
+	    .formLabel {
+	        font-size: 1.25em;
+	    }
+	    .infoWindow {
+	        width: 90%;
+	        height: 398px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 335px ;
+	    }
+	   .listboxMax {
+	        width: 175px ;
+	        height: 25px ;
+	        font-size: 12px;
+	    }
+	    .textbox {
+	        height: 22px ;
+	        padding: 2px ;
+	        font-size: 1.25em;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-50%; 
+			width: 100%;
+		}
+		.searchButton {
+			 width: 60%;
+			 height: 35px;
+			 color: navy; 
+			 font-size: 20px; 
+			 font-weight: bold;
+		}
+		.searchGrid {
+			width: 80% !important;
+			min-width: 95% !important;
+			margin-left: auto ;
+			margin-right: auto ;
+			border: 0px dashed Maroon !important;
+		}
+		.searchGridCol1 {
+			width: 25px !important;
+		}
+		.searchGridCol2 {
+			width: 45px !important;
+		}
+		.searchGridCol3 {
+			width: 30px !important;
+		}
+
+		.infoForm
+		{
+			width: 60%; 
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+	}
+
+/*  iPhone 6  */
+	@media (max-width: 375px) and (max-height: 667px) and (orientation: portrait) {
+		div[id*='mediaSelector']::after { 
+			content: "375 x 667 portrait"
+		}
+	    .formLabel {
+	        font-size: 1.25em;
+	    }
+	    .infoWindow {
+	        width: 90%;
+	        height: 398px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 335px ;
+	    }
+	   .listboxMax {
+	        width: 175px ;
+	        height: 25px ;
+	        font-size: 12px;
+	    }
+	    .textbox {
+	        height: 22px ;
+	        padding: 2px ;
+	        font-size: 1.25em;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-50%; 
+			width: 100%;
+		}
+		.searchButton {
+			 width: 60%;
+			 height: 35px;
+			 color: navy; 
+			 font-size: 20px; 
+			 font-weight: bold;
+		}
+		.searchGrid {
+			width: 80% !important;
+			min-width: 95% !important;
+			margin-left: auto ;
+			margin-right: auto ;
+			border: 0px dashed Maroon !important;
+		}
+		.searchGridCol1 {
+			width: 25px !important;
+		}
+		.searchGridCol2 {
+			width: 45px !important;
+		}
+		.searchGridCol3 {
+			width: 30px !important;
+		}
+
+		.infoForm
+		{
+			width: 75%; 
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+	}
+
+/*  Google Nexus 5  */
+	@media (max-width: 360px) and (orientation: portrait) {
+		div[id*='mediaSelector']::after { 
+			content: "360 portrait"
+		}
+	    .formLabel {
+	        font-size: 1.25em;
+	    }
+	    .infoWindow {
+	        width: 90%;
+	        height: 495px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 430px ;
+	    }
+	   .listboxMax {
+	        width: 175px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 22px ;
+	        padding: 1px ;
+	        font-size: 1.25em;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-50%; 
+			width: 100%;
+		}
+		.searchButton {
+			 width: 55%;
+			 height: 35px;
+			 color: navy; 
+			 font-size: 18px; 
+			 font-weight: bold;
+		}
+		.searchGrid {
+			width: 85% !important;
+			min-width: 95% !important;
+			margin-left: auto ;
+			margin-right: auto ;
+			border: 0px dotted OrangeRed !important;
+		}
+		.searchGridCol1 {
+			width: 29px !important;
+		}
+		.searchGridCol2 {
+			width: 45px !important;
+		}
+		.searchGridCol3 {
+			width: 15px !important;
+		}
+	}
+	
+	
+/*  iPhone 5  */
+	@media (max-width: 320px) and (max-height: 568px) and (orientation: portrait) {
+		div[id*='mediaSelector']::after { 
+			content: "320 x 568 portrait"
+		}
+	    .formLabel {
+	        font-size: 1em;
+	    }
+	    .infoWindow {
+	        width: 95% ;
+	        height: 385px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 320px ;
+	    }
+	    .listboxMax {
+	        width: 160px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 20px ;
+	        padding: 1px ;
+	        font-size: 1em;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-35%; 
+			width: 125%;
+		}
+		.searchButton {
+			 width: 80%;
+			 height: 35px;
+			 color: navy; 
+			 font-size: 22px; 
+			 font-weight: bold;
+		}
+		.searchGrid {
+			width: 99% !important;
+			min-width: 99% !important;
+			margin-left: auto ;
+			margin-right: auto ;
+			border: 0px solid lime !important;
+		}
+		.searchGridRow {
+			width: 95% !important;
+			border: 0px solid black !important;
+		}
+		.searchGridCol1 {
+			width: 60px !important;
+		}
+		.searchGridCol2 {
+			width: 110px !important;
+		}
+		.searchGridCol3 {
+			width: 25px !important;
+		}
+
+		.infoForm
+		{
+			width: 65%; 
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+	}
+
+/*  Google Nexus S  */   
+	@media (max-width: 320px) and (max-height: 533px) and (orientation: portrait) {
+		div[id*='mediaSelector']::after { 
+			content: "320 x 533 portrait"
+		}
+	    .formLabel {
+	        font-size: 1em;
+	    }
+	    .infoWindow {
+	        width: 95%;
+	        height: 375px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 305px ;
+	    }
+	   .listboxMax {
+	        width: 150px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 22px ;
+	        padding: 1px ;
+	        font-size: 1em;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-50%; 
+			width: 100%;
+		}
+		.searchButton {
+			 width: 50%;
+			 height: 35px;
+			 color: navy; 
+			 font-size: 16px; 
+			 font-weight: bold;
+		}
+		.searchGrid {
+			width: 95% !important;
+			min-width: 95% !important;
+			margin-left: auto ;
+			margin-right: auto ;
+			border: 0px solid Tomato !important;
+		}
+		.searchGridCol1 {
+			width: 35px !important;
+		}
+		.searchGridCol2 {
+			width: 60px !important;
+		}
+		.searchGridCol3 {
+			width: 16px !important;
+		}
+	}	
+	
+	
+	@media (max-width: 320px) and (max-height: 480px) and (orientation: portrait) {
+		div[id*='mediaSelector']::after { 
+			content: "320 x 480 portrait"
+		}
+	    .formLabel {
+	        font-size: 1.2em;
+	    }
+	    .formLabel2 {
+	        font-size: 1.2em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 12px;
+	    }
+		.nextBackIcon {
+	    	font-size: 2em; 
+	    }
+	    .nextBackWord {
+	    	font-size: 20px; 
+	    	font-weight: bold; 
+	    }
+		.infoIcon {
+	    	font-size: 2em; 
+	    }
+	    .infoWindow {
+	        width: 95% ;
+	        height: 360px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 290px ;
+	    }
+	    .listboxMax {
+	        width: 160px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 20px ;
+	        padding: 2px ;
+	        font-size: 1em ;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-35%; 
+			width: 125%;
+		}
+		.searchButton {
+			 width: 80%;
+			 height: 35px;
+			 color: navy; 
+			 font-size: 22px; 
+			 font-weight: bold;
+		}
+	    .searchGridLayout {
+	    	height: 85% ;
+	    }
+		.searchGrid {
+			width: 99% !important;
+			min-width: 99% !important;
+			margin-left: auto ;
+			margin-right: auto ;
+			border: 0px solid lime !important;
+		}
+		.searchGridRow {
+			width: 95% !important;
+			border: 0px solid black !important;
+		}
+		.searchGridCol1 {
+			width: 56px !important;
+		}
+		.searchGridCol2 {
+			width: 108px !important;
+		}
+		.searchGridCol3 {
+			width: 25px !important;
+		}
+
+		.infoForm
+		{
+			width: 65%; 
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+	}
+	
+	
+	/*  Optimus One */
+	@media (max-width: 213px) and (max-height: 320px) and (orientation: portrait) {
+		div[id*='mediaSelector']::after { 
+			content: "213 x 320 portrait"
+		}
+		.stateProvinceLabel::before { 
+			content: "St/Pr"
+		}
+	    .formLabel {
+	        font-size: 1.25em;
+	    }
+	    .formLabel2 {
+	        font-size: 1.2em;
+	    }
+	    .infoWindow {
+	        width: 95% ;
+	        height: 360px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 290px ;
+	    }
+	    .listboxMax {
+	        width: 100px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 20px ;
+	        padding: 2px ;
+	        font-size: 1em ;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-35%; 
+			width: 125%;
+		}
+		.searchButton {
+			 width: 80%;
+			 height: 35px;
+			 color: navy; 
+			 font-size: 16px; 
+			 font-weight: bold;
+		}
+	    .searchGridLayout {
+	    	height: 100% ;
+	    }
+		.searchGrid {
+			width: 99% !important;
+			min-width: 99% !important;
+			margin-left: auto ;
+			margin-right: auto ;
+			border: 0px solid lime !important;
+		}
+		.searchGridRow {
+			width: 95% !important;
+			border: 0px solid black !important;
+		}
+		.searchGridCol1 {
+			width: 56px !important;
+		}
+		.searchGridCol2 {
+			width: 108px !important;
+		}
+		.searchGridCol3 {
+			width: 25px !important;
+		}
+	}
+
+    @media (max-width: 1023px) {
+        div[id*='mediaSelector']::before {
+            content: "max 1023"
+        }
+    }
+
+    @media (max-width: 1024px) {
+        div[id*='mediaSelector']::before {
+            content: "max 1024"
+        }
+    }
+
+    @media (max-width: 1025px) {
+        div[id*='mediaSelector']::before {
+            content: "max 1025"
+        }
+    }
+
+    @media (max-width: 1050px) {
+        div[id*='mediaSelector']::before {
+            content: "max 1050 "
+        }
+    }
+
+
+	@media (max-width: 1280px) and (max-height: 800px) and (orientation: landscape) {
+		div[id*='mediaSelector']::after { 
+			content: "1280 x 800 landscape"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 1.0em;
+	    }
+	    .infoWindow {
+	        width: 40%;
+	        height: 420px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+	    	height: 355px;
+	    }
+		.listboxMax {
+	        width: 185px ;
+	        height: 25px ;
+	        font-size: 14px;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em ;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-50%; 
+			width: 100%;
+		}
+		.searchButton {
+			 width: 25%;
+			 height: 35px;
+			 color: navy; 
+			 font-size: 16px; 
+			 font-weight: bold;
+		}
+		.searchGrid {
+			width: 35% !important;
+			min-width: 55% !important;
+			margin-left: auto ;
+			margin-right: auto ;
+			border: 0px dashed #1E90FF !important;
+		}
+		.searchGridCol1 {
+			width: 9px !important;
+		}
+		.searchGridCol2 {
+			width: 9px !important;
+		}
+		.searchGridCol3 {
+			width: 8px !important;
+		}
+
+		.infoForm
+		{
+			width: 40%; 
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+	}
+
+
+	@media (max-width: 1280px) and (max-height: 640px) and (orientation: landscape) {
+		div[id*='mediaSelector']::after { 
+			content: "1280 x 640 landscape"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 1.0em;
+	    }
+	    .infoWindow {
+	        width: 40%;
+	        height: 340px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+	       	height: 300px ;
+	    }
+		.listboxMax {
+	        width: 160px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em ;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-50%; 
+			width: 100%;
+		}
+		.searchButton {
+			 width: 40%;
+			 height: 35px;
+			 color: navy; 
+			 font-size: 16px; 
+			 font-weight: bold;
+		}
+		.searchGrid {
+			width: 35% !important;
+			min-width: 95% !important;
+			margin-left: auto ;
+			margin-right: auto ;
+			border: 0px dashed #1E90FF !important;
+		}
+		.searchGridCol1 {
+			width: 6px !important;
+		}
+		.searchGridCol2 {
+			width: 9px !important;
+		}
+		.searchGridCol3 {
+			width: 32px !important;
+		}
+	}	
+
+
+	@media (max-width: 1280px) and (max-height: 631px) and (orientation: landscape) {
+		div[id*='mediaSelector']::after { 
+			content: "1280 x 631 landscape"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .formLabel2 {
+	        font-size: 2em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 1.0em;
+	    }
+	    .infoWindow {
+	        width: 40%;
+	        height: 360px; /*  85%  */
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+	       	height: 320px ;  /*  280px  */
+	    }
+		.listboxMax {
+	        width-x: 160px ;
+	        height: 30px ;
+	        font-size: 2em;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em ;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-50%; 
+			width: 100%;
+		}
+		.searchButton {
+			 width: 40%;
+			 height: 35px;
+			 color: navy; 
+			 font-size: 16px; 
+			 font-weight: bold;
+		}
+		.searchGrid {
+			width: 35% !important;
+			min-width: 45% !important;
+			margin-left: auto ;
+			margin-right: auto ;
+			border: 0px dashed #1E90FF !important;
+		}
+		.searchGridCol1 {
+			width: 7px !important;
+		}
+		.searchGridCol2 {
+			width: 9px !important;
+		}
+		.searchGridCol3 {
+			width: 2px !important;
+		}
+	}
+	
+	@media (max-width: 1024px) and (max-height: 768px) and (orientation: landscape) {
+		div[id*='mediaSelector']::after { 
+			content: "1024 x 768 landscape"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 1.0em;
+	    }
+	    .infoWindow {
+	        width: 40%;
+	        height: 270px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+	    	height: 205px ;
+	    }
+		.listboxMax {
+	        width: 160px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em ;
+	    }
+		.searchGrid {
+			width: 50% !important;
+			min-width: 95% !important;
+			margin-left: auto ;
+			margin-right: auto ;
+			border: 0px solid green !important;
+		}
+		.searchGridCol1 {
+			width: 10px !important;
+		}
+		.searchGridCol2 {
+			width: 20px !important;
+		}
+		.searchGridCol3 {
+			width: 40px !important;
+		}
+            
+		.infoForm
+		{
+			width: 25%; 
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+	}
+	
+	@media (max-width: 1024px) and (max-height: 600px) and (orientation: landscape) {
+		div[id*='mediaSelector']::after { 
+			content: "1024 x 600 landscape"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 1.0em;
+	    }
+	    .infoWindow {
+	        width: 40%;
+	        height: 270px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+	    	height: 205px ;
+	    }
+		.listboxMax {
+	        width: 160px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em ;
+	    }
+		.searchGrid {
+			width: 50% !important;
+			min-width: 95% !important;
+			margin-left: auto ;
+			margin-right: auto ;
+			border: 0px solid green !important;
+		}
+		.searchGridCol1 {
+			width: 10px !important;
+		}
+		.searchGridCol2 {
+			width: 20px !important;
+		}
+		.searchGridCol3 {
+			width: 40px !important;
+		}
+            
+		.infoForm
+		{
+			width: 25%; 
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+	}
+	
+	@media (max-width: 1024px) and (max-height: 384px) and (orientation: landscape) {
+		div[id*='mediaSelector']::after { 
+			content: "1024 x 384 landscape"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 1.0em;
+	    }
+	    .infoWindow {
+	        width: 40%;
+	        height: 295px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+	       	height: 255px ;
+	    }
+		.listboxMax {
+	        width: 160px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em ;
+	    }
+		.searchGrid {
+			width: 50% !important;
+			min-width: 95% !important;
+			margin-left: auto ;
+			margin-right: auto ;
+			border: 0px solid green !important;
+		}
+		.searchGridCol1 {
+			width: 10px !important;
+		}
+		.searchGridCol2 {
+			width: 20px !important;
+		}
+		.searchGridCol3 {
+			width: 40px !important;
+		}
+	}
+	
+	
+/*   Google Nexus 7  */	
+	@media (max-width: 966px) and (orientation: landscape) {
+		div[id*='mediaSelector']::after { 
+			content: "966 landscape"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 1.0em;
+	    }
+	    .infoWindow {
+	        width: 40%;
+	        height: 325px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+   	    	height: 255px ;
+	    }
+		.listboxMax {
+	        width: 160px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em ;
+	    }
+		.searchGrid {
+			width: 45% !important;
+			min-width: 95% !important;
+			margin-left: auto ;
+			margin-right: auto ;
+			border: 0px double yellow !important;
+		}
+		.searchGridRow {
+			width: 75% !important;
+			border: 0px solid black !important;
+		}
+		.searchGridCol1 {
+			width: 10px !important;
+		}
+		.searchGridCol2 {
+			width: 16px !important;
+		}
+		.searchGridCol3 {
+			width: 40px !important;
+		}
+	}
+	
+	
+	@media (max-width: 960px) and (orientation: landscape) {
+		div[id*='mediaSelector']::after { 
+			content: "960 landscape"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 1.0em;
+	    }
+	    .infoWindow {
+	        width: 40%;
+	        height: 395px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 330px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em ;
+	    }
+		.listboxMax {
+	        width: 270px ;
+	        height: 25px ;
+	    }
+	    .searchGridLayout {
+	    	height: 90% ;
+	    }
+		.searchGrid {
+			width: 45% !important;
+			min-width: 95% !important;
+			margin-left: auto ;
+			margin-right: auto ;
+			border: 0px dotted yellowgreen !important;
+		}
+		.searchGridRow {
+			width: 75% !important;
+			border: 0px solid black !important;
+		}
+		.searchGridCol1 {
+			width: 10px !important;
+		}
+		.searchGridCol2 {
+			width: 16px !important;
+		}
+		.searchGridCol3 {
+			width: 40px !important;
+		}
+
+		.infoForm
+		{
+			width: 35%; 
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+	}
+	
+	
+	@media (max-width: 854px) and (max-height: 480px) and (orientation: landscape) {
+		div[id*='mediaSelector']::after { 
+			content: "854 x 480 landscape"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 1.0em;
+	    }
+	    .infoWindow {
+	        width: 40%;
+	        height: 395px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 330px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em ;
+	    }
+		.listboxMax {
+	        width: 270px ;
+	        height: 25px ;
+	    }
+	    .searchGridLayout {
+	    	height: 70% ;
+	    }
+	    .searchGridLayout {
+	    	height: 90% ;
+	    }
+		.searchGrid {
+			width: 45% !important;
+			min-width: 95% !important;
+			margin-left: auto ;
+			margin-right: auto ;
+			border: 0px dotted yellowgreen !important;
+		}
+		.searchGridRow {
+			width: 75% !important;
+			border: 0px solid black !important;
+		}
+		.searchGridCol1 {
+			width: 10px !important;
+		}
+		.searchGridCol2 {
+			width: 16px !important;
+		}
+		.searchGridCol3 {
+			width: 40px !important;
+		}
+	}
+
+/*   LG Optimus LTE  */	
+	@media (max-width: 753px) and (orientation: landscape) {
+		div[id*='mediaSelector']::after { 
+			content: "753 landscape"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 1.0em;
+	    }
+	    .infoWindow {
+	        width: 40%;
+	        height: 330px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 265px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em ;
+	    }
+		.listboxMax {
+	        width: 160px ;
+	        height: 25px ;
+	    }
+	    .searchGridLayout {
+	    	height: 100% ;
+	    }
+		.searchGrid {
+			width: 45% !important;
+			min-width: 95% !important;
+			margin-left: auto ;
+			margin-right: auto ;
+			border: 0px double yellow !important;
+		}
+		.searchGridRow {
+			width: 75% !important;
+			border: 0px solid black !important;
+		}
+		.searchGridCol1 {
+			width: 10px !important;
+		}
+		.searchGridCol2 {
+			width: 16px !important;
+		}
+		.searchGridCol3 {
+			width: 40px !important;
+		}
+	}
+
+/*   iPhone 6 Plus */	
+	@media (max-width: 736px) and (max-height: 414px) and (orientation: landscape) {
+	div[id*='mediaSelector']::after { 
+			content: "736 x 414 landscape"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 1.0em;
+	    }
+	    .infoWindow {
+	        width: 40%;
+	        height: 330px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 265px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em ;
+	    }
+		.listboxMax {
+	        width: 270px ;
+	        height: 25px ;
+	    }
+	    .searchIcon {
+	    	color: navy;
+	    	background-color: #fcfcfc;
+	    	font-size: 1.75em; 
+	    }
+		.searchButton {
+			 width: 50%;
+			 height: 35px;
+			 color: navy; 
+			 font-size: 22px; 
+			 font-weight: bold;
+		}
+	    .searchGridLayout {
+	    	height: 100% ;
+	    }
+		.searchGrid {
+			width: 45% !important;
+			min-width: 95% !important;
+			margin-left: auto ;
+			margin-right: auto ;
+			border: 0px double yellow !important;
+		}
+		.searchGridRow {
+			width: 75% !important;
+			border: 0px solid black !important;
+		}
+		.searchGridCol1 {
+			width: 10px !important;
+		}
+		.searchGridCol2 {
+			width: 16px !important;
+		}
+		.searchGridCol3 {
+			width: 40px !important;
+		}
+
+		.infoForm
+		{
+			width: 50%; 
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+	}
+
+/*   iPhone 6  */	
+	@media (max-width: 667px) and (max-height: 375px) and (orientation: landscape) {
+		div[id*='mediaSelector']::after { 
+			content: "667 x 375 landscape"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 1.0em;
+	    }
+	    .infoWindow {
+	        width: 40%;
+	        height: 330px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 265px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em ;
+	    }
+		.listboxMax {
+	        width: 270px ;
+	        height: 25px ;
+	    }
+	    .searchIcon {
+	    	color: navy;
+	    	background-color: #fcfcfc;
+	    	font-size: 1.75em; 
+	    }
+		.searchButton {
+			 width: 50%;
+			 height: 35px;
+			 color: navy; 
+			 font-size: 22px; 
+			 font-weight: bold;
+		}
+	    .searchGridLayout {
+	    	height: 100% ;
+	    }
+		.searchGrid {
+			width: 45% !important;
+			min-width: 95% !important;
+			margin-left: auto ;
+			margin-right: auto ;
+			border: 0px double yellow !important;
+		}
+		.searchGridRow {
+			width: 75% !important;
+			border: 0px solid black !important;
+		}
+		.searchGridCol1 {
+			width: 10px !important;
+		}
+		.searchGridCol2 {
+			width: 16px !important;
+		}
+		.searchGridCol3 {
+			width: 40px !important;
+		}
+
+		.infoForm
+		{
+			width: 40%; 
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+	}
+
+/*   Google Nexus 4  */	
+	@media (max-width: 598px) and (max-height: 359px) and (orientation: landscape) {
+		div[id*='mediaSelector']::after { 
+			content: "598 x 359 landscape"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 1.0em;
+	    }
+	    .infoWindow {
+	        width: 40%;
+	        height: 330px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 265px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em ;
+	    }
+		.listboxMax {
+	        width: 270px ;
+	        height: 25px ;
+	    }
+	    .searchIcon {
+	    	color: navy;
+	    	background-color: #fcfcfc;
+	    	font-size: 1.75em; 
+	    }
+		.searchButton {
+			 width: 50%;
+			 height: 35px;
+			 color: navy; 
+			 font-size: 22px; 
+			 font-weight: bold;
+		}
+	    .searchGridLayout {
+	    	height: 100% ;
+	    }
+		.searchGrid {
+			width: 45% !important;
+			min-width: 95% !important;
+			margin-left: auto ;
+			margin-right: auto ;
+			border: 0px double yellow !important;
+		}
+		.searchGridRow {
+			width: 75% !important;
+			border: 0px solid black !important;
+		}
+		.searchGridCol1 {
+			width: 10px !important;
+		}
+		.searchGridCol2 {
+			width: 16px !important;
+		}
+		.searchGridCol3 {
+			width: 40px !important;
+		}
+
+		.infoForm
+		{
+			width: 45%; 
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+	}
+	
+	
+	@media (max-width: 640px) and (orientation: landscape) {
+		div[id*='mediaSelector']::after { 
+			content: "640 landscape"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 1.0em;
+	    }
+	    .infoWindow {
+	        width: 70%;
+	        height: 315px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 245px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em ;
+	    }
+		.listboxMax {
+	        width: 270px ;
+	        height: 25px ;
+	    }
+	    .searchGridLayout {
+	    	height: 100% ;
+	    }
+		.searchGrid {
+			width: 65% !important;
+			min-width: 95% !important;
+			margin-left: auto ;
+			margin-right: auto ;
+			border: 0px solid orange !important;
+		}
+		.searchGridRow {
+			width: 75% !important;
+			border: 0px dashed o !important;
+		}
+		.searchGridCol1 {
+			width: 20px !important;
+		}
+		.searchGridCol2 {
+			width: 30px !important;
+		}
+		.searchGridCol3 {
+			width: 40px !important;
+		}
+	}
+	
+	/*  Galaxy S III, Galaxy Nexus  */
+	@media (max-width: 640px) and (max-height: 360px) and (orientation: landscape) {
+		div[id*='mediaSelector']::after { 
+			content: "640 x 360 landscape"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 1.0em;
+	    }
+	    .infoWindow {
+	        width: 70%;
+	        height: 315px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 250px ;
+	    }
+		.listboxMax {
+	        width: 270px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em ;
+	    }
+	    .searchGridLayout {
+	    	height: 100% ;
+	    }
+		.searchGrid {
+			width: 65% !important;
+			min-width: 95% !important;
+			margin-left: auto ;
+			margin-right: auto ;
+			border: 0px dashed orange !important;
+		}
+		.searchGridRow {
+			width: 75% !important;
+			border: 0px dashed o !important;
+		}
+		.searchGridCol1 {
+			width: 20px !important;
+		}
+		.searchGridCol2 {
+			width: 30px !important;
+		}
+		.searchGridCol3 {
+			width: 12px !important;
+		}
+	}
+	
+	
+	@media (max-width: 569px) and (orientation: landscape) {
+		div[id*='mediaSelector']::after { 
+			content: "569 landscape"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 1.0em;
+	    }
+	    .infoWindow {
+	        width: 80%;
+	        height: 250px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 180px ;
+	    }
+		.listboxMax {
+	        width: 270px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em ;
+	    }
+		.searchGrid {
+			width: 65% !important;
+			min-width: 95% !important;
+			margin-left: auto ;
+			margin-right: auto ;
+			border: 0px dashed navy !important;
+		}
+		.searchGridRow {
+			width: 75% !important;
+			border: 0px solid black !important;
+		}
+		.searchGridCol1 {
+			width: 20px !important;
+		}
+		.searchGridCol2 {
+			width: 30px !important;
+		}
+		.searchGridCol3 {
+			width: 40px !important;
+		}
+	}
+	
+	
+	@media (max-width: 568px) and (orientation: landscape) {
+		div[id*='mediaSelector']::after { 
+			content: "568 landscape"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 1.0em;
+	    }
+	    .infoWindow {
+	        width: 80%;
+	        height: 265px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 200px ;
+	    }
+		.listboxMax {
+	        width: 160px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em ;
+	    }
+		.searchGrid {
+			width: 65% !important;
+			min-width: 95% !important;
+			margin-left: auto ;
+			margin-right: auto ;
+			border: 0px solid fuchsia !important;
+		}
+		.searchGridRow {
+			width: 75% !important;
+			border: 0px solid black !important;
+		}
+		.searchGridCol1 {
+			width: 20px !important;
+		}
+		.searchGridCol2 {
+			width: 30px !important;
+		}
+		.searchGridCol3 {
+			width: 40px !important;
+		}
+
+		.infoForm
+		{
+			width: 50%; 
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+	}
+	
+/*   Google Nexus S  */	
+	@media (max-width: 533px) and (orientation: landscape) {
+		div[id*='mediaSelector']::after { 
+			content: "533 landscape"
+		}
+	    .formLabel {
+	        font-size: 1.5em;
+	    }
+	    .nameInfoLabel {
+	        font-size: .75em;
+	    }
+	    .listboxMax {
+	        width: 275px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em ;
+	    }
+		.searchGrid {
+			width: 65% !important;
+			min-width: 95% !important;
+			margin-left: auto ;
+			margin-right: auto ;
+			border: 0px dotted aqua !important;
+		}
+		.searchGridRow {
+			width: 75% !important;
+			border: 0px solid black !important;
+		}
+		.searchGridCol1 {
+			width: 20px !important;
+		}
+		.searchGridCol2 {
+			width: 30px !important;
+		}
+		.searchGridCol3 {
+			width: 40px !important;
+		}
+	}
+	
+	@media (max-width: 480px) and (orientation: landscape) {
+		div[id*='mediaSelector']::after { 
+			content: "480 landscape"
+		}
+	    .formLabel {
+	        font-size: 1.25em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 12px;
+	    }
+		.infoWindow {
+	        width: 80%;
+	        height: 195px ;
+		}
+	    .infoWindowLayout {
+	    	width: 99%; 
+	    	height: 125px ;
+	    }
+		.listboxMax {
+	        width: 160px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 20px ;
+	        padding: 2px ;
+	        font-size: 1em ;
+	    }
+		.searchGrid {
+			width: 75% !important;
+			min-width: 95% !important;
+			margin-left: auto ;
+			margin-right: auto ;
+			border: 0px solid red !important;
+		}
+		.searchGridRow {
+			width: 75% !important;
+			border: 0px solid cyan !important;
+		}
+		.searchGridCol1 {
+			width: 32px !important;
+		}
+		.searchGridCol2 {
+			width: 52px !important;
+		}
+		.searchGridCol3 {
+			width: 40px !important;
+		}
+
+		.infoForm
+		{
+			width: 50%; 
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+	}
+	
+	/*  Optimus One */
+	@media (max-width: 320px) and (max-height: 213px) and (orientation: landscape) {
+		div[id*='mediaSelector']::after { 
+			content: "320 x 213 landscape"
+		}
+		.stateProvinceLabel::before { 
+			content: "St/Pr"
+		}
+	    .formLabel {
+	        font-size: 1.5em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 1.0em;
+	    }
+	    .infoWindow {
+	        width: 70%;
+	        height: 315px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 250px ;
+	    }
+		.listboxMax {
+	        width: 160px ;
+	        height: 25px ;
+	        font-size: 14px;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em ;
+	    }
+		.searchButton {
+			 width: 70%;
+			 height: 35px;
+			 color: navy; 
+			 font-size: 16px; 
+			 font-weight: bold;
+		}
+	    .searchGridLayout {
+	    	height: 100% ;
+	    }
+		.searchGrid {
+			width: 65% !important;
+			min-width: 95% !important;
+			margin-left: auto ;
+			margin-right: auto ;
+			border: 0px dashed orange !important;
+		}
+		.searchGridRow {
+			width: 75% !important;
+			border: 0px dashed o !important;
+		}
+		.searchGridCol1 {
+			width: 20px !important;
+		}
+		.searchGridCol2 {
+			width: 30px !important;
+		}
+		.searchGridCol3 {
+			width: 40px !important;
+		}
+            
+		.infoForm
+		{
+			width: 65%; 
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+	}
+
+	.greenButton, .grayButton
+	{
+		height : 40px ;
+		font-size : 12px ;
+	}
+
+	.greenButton .z-button-cm 
+	{ 
+		background-image : none ; 
+		background-color:#00B6CB ; 
+		color : white ;
+		border-radius : 5px ;
+		padding : 10px;
+		text-transform : uppercase ;
+	}
+	.greenButton .z-button-tl, .greenButton .z-button-tm, .greenButton .z-button-tr, 
+	.greenButton .z-button-bl, .greenButton .z-button-bm, .greenButton .z-button-br, 
+	.greenButton .z-button-cl, .greenButton .z-button-cr 
+	{ 
+		display : none ;
+	}
+
+
+	.grayButton .z-button-cm 
+	{ 
+		background-image : none ; 
+		background-color:#9B9B9B ; 
+		color : white ;
+		border-radius : 5px ;
+		padding : 10px;
+		text-transform : uppercase ;
+	}
+	.grayButton .z-button-tl, .grayButton .z-button-tm, .grayButton .z-button-tr, 
+	.grayButton .z-button-bl, .grayButton .z-button-bm, .grayButton .z-button-br, 
+	.grayButton .z-button-cl, .grayButton .z-button-cr 
+	{ 
+		display : none ;
+	}
+
+
+	.z-window-embedded select:not(.ui-datepicker-month):not(.ui-datepicker-year)
+	{
+		padding : 0px 1px ;
+		color : black ;
+		height : auto ;
+		width : auto ;
+		font-size : 12px ;
+	}
+
+   	.layout-wrapper .topbar .topbar-menu a:link 
+   	{ 
+   		line-height : 50px ;
+   		text-decoration: none ; 
+   	}
+
+	.z-window-embedded hr
+	{
+		margin : 0px ;
+	}
+	
+	body div
+	{
+	   box-sizing : border-box ;
+	}

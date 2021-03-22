@@ -1,0 +1,244 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:st-ui="http://stafftrack.net/ui"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:pu="http://primefaces.org/ultima"
+    xmlns:c="http://java.sun.com/jsp/jstl/core"
+    >
+    
+    <h:form id="menuform">
+        <div class="layout-menu #{guestPreferences.menuClass}">
+            <div class="nano">
+                <div class="nano-content menu-scroll-content">
+					<ul class="ultima-menu">
+						<li class="search-item">
+							<span class="md-inputfield location"> 
+								<ui:include src="/views/common/officeSelectionView.xhtml" />
+							</span>
+						</li>
+					</ul>
+
+					<ui:remove>
+                    <ui:fragment >
+                        <div class="profile">
+                            <div class="profile-image"></div>
+                            <a id="profile-options" href="#">
+                                <span class="profile-name">Jane Williams</span>
+                                <i class="material-icons">&#xE313;</i>
+                            </a>
+                        </div>
+                    
+                        <ul id="profile-menu" class="ultima-menu">
+                            <li role="menuitem">
+                                <a href="#" class="ripplelink">
+                                    <i class="material-icons">&#xE7FD;</i>
+                                    <span>Profile</span>
+                                </a>
+                            </li>
+                            <li role="menuitem">
+                                <a href="#" class="ripplelink">
+                                    <i class="material-icons">&#xE32A;</i>
+                                    <span>Privacy</span>
+                                </a>
+                            </li>
+                            <li role="menuitem">
+                                <a href="#" class="ripplelink">
+                                    <i class="material-icons">&#xE8B9;</i>
+                                    <span>Settings</span>
+                                </a>
+                            </li>
+                            <li role="menuitem">
+                                <a href="#" class="ripplelink">
+                                    <i class="material-icons">&#xE8AC;</i>
+                                    <span>Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+   					</ui:fragment>
+   				  </ui:remove>
+                    <pu:menu widgetVar="me">
+
+						<st-ui:check-security var="isCrewDeskAuthorized" resourceId="#{SecuredResources.CREWDESK_MODULE}" operationId="#{SystemOperations.VIEW_CONTENT}" >
+		                    <p:submenu id="_st_CDMenu" label="Crew Desk" icon="fa fa-image sm-icon-crewdesk" >
+		                        <p:menuitem id="cdMain" value="Crew Desk Main" outcome="crewDeskMain">
+		                        	<f:param name="officeId" value="#{sessionScope[AttributeKeys.USER_CONTEXT].currentOffice}" />
+		                        </p:menuitem>
+	
+		                        <p:menuitem id="cdWorkforce" value="Workforce" url="/crewdesk/workForceMgmtPage.do?officeId=#{sessionScope[AttributeKeys.USER_CONTEXT].currentOffice}" />
+	
+		                        <p:menuitem id="cdTakeaction" value="Take Action" url="/crewdesk/takeActionCrewDeskPage.do?officeId=#{sessionScope[AttributeKeys.USER_CONTEXT].currentOffice}" />
+	
+		                        <p:menuitem id="cdWhiteboard" value="Whiteboard" url="/crewdesk/schedulingCrewDeskPage.do?officeId=#{sessionScope[AttributeKeys.USER_CONTEXT].currentOffice}&amp;refresh=true" /> <!-- SMSTN-15528 & SMSTN-15529 address refresh parameter -->
+	
+		                        <p:menuitem id="cdRecruiting" value="Recruiting" url="/crewdesk/recruitingCrewDeskPage.do?officeId=#{sessionScope[AttributeKeys.USER_CONTEXT].currentOffice}" />
+	
+		                        <p:menuitem id="cdOrders" value="Orders" url="/crewdesk/startSessionsCrewDeskPage.do?officeId=#{sessionScope[AttributeKeys.USER_CONTEXT].currentOffice}" />
+	
+		                        <p:menuitem id="cdRisks" value="Risks" url="/crewdesk/riskConsoleCrewDeskPage.do?officeId=#{sessionScope[AttributeKeys.USER_CONTEXT].currentOffice}" rendered="false" />
+		                    </p:submenu>
+			            </st-ui:check-security>
+			            
+			            
+			            <c:if test="#{sessionScope[AttributeKeys.USER_CONTEXT].rpsEnabled}">
+				            <st-ui:check-security var="isRecruitmentAuthorized" resourceId="#{SecuredResources.RECRUITING_MODULE}" operationId="#{SystemOperations.VIEW_CONTENT}" >
+				            	<p:submenu id="_st_RecruitMenu" label="Recruiting" icon="fa fa-image sm-icon-recruiting" >	
+				            			<p:menuitem id="myReqMain" value="MyRequisitions" outcome="myRequisitionsMain">
+			                      	  		<f:param name="officeId" value="#{sessionScope[AttributeKeys.USER_CONTEXT].currentOffice}" />
+			                        	</p:menuitem>
+				            	</p:submenu>
+				            </st-ui:check-security>
+			            </c:if>
+			            
+
+						<st-ui:check-security var="isAssociateAuthorized" resourceId="#{SecuredResources.ASSOCIATE_MODULE}" operationId="#{SystemOperations.VIEW_CONTENT}" >
+		                    <p:submenu id="_st_AssocMenu" label="Associate" icon="fa fa-image sm-icon-associate" >
+								<p:menuitem id="asSearch" value="Associate Search" url="/associate/search/associateSearchPage.do?officeId=#{sessionScope[AttributeKeys.USER_CONTEXT].currentOffice}" /> 
+	
+								<p:menuitem id="asMain" value="Associate Main" outcome="associateMain" >
+		                        	<f:param name="officeId" value="#{sessionScope[AttributeKeys.USER_CONTEXT].currentOffice}" />
+		                        	<f:param name="asscId" value="" />
+	    	                    	<f:param name="associateMasterRecordId" value="#{not empty param.associateMasterRecordId and param.associateMasterRecordId != -1? param.associateMasterRecordId : ''}" />
+								</p:menuitem> 						
+								
+								<p:menuitem id="asRecruiting" value="Recruiting" outcome="associateRecruitingMain">
+		                        	<f:param name="officeId" value="#{sessionScope[AttributeKeys.USER_CONTEXT].currentOffice}" />
+		                        	<f:param name="asscId" value="" />		                        	
+	    	                    	<f:param name="associateMasterRecordId" value="#{not empty param.associateMasterRecordId and param.associateMasterRecordId != -1? param.associateMasterRecordId : ''}" />
+	        	                </p:menuitem>
+						
+								<p:menuitem id="asSetup" value="Setup" url="/associate/setupAssociatePage.do?officeId=#{sessionScope[AttributeKeys.USER_CONTEXT].currentOffice}&amp;asscId=&amp;associateMasterRecordId=#{not empty param.associateMasterRecordId and param.associateMasterRecordId != -1? param.associateMasterRecordId : ''}" />
+						
+								<p:menuitem id="asHistory" value="History" url="/associate/historyAssociatePage.do?officeId=#{sessionScope[AttributeKeys.USER_CONTEXT].currentOffice}&amp;asscId=&amp;associateMasterRecordId=#{not empty param.associateMasterRecordId and param.associateMasterRecordId != -1? param.associateMasterRecordId : ''}" />
+						
+								<p:menuitem id="asPayroll" value="Payroll" outcome="associatePayrollMain">
+		                        	<f:param name="officeId" value="#{sessionScope[AttributeKeys.USER_CONTEXT].currentOffice}" />
+		                        	<f:param name="asscId" value="" />
+		                        	<f:param name="refreshPage" value="Y" />
+	    	                    	<f:param name="associateMasterRecordId" value="#{not empty param.associateMasterRecordId and param.associateMasterRecordId != -1? param.associateMasterRecordId : ''}" />
+	        	                </p:menuitem>
+								
+								<p:menuitem id="asDocuments" value="Documents" url="/associate/associateDocumentsPage.do?officeId=#{sessionScope[AttributeKeys.USER_CONTEXT].currentOffice}&amp;asscId=&amp;associateMasterRecordId=#{not empty param.associateMasterRecordId and param.associateMasterRecordId != -1? param.associateMasterRecordId : ''}" />
+	
+								<st-ui:check-security resourceId="#{SecuredResources.ASSOCIATE_PRODUCTIVITY_TAB}" operationId="#{SystemOperations.VIEW_CONTENT}" >
+									<p:menuitem id="asProductivity" value="Productivity" 
+										url="/associate/associateProductivityPage.do?officeId=#{sessionScope[AttributeKeys.USER_CONTEXT].currentOffice}&amp;asscId=&amp;associateMasterRecordId=#{param.associateMasterRecordId}" 
+										rendered="#{sessionScope[AttributeKeys.USER_CONTEXT].officeWeeklyProductivityManaged}" >
+									</p:menuitem>
+								</st-ui:check-security>
+		                    </p:submenu>
+			            </st-ui:check-security>
+	            
+						<st-ui:check-security var="isSchedulingAuthorized" resourceId="#{SecuredResources.SCHEDULING_MODULE}" operationId="#{SystemOperations.VIEW_CONTENT}" >
+		                    <p:submenu id="_st_SchedMenu" label="Scheduling" icon="fa fa-image sm-icon-scheduling" >
+		                        <p:menuitem id="schMain" value="Scheduling Main" url="/scheduling/requirements/WeeklyScheduleListPage.do?officeId=#{sessionScope[AttributeKeys.USER_CONTEXT].currentOffice}" />
+		                    </p:submenu>
+	            		</st-ui:check-security>
+	
+						<st-ui:check-security var="isReportsAuthorized" resourceId="#{SecuredResources.REPORTS_MODULE}" operationId="#{SystemOperations.VIEW_CONTENT}" >
+		                    <p:submenu id="_st_ReportMenu" label="Reports" icon="fa fa-image sm-icon-reports" >
+								<p:menuitem id="rptOfficeReports" value="Office Reports" url="/reports/mainReportPage.do?officeId=#{sessionScope[AttributeKeys.USER_CONTEXT].currentOffice}" />
+						
+								<p:menuitem id="rptOfficeReportWriter" value="Office Report Writer" url="/reports/mainOfficeReportWriterPage.do?officeId=#{sessionScope[AttributeKeys.USER_CONTEXT].currentOffice}" />
+						
+								<p:menuitem id="rptNationalReportWriter" value="National Report Writer" url="/reports/mainNationalReportWriterPage.do?officeId=#{sessionScope[AttributeKeys.USER_CONTEXT].currentOffice}" />
+		                    </p:submenu>
+			            </st-ui:check-security>	
+				       
+				       <c:if test="#{sessionScope[AttributeKeys.USER_CONTEXT].officeUseCrm}">    
+				      	<p:submenu id="_st_Client_mgmtMenu" label="Client Management" icon="fa fa-image sm-icon-communications" >	
+				      		
+				          		<p:menuitem id="myClientMgmtMain" value="Communications" outcome="communicationsPage">
+			                   	 <f:param name="officeId" value="#{sessionScope[AttributeKeys.USER_CONTEXT].currentOffice}" />
+			               	  </p:menuitem>
+			               
+			               <st-ui:check-security resourceId="#{SecuredResources.CRM_ACCOUNTS}" operationId="#{SystemOperations.VIEW_CONTENT}" >
+				          	 <p:menuitem id="myCrmAccountingMain" value="Account" outcome="crmAccountingPage">
+			                    <f:param name="officeId" value="#{sessionScope[AttributeKeys.USER_CONTEXT].currentOffice}" />
+			                 </p:menuitem>
+			               </st-ui:check-security>		
+			               
+			               <st-ui:check-security resourceId="#{SecuredResources.CRM_REPORTS}" operationId="#{SystemOperations.VIEW_CONTENT}" >
+			                   <p:menuitem id="myCrmReportingMain" value="Reports" outcome="crmReportingPage">
+			                   	 <f:param name="officeId" value="#{sessionScope[AttributeKeys.USER_CONTEXT].currentOffice}" />
+			                	</p:menuitem>            	
+			                	</st-ui:check-security>  
+			               		               	 
+				      	</p:submenu>	
+				      </c:if>		            
+	
+						<st-ui:check-security var="isDatatrackAuthorized" resourceId="#{SecuredResources.DATATRACK_MODULE}" operationId="#{SystemOperations.VIEW_CONTENT}" >
+		                    <p:submenu id="_st_AnMenu" label="Analytics" icon="fa fa-image sm-icon-analytics" >
+                                <st-ui:check-security resourceId="#{SecuredResources.ANALYTICS_DASHBOARD}" operationId="#{SystemOperations.VIEW_CONTENT}" >
+			                        <p:menuitem id="anAnalytics" value="Dashboards" outcome="dashboardList" >
+			                        	<f:param name="officeId" value="#{sessionScope[AttributeKeys.USER_CONTEXT].currentOffice}" />
+			                        </p:menuitem>
+		                        </st-ui:check-security>
+
+		                        <p:menuitem id="anOfficeAudit" value="Office Audit" outcome="officeAudit">
+		                        	<f:param name="officeId" value="#{sessionScope[AttributeKeys.USER_CONTEXT].currentOffice}" />
+		                        </p:menuitem>
+	
+		                        <p:menuitem id="anNcd" value="NCD" url="/ncd/ncdMainPage.do?officeId=#{sessionScope[AttributeKeys.USER_CONTEXT].currentOffice}"/>
+	
+		                        <p:menuitem id="anCaer" value="CAE Reporting" outcome="dashboardHome" >
+		                        	<f:param name="officeId" value="#{sessionScope[AttributeKeys.USER_CONTEXT].currentOffice}" />
+		                        </p:menuitem>
+		                    </p:submenu>
+			            </st-ui:check-security>
+
+						<c:if test="#{sessionScope[AttributeKeys.USER_CONTEXT].payrollOffice}">
+							<st-ui:check-security var="isPayrollAuthorized" resourceId="#{SecuredResources.PAYROLL_MAIN_TAB}" operationId="#{SystemOperations.VIEW_CONTENT}" >
+			                    <p:submenu id="_st_PayMenu" label="Payroll" icon="fa fa-image sm-icon-payroll" >
+			                        <p:menuitem id="payMain" value="Payroll Main" outcome="payrollMain">
+			                        	<f:param name="officeId" value="#{sessionScope[AttributeKeys.USER_CONTEXT].currentOffice}" />
+			                        </p:menuitem>
+			                        <p:menuitem id="payNoncompliance" value="Non-Compliance" url="/payroll/nonCompliancePayrollPage.do?officeId=#{sessionScope[AttributeKeys.USER_CONTEXT].currentOffice}" >
+			                        </p:menuitem>
+
+                                    <st-ui:check-security resourceId="#{SecuredResources.CPU_ENTRY}" operationId="#{SystemOperations.EDIT}" >
+                                        <p:menuitem id="payCpuEntry" value="CPU Entry" outcome="cpuEntryPage" rendered="#{sessionScope[AttributeKeys.USER_CONTEXT].cpuEnabled}">
+                                            <f:param name="officeId" value="#{sessionScope[AttributeKeys.USER_CONTEXT].currentOffice}" />
+                                            <f:param name="mode" value="o" />
+                                        </p:menuitem>
+                                    </st-ui:check-security>
+                                    <c:if test="#{not empty sessionScope[AttributeKeys.USER_CONTEXT].spgShortDescTxt}">
+                                    	<st-ui:check-security resourceId="#{SecuredResources.SHARED_PAYROLL_GROUPS}" operationId="#{SystemOperations.EDIT}" >
+	                                        <p:menuitem id="spgMain" value="Shared Payroll Groups" outcome="spgPayrollMain">
+				                        		<f:param name="officeId" value="#{sessionScope[AttributeKeys.USER_CONTEXT].currentOffice}" />
+				                        		<f:param name="viewMode" value="payroll" />
+				                        	</p:menuitem>
+	                                    </st-ui:check-security>
+                                    </c:if>
+			                    </p:submenu>
+							</st-ui:check-security>	            
+						</c:if>
+	
+						<st-ui:check-security var="isSystemAuthorized" resourceId="#{SecuredResources.SYSTEM_MODULE}" operationId="#{SystemOperations.VIEW_CONTENT}" >
+		                    <p:submenu id="_st_SysMenu" label="System" icon="fa fa-image sm-icon-system" >
+		                        <p:menuitem id="sy_localmaintenance" value="Local Maintenance" url="/maintenance/localMaintenancePage.do?officeId=#{sessionScope[AttributeKeys.USER_CONTEXT].currentOffice}" >
+		                        </p:menuitem>
+		                        <p:menuitem id="sy_nationalmaintenance" value="National Maintenance" url="/maintenance/nationalMaintenancePage.do?officeId=#{sessionScope[AttributeKeys.USER_CONTEXT].currentOffice}" >
+		                        </p:menuitem>
+		                    </p:submenu>
+			            </st-ui:check-security>
+			     
+			     		<ui:remove>
+			     		<p:separator />
+			     		<c:if test="#{not empty actionsMenuBean.actionsMenu.elements}">
+		                    <p:submenu id="_st_ActionsMenu" label="Actions">
+					            <c:forEach items="#{actionsMenuBean.actionsMenu.elements}" var="item" >
+			                        <p:menuitem value="#{item.value}" url="#{item.url}" onclick="#{item.onclick}">
+			                        </p:menuitem>
+					            </c:forEach>
+	                        </p:submenu>
+                        </c:if>
+                        </ui:remove>
+                    </pu:menu>
+   				</div>
+   			</div>
+    	</div> 
+    </h:form>
+</ui:composition>

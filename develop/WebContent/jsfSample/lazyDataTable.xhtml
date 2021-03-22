@@ -1,0 +1,152 @@
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:st-ui="http://stafftrack.net/ui"
+	xmlns:o="http://omnifaces.org/ui"
+	xmlns:of="http://omnifaces.org/functions"
+	xmlns:st-jsf="http://stafftrack.net/jsfext"
+	template="/WEB-INF/templates/ultima-stn/template.xhtml">
+
+	<ui:define name="content">
+
+	<h:form id="form">
+
+
+<h:outputText value="#{lazy.indexOfFirstPage}" />
+		
+			<p:dataTable var="list" id="empList" value="#{lazy.lazyModel}"
+				paginator="true" rowIndexVar="index" widgetVar="listJs"
+				reflow="true"				
+				paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}"
+				lazy="true"
+				editable = "true"
+				
+				rows="5">
+				<f:facet name="header">
+        List of Employees (Editable dataTable)
+        
+          <p:outputPanel>
+						<h:outputText value="Search all fields:" />
+					</p:outputPanel>
+				</f:facet>
+
+
+
+				<p:column headerText="Id" style="width:30px;">
+					<h:outputText value="#{list.empId}" />
+				</p:column>
+
+			
+				
+				<p:column headerText="Name">
+            
+         <p:cellEditor>  
+            <f:facet name="output">  
+                <h:outputText value="#{list.name}"/>  
+            </f:facet>  
+            <f:facet name="input">  
+                <p:inputText id="modelInput" value="#{list.name}" styleClass="smallerBlack"/>  
+            </f:facet>  
+        </p:cellEditor>  
+        
+        
+    </p:column>
+    
+
+				<p:column headerText="Department">
+					<p:selectOneMenu id="select" value="#{list.department}"
+						onchange="changeSel(this, #{index})">
+						<f:selectItem itemLabel="Sales" itemValue="1" />
+						<f:selectItem itemLabel="Business" itemValue="2" />
+						<f:selectItem itemLabel="Technology" itemValue="3" />
+						<f:selectItem itemLabel="HR" itemValue="HR" />
+						<f:selectItem itemLabel="Training" itemValue="5" />
+
+						
+					</p:selectOneMenu>
+
+				</p:column>
+
+				<p:column headerText="Vehicle">
+					<h:inputText value="#{list.vehicle}" id="v" widgetVar="sss">
+					</h:inputText>
+
+				</p:column>
+
+
+
+
+				<p:column headerText="Phone">
+					<h:outputText value="#{list.phone}" id='ttt' />
+				</p:column>
+
+
+				<p:column headerText="Phone">
+					<h:outputText value="#{list.department} plus  #{list.vehicle}" />
+				</p:column>
+
+				<p:column styleClass="table-icon" headerText="Select"
+					style="width:5%" toggleable="false">
+					<p:commandButton value="SELECT " action="#{lazy.checked()}" />
+				</p:column>
+
+			</p:dataTable>
+			
+			
+			
+
+			<p:commandButton id="next" icon="ui-icon-check"
+				styleClass="ui-priority-primary" value="Save Next"
+				actionListener="${lazy.printPage('savenext')}" 
+				update="empList">
+			
+			</p:commandButton>
+				
+			<p:commandButton id="save" icon="ui-icon-check"
+				styleClass="ui-priority-primary" value="Save"
+				actionListener="${lazy.printPage('save')}" 
+				update="empList">
+					
+			</p:commandButton>
+
+
+<!-- 			<p:button id="two" icon="ui-icon-check" -->
+<!-- 				styleClass="ui-priority-primary" value="Execute Js" -->
+<!-- 				onclick="testCall()"></p:button> -->
+
+
+
+
+		</h:form>
+
+		<script>
+		
+		
+		
+			function testCall() {
+				obj = document.getElementById("form:sss:3");
+				alert(obj.value);
+			}
+		
+		
+			function changeSel(obj, index) {
+				obj = document.getElementById("form:empList:" + index + ":ttt");
+				//alert(obj);
+				obj.innerHTML = '100';
+			}
+		
+		
+			function seethis(item) {
+				alert(item.name);
+			}
+		</script>
+
+	</ui:define>
+
+</ui:composition>
+
+
+

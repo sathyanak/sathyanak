@@ -1,0 +1,31 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+    
+	<div class="footer clearfix">
+		<div class="ui-g footer-content">		
+			<p:graphicImage name="images/logos/staff-management-logo.svg" library="ultima-layout-stn" />
+     	 
+			<p>
+				<h:outputText value="&#169; " escape="true" />				        	       
+	            <h:outputText value="#{now}" >
+				    <f:convertDateTime pattern="yyyy" type="date" />
+				</h:outputText>
+				<h:outputText value=" "/>				        	       
+			    <h:outputText id="copyrightLine1" value="#{msgs['stn.common.copyright.one.label']}" />
+			</p>
+			<p>
+				<h:outputText id="copyrightLine2" value="#{msgs['stn.common.copyright.two.label']}"  /> 
+			    <h:outputText id="versionInfo" value="#{msgs['stn.common.version.label']} #{applicationScope['STAFFTRACK_VERSION']}"  /> 
+				<p:tooltip id="versionTooltip" for="versionInfo" position="top"  >					
+					<p:outputPanel id="tooltip-content-wrapper">								 
+		           		<h:outputText value="#{TOOLTIP_CONTENT} #{initParam['ST_VERSION_SUFFIX']} DB: #{applicationScope['STAFFTRACK_DB_VERSION']}" />		           					 
+		       		</p:outputPanel>        
+				</p:tooltip>								           
+			</p>
+		</div>
+	</div>
+</ui:composition>

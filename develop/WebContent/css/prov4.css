@@ -1,0 +1,2411 @@
+
+body form[id$="W4Form"],
+body form[id$="W4Form"] .form--content p, 
+body form[id$="W4Form"] .form--content ul
+{
+	font-family: Verdana, Sans-serif, Arial, Helvetica;
+	font-size: 12px;
+}
+
+body form[id$="W4Form"] .ui-inputfield 
+{
+	margin : 0px ;
+	padding : 4px ;
+	font-size : 12px ;
+}
+
+body form[id$="W4Form"] .form--content 
+{
+	padding: 20px ;
+}
+
+.oddRow {
+    background-color : white
+}
+
+.centered {
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.centeredText {
+    text-align : center
+}
+
+.rightText {
+	text-align: right
+}
+
+.relativePosition {
+    position:relative;
+}
+
+.thinBorder {
+    border : thin solid black;
+}
+
+.borderAll1px {
+    border : 1px solid black;
+}
+
+.borderAll2px {
+    border : 2px solid black;
+}
+
+.borderRight {
+    border-top : none ;
+    border-right : 2px solid black ;
+    border-bottom : none;
+    border-left : none ;
+}
+
+.borderLeft {
+    border-left : 2px solid black ;
+}
+
+.borderTop {
+    border-top : 2px solid black ;
+}
+
+.borderBottom {
+    border-bottom : 2px solid black ;
+}
+
+.noMargin
+{
+	margin: 0px;
+}
+	
+.margin5px
+{
+	margin: 5px;
+}
+	
+.margin10px
+{
+	margin: 10px;
+}
+	
+.noPadding
+{
+	padding: 0px !important;
+}
+	    
+.noBorder
+{
+   	border: 0;
+}
+
+.padding5px {
+    padding : 5px
+}
+
+.padding10px {
+    padding : 10px
+}
+
+.padding20px {
+    padding : 20px
+}
+
+.paddingSides5px {
+	padding: 0px 5px
+}
+
+.paddingTop10px {
+	padding-top: 10px !important;
+}
+
+.paddingNone {
+    padding : 0px
+}
+
+.transparentBlocker
+{
+	background-image: none !important;
+	background-color: white !important;
+	opacity: 0.0 !important ;
+}
+
+.i9Instructions { }
+
+.i9Instructions .z-label { font-family:"Times New Roman",serif; font-size:14pt; }
+
+.i9InstSectionHeading {
+	font-weight:bold;
+	font-size:15pt;
+	font-family : Times New Roman,Arial;
+	background:#BEBEBE; 
+	border:solid 1px black;
+	padding:5px;
+	display:inline-block;
+	width:98.5%
+}
+
+.i9InstSubsectionHeading {
+	font-weight:bold;
+	font-size:11px;
+	font-family : Times New Roman,Arial;
+}
+
+.i9InstMainHeading {
+	font-weight:bold;
+	font-size:14px;
+	font-family : Times New Roman,Arial;	
+}
+
+.i9InstHeaderText {
+	font-size:8px;
+	font-family : Times New Roman,Arial;
+}
+
+.i9InstNote {
+	font-size:12px;
+	font-weight:bold;
+	font-family : Times New Roman,Arial;
+	text-align : center
+}
+
+.i9InstParaHeading {
+	font-size:15pt;
+	font-family : Times New Roman,Arial;
+	font-weight:bold;
+	text-align:justify;
+}
+
+.i9Form { background-color:white }
+
+.i9Form .z-label { font-family:Helvetica,sans-serif; font-size:11pt; }
+        
+.i9FormMajorSection {
+    border : 2px solid black;
+    padding : 5px;
+    margin-top:10px;
+    background-color : #F5F5F5;
+}
+
+.i9FormMajorSectionBlack {
+    border : 2px solid black;
+    padding : 5px;
+    margin-top:10px;
+    background-color : black;
+}
+
+.i9FormMajorSectionHeading {
+    font: bold 16pt sans-serif
+}
+
+.i9FormMajorSectionSubHeading {
+    font-size: 14pt;
+    font-family: sans-serif;
+    font-style:italic
+}
+
+.i9FormGridRow {
+	height : 40px;
+    border-top : none ;
+    border-right : 2px solid black ;
+    border-bottom : 2px solid black ;
+    border-left : 2px solid black ;
+}
+.i9FormGridCell {
+	position:relative;
+	display:inline-block;
+	height:100%; 
+}
+.i9DocListRow {
+	position: relative ;
+	height : 40px;
+    border-top : none ;
+    border-right : none ;
+    border-bottom : 2px solid black ;
+    border-left : none ;
+}
+
+.i9InstPage9NumberLabel
+{
+    display : inline-block;
+    width : 20px ;
+    height : 100% ;
+    vertical-align: top;
+    font-family : sans-serif ;
+    font-size : 16px ;
+    font-weight : bold
+}
+.i9InstPage9Label
+{
+    display : inline-block ;
+    width : 90% ;
+    height : 100% ;
+    vertical-align: top;
+    font-family : sans-serif ;
+    font-size : 16px ;
+}
+
+.headerText10 {
+	font-size: 10pt
+}
+
+.headerText12 {
+	font-size: 12pt
+}
+
+.headerText14 {
+	font-size: 14pt
+}
+
+.headerText16 {
+	font-size: 16pt
+}
+
+.headerText20 {
+	font-size: 20pt
+}
+
+.formFont12Pt { font-size:12pt }
+
+.formFont14Pt { font-size:14pt }
+		
+.bold {
+	font-weight: bold
+}
+
+.italics {
+	font-style: italic
+}
+
+.inlineBlock {
+	display: inline-block
+}
+
+.lineHalfPixelBlack {
+	border: 0.5px solid #000
+}
+
+.lineOnePixelBlack {
+	border: 1px solid #000
+}
+
+.lineTwoPixelBlack {
+	border: 2px solid #000
+}
+
+.doubleLineDivider {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border-width: 10px 0px 2px 0px;
+	border-style: solid;
+	border-color: #000;
+	width: 100%;
+	height: 17px
+}
+
+.thinDoubleLineDivider {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border-width: 2px 0px 2px 0px;
+	border-style: solid;
+	border-color: #000;
+	width: 100%;
+	height: 17px
+}
+
+.cellIndent {
+	padding: 0em 3em 0em 4em;
+	text-align:justify;
+}
+
+.footerTextBold { 
+	font-weight:bold; 
+	font-size:14pt;
+}
+
+ol.numberList, ol.numberParanthesisList, ol.alphaList {     
+	counter-reset:li; /* Initiate a counter */
+   	margin-left:0; /* Remove the default left margin */
+   	padding-left:0; /* Remove the default left padding */ 
+   }
+ol.numberList > li, ol.numberParanthesisList > li, ol.alphaList > li {
+    position:relative; /* Create a positioning context */
+    margin:0 0 2px 2em; /* Give each list item a left margin to make room for the numbers */
+    padding:2px; /* Add some spacing around the content */
+    list-style:none; /* Disable the normal item numbering */
+    font-size:14pt;
+}
+ol.numberList > li:before {
+    content:counter(li) ". "; /* Use the counter as content */
+    counter-increment:li; /* Increment the counter by 1 */
+    /* Position and style the number */
+    position:absolute;
+    top:opx;
+    left:-2em;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    width:2em;
+    /* Some space between the number and the content in browsers that support
+       generated content but not positioning it (Camino 2 is one example) */
+    margin-right:0px;
+    padding:2px;
+    font-size:14pt;
+    font-weight:bold;
+    text-align:center;
+}
+ol.numberParanthesisList > li:before {
+    content:"(" counter(li) ")"; /* Use the counter as content */
+    counter-increment:li; /* Increment the counter by 1 */
+    /* Position and style the number */
+    position:absolute;
+    top:0px;
+    left:-2em;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    width:2em;
+    /* Some space between the number and the content in browsers that support
+       generated content but not positioning it (Camino 2 is one example) */
+    margin-right:0px;
+    padding:2px;
+    font-size:14pt;
+    font-weight:bold;
+    text-align:center;
+}
+ol.alphaList > li:before {
+    content:counter(li,lower-latin) ". "; /* Use the counter as content */
+    counter-increment:li; /* Increment the counter by 1 */
+    /* Position and style the number */
+    position:absolute;
+    top:0px;
+    left:-2em;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    width:2em;
+    /* Some space between the number and the content in browsers that support
+       generated content but not positioning it (Camino 2 is one example) */
+    margin-right:0px;
+    padding:2px;
+    font-size:14pt;
+    font-weight:bold;
+    text-align:center;
+}
+li ol,
+li ul {margin-top:0px;}
+ol ol li:last-child {margin-bottom:0;}
+            
+	.border-radius {
+	    /* W3C standard */
+	    border-radius: 6px 6px 6px 6px;
+	    /* Mozilla Firefox 4.0 and earlier */
+	    -moz-border-radius: 6px 6px 6px 6px;
+	}
+            
+	
+	.vertical-align {
+	  position: relative;
+	  top: 50%;
+	  -webkit-transform: translateY(-50%);
+	  -ms-transform: translateY(-50%);
+	  transform: translateY(-50%);
+	}
+
+	.infoWindow {
+        width: 45% ;
+        height: 360px ;
+	}
+    .infoWindowLayout {
+    	width: 100%; 
+    	height: 320px;
+    }
+    .searchGridLayout {
+    	height: 70% ;
+    }
+	div[id*='mediaSelector']::after { 
+		display: hidden ;
+	}
+
+	@media {
+		div[id*='mediaSelector']::after { 
+			content: "default"
+		}
+		.stateProvinceLabel::before { 
+			content: "State/Province"
+		}
+	    .formLabel {
+	        font-size: 1em;
+	    }
+	    .formLabel2 {
+	        font-size: 1em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 12px;
+	    }
+		.nextBackIcon {
+	    	font-size: 2em; 
+	    }
+	    .nextBackWord {
+	    	font-size: 20px; 
+	    	font-weight: bold; 
+	    }
+		.infoIcon {
+	    	font-size: 2em; 
+	    }
+		.infoWindow {
+	        width: 45% ;
+	        height: 360px ;
+		}
+	    .infoWindowLayout {
+	    	width: 100%; 
+	    	height: 320px;
+	    }
+	   .listboxMax {
+	        width: 180px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 20px ;
+	        padding: 1px ;
+	        font-height: 12px ;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-50%; 
+			width: 100%;
+		}
+            
+        .infoForm
+        {
+        	width: 75%;
+        	margin-left: 7.5%; 
+        	margin-right: 7.5%; 
+        	border: 0px solid red;
+        }
+	}
+
+/*  Google Nexus 10  */
+	@media (max-width: 800px) and (orientation: portrait) {
+		div[id*='mediaSelector']::after { 
+			content: "800 portrait"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 1.0em;
+	    }
+		.infoWindow {
+	        width: 50%;
+	        height: 315px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+	    	height: 255px;
+	    }
+	   .listboxMax {
+	        width: 250px ;
+	        height: 32px ;
+	        font-size: 18px;
+	    }
+	    .textbox {
+	        height: 32px ;
+	        padding: 1px ;
+	        font-size: 2.5em;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-50%; 
+			width: 100%;
+		}
+
+		.infoForm
+		{
+			width: 40%; 
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+	}
+
+/*  iPad  */
+	@media (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
+		div[id*='mediaSelector']::after { 
+			content: "768 x 1024 portrait"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .infoWindow {
+	        width: 50%;
+	        height: 445px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 385px ;
+	    }
+	   .listboxMax {
+	        width: 150px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-50%; 
+			width: 100%;
+		}
+            
+        .infoForm
+        {
+        	width: 35%;
+			margin-left: auto !important;
+			margin-right: auto !important;
+        	border: 0px solid red;
+        }
+	}
+
+/*  Droid Razr  */
+	@media (max-width: 720px) and (max-height: 1280px) and  (orientation: portrait) {
+		div[id*='mediaSelector']::after { 
+			content: "720 x 1280 portrait"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+		.infoWindow {
+	        width: 50%;
+	        height: 475px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 410px ;
+	    }
+	   .listboxMax {
+	        width: 150px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-50%; 
+			width: 100%;
+		}
+	}
+	
+/*   Google Nexus 4  */	
+	@media (max-width: 640px) and (max-height: 384px) and (orientation: portrait) {
+		div[id*='mediaSelector']::after { 
+			content: "640 x 384 portrait"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .listboxMax {
+	        width: 160px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em;
+	    }
+	}
+
+/*  Google Nexus 7's  */
+	@media (max-width: 600px) and (orientation: portrait), (max-width: 604px) and (orientation: portrait) {
+		div[id*='mediaSelector']::after { 
+			content: "600 portrait, 604 portrait"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .infoWindow {
+	        width: 75%;
+	        height: 358px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 295px ;
+	    }
+	   .listboxMax {
+	        width: 255px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-50%; 
+			width: 100%;
+		}
+	}
+
+
+/*  Sony Xperia Sola, U  */
+	@media (max-width: 480px) and (orientation: portrait) {
+		div[id*='mediaSelector']::after { 
+			content: "480 portrait"
+		}
+	    .formLabel {
+	        font-size: 1.4em;
+	    }
+	    .formLabel2 {
+	        font-size: 1.4em;
+	    }
+		.infoWindow {
+	        width: 350px;
+	        height: 360px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 300px ;
+	    }
+	   .listboxMax {
+	        width: 245px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-50%; 
+			width: 100%;
+		}
+	}
+
+
+/*  LG Optimus LTE, Optimus 4X HD  */
+	@media (max-width: 424px) and (orientation: portrait) {
+		div[id*='mediaSelector']::after { 
+			content: "424 portrait"
+		}
+		.stateProvinceLabel::before { 
+			content: "State/Prov"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .infoWindow {
+	        width: 75%;
+	        height: 315px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 245px ;
+	    }
+	   .listboxMax {
+	        width: 210px ;
+	        height: 25px ;
+	        font-size: 14px;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-50%; 
+			width: 100%;
+		}
+	}
+
+
+/*  iPhone 6 Plus  */
+	@media (max-width: 414px) and (max-height: 736px) and (orientation: portrait) {
+		div[id*='mediaSelector']::after { 
+			content: "414 x 736 portrait"
+		}
+		.stateProvinceLabel::before { 
+			content: "State/Prov"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .infoWindow {
+	        width: 75%;
+	        height: 315px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 245px ;
+	    }
+	   .listboxMax {
+	        width: 205px ;
+	        height: 25px ;
+	        font-size: 14px;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-50%; 
+			width: 100%;
+		}
+	}
+
+/*  Samsung Galaxy Note  */
+	@media (max-width: 400px) and (orientation: portrait) {
+		div[id*='mediaSelector']::after { 
+			content: "400 portrait"
+		}
+		.stateProvinceLabel::before { 
+			content: "State/Prov"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .infoWindow {
+	        width: 80%;
+	        height: 455px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 390px ;
+	    }
+	   .listboxMax {
+	        width: 150px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-50%; 
+			width: 100%;
+		}
+	}
+
+/*  Google Nexus 4  */
+	@media (max-width: 384px) and (orientation: portrait) {
+		div[id*='mediaSelector']::after { 
+			content: "384 portrait"
+		}
+	    .formLabel {
+	        font-size: 1.25em;
+	    }
+	    .infoWindow {
+	        width: 90%;
+	        height: 398px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 335px ;
+	    }
+	   .listboxMax {
+	        width: 150px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 22px ;
+	        padding: 2px ;
+	        font-size: 1.25em;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-50%; 
+			width: 100%;
+		}
+	}
+
+/*  iPhone 6 + */
+	@media (max-width: 414px) and (max-height: 736px) and (orientation: portrait) {
+		div[id*='mediaSelector']::after { 
+			content: "414 x 736 portrait"
+		}
+	    .formLabel {
+	        font-size: 1.25em;
+	    }
+	    .infoWindow {
+	        width: 90%;
+	        height: 398px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 335px ;
+	    }
+	   .listboxMax {
+	        width: 175px ;
+	        height: 25px ;
+	        font-size: 12px;
+	    }
+	    .textbox {
+	        height: 22px ;
+	        padding: 2px ;
+	        font-size: 1.25em;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-50%; 
+			width: 100%;
+		}
+
+		.infoForm
+		{
+			width: 60%; 
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+	}
+
+/*  iPhone 6  */
+	@media (max-width: 375px) and (max-height: 667px) and (orientation: portrait) {
+		div[id*='mediaSelector']::after { 
+			content: "375 x 667 portrait"
+		}
+	    .formLabel {
+	        font-size: 1.25em;
+	    }
+	    .infoWindow {
+	        width: 90%;
+	        height: 398px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 335px ;
+	    }
+	   .listboxMax {
+	        width: 175px ;
+	        height: 25px ;
+	        font-size: 12px;
+	    }
+	    .textbox {
+	        height: 22px ;
+	        padding: 2px ;
+	        font-size: 1.25em;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-50%; 
+			width: 100%;
+		}
+
+		.infoForm
+		{
+			width: 75%; 
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+	}
+
+/*  Google Nexus 5  */
+	@media (max-width: 360px) and (orientation: portrait) {
+		div[id*='mediaSelector']::after { 
+			content: "360 portrait"
+		}
+	    .formLabel {
+	        font-size: 1.25em;
+	    }
+	    .infoWindow {
+	        width: 90%;
+	        height: 495px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 430px ;
+	    }
+	   .listboxMax {
+	        width: 175px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 22px ;
+	        padding: 1px ;
+	        font-size: 1.25em;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-50%; 
+			width: 100%;
+		}
+	}
+	
+	
+/*  iPhone 5  */
+	@media (max-width: 320px) and (max-height: 568px) and (orientation: portrait) {
+		div[id*='mediaSelector']::after { 
+			content: "320 x 568 portrait"
+		}
+	    .formLabel {
+	        font-size: 1em;
+	    }
+	    .infoWindow {
+	        width: 95% ;
+	        height: 385px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 320px ;
+	    }
+	    .listboxMax {
+	        width: 160px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 20px ;
+	        padding: 1px ;
+	        font-size: 1em;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-35%; 
+			width: 125%;
+		}
+
+		.infoForm
+		{
+			width: 65%; 
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+	}
+
+/*  Google Nexus S  */   
+	@media (max-width: 320px) and (max-height: 533px) and (orientation: portrait) {
+		div[id*='mediaSelector']::after { 
+			content: "320 x 533 portrait"
+		}
+	    .formLabel {
+	        font-size: 1em;
+	    }
+	    .infoWindow {
+	        width: 95%;
+	        height: 375px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 305px ;
+	    }
+	   .listboxMax {
+	        width: 150px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 22px ;
+	        padding: 1px ;
+	        font-size: 1em;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-50%; 
+			width: 100%;
+		}
+	}	
+	
+	
+	@media (max-width: 320px) and (max-height: 480px) and (orientation: portrait) {
+		div[id*='mediaSelector']::after { 
+			content: "320 x 480 portrait"
+		}
+	    .formLabel {
+	        font-size: 1.2em;
+	    }
+	    .formLabel2 {
+	        font-size: 1.2em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 12px;
+	    }
+		.nextBackIcon {
+	    	font-size: 2em; 
+	    }
+	    .nextBackWord {
+	    	font-size: 20px; 
+	    	font-weight: bold; 
+	    }
+		.infoIcon {
+	    	font-size: 2em; 
+	    }
+	    .infoWindow {
+	        width: 95% ;
+	        height: 360px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 290px ;
+	    }
+	    .listboxMax {
+	        width: 160px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 20px ;
+	        padding: 2px ;
+	        font-size: 1em ;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-35%; 
+			width: 125%;
+		}
+		.searchButton {
+			 width: 80%;
+			 height: 35px;
+			 color: navy; 
+			 font-size: 22px; 
+			 font-weight: bold;
+		}
+	    .searchGridLayout {
+	    	height: 85% ;
+	    }
+
+		.infoForm
+		{
+			width: 65%; 
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+	}
+	
+	
+	/*  Optimus One */
+	@media (max-width: 213px) and (max-height: 320px) and (orientation: portrait) {
+		div[id*='mediaSelector']::after { 
+			content: "213 x 320 portrait"
+		}
+		.stateProvinceLabel::before { 
+			content: "St/Pr"
+		}
+	    .formLabel {
+	        font-size: 1.25em;
+	    }
+	    .formLabel2 {
+	        font-size: 1.2em;
+	    }
+	    .infoWindow {
+	        width: 95% ;
+	        height: 360px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 290px ;
+	    }
+	    .listboxMax {
+	        width: 100px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 20px ;
+	        padding: 2px ;
+	        font-size: 1em ;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-35%; 
+			width: 125%;
+		}
+	}
+
+
+
+	@media (max-width: 1280px) and (max-height: 800px) and (orientation: landscape) {
+		div[id*='mediaSelector']::after { 
+			content: "1280 x 800 landscape"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 1.0em;
+	    }
+	    .infoWindow {
+	        width: 40%;
+	        height: 420px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+	    	height: 355px;
+	    }
+		.listboxMax {
+	        width: 185px ;
+	        height: 25px ;
+	        font-size: 14px;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em ;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-50%; 
+			width: 100%;
+		}
+
+		.infoForm
+		{
+			width: 40%; 
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+	}
+
+
+	@media (max-width: 1280px) and (max-height: 640px) and (orientation: landscape) {
+		div[id*='mediaSelector']::after { 
+			content: "1280 x 640 landscape"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 1.0em;
+	    }
+	    .infoWindow {
+	        width: 40%;
+	        height: 340px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+	       	height: 300px ;
+	    }
+		.listboxMax {
+	        width: 160px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em ;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-50%; 
+			width: 100%;
+		}
+	}	
+
+
+	@media (max-width: 1280px) and (max-height: 631px) and (orientation: landscape) {
+		div[id*='mediaSelector']::after { 
+			content: "1280 x 631 landscape"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .formLabel2 {
+	        font-size: 2em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 1.0em;
+	    }
+	    .infoWindow {
+	        width: 40%;
+	        height: 360px; /*  85%  */
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+	       	height: 320px ;  /*  280px  */
+	    }
+		.listboxMax {
+	        width-x: 160px ;
+	        height: 30px ;
+	        font-size: 2em;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em ;
+	    }
+		.logoContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.logoPosition {
+			position: relative; 
+			right:-50%;
+		}
+		.titleImageContPosition {
+			position:relative; 
+			float: right; 
+			right: 50%;
+		}
+		.titleImagePosition {
+			position: relative; 
+			right:-50%; 
+			width: 100%;
+		}
+	}
+	
+	@media (max-width: 1024px) and (max-height: 768px) and (orientation: landscape) {
+		div[id*='mediaSelector']::after { 
+			content: "1024 x 768 landscape"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 1.0em;
+	    }
+	    .infoWindow {
+	        width: 40%;
+	        height: 270px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+	    	height: 205px ;
+	    }
+		.listboxMax {
+	        width: 160px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em ;
+	    }
+            
+		.infoForm
+		{
+			width: 25%; 
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+	}
+	
+	@media (max-width: 1024px) and (max-height: 600px) and (orientation: landscape) {
+		div[id*='mediaSelector']::after { 
+			content: "1024 x 600 landscape"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 1.0em;
+	    }
+	    .infoWindow {
+	        width: 40%;
+	        height: 270px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+	    	height: 205px ;
+	    }
+		.listboxMax {
+	        width: 160px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em ;
+	    }
+            
+		.infoForm
+		{
+			width: 25%; 
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+	}
+	
+	@media (max-width: 1024px) and (max-height: 384px) and (orientation: landscape) {
+		div[id*='mediaSelector']::after { 
+			content: "1024 x 384 landscape"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 1.0em;
+	    }
+	    .infoWindow {
+	        width: 40%;
+	        height: 295px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+	       	height: 255px ;
+	    }
+		.listboxMax {
+	        width: 160px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em ;
+	    }
+	}
+	
+	
+/*   Google Nexus 7  */	
+	@media (max-width: 966px) and (orientation: landscape) {
+		div[id*='mediaSelector']::after { 
+			content: "966 landscape"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 1.0em;
+	    }
+	    .infoWindow {
+	        width: 40%;
+	        height: 325px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+   	    	height: 255px ;
+	    }
+		.listboxMax {
+	        width: 160px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em ;
+	    }
+	}
+	
+	
+	@media (max-width: 960px) and (orientation: landscape) {
+		div[id*='mediaSelector']::after { 
+			content: "960 landscape"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 1.0em;
+	    }
+	    .infoWindow {
+	        width: 40%;
+	        height: 395px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 330px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em ;
+	    }
+		.listboxMax {
+	        width: 270px ;
+	        height: 25px ;
+	    }
+	    .searchGridLayout {
+	    	height: 90% ;
+	    }
+
+		.infoForm
+		{
+			width: 35%; 
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+	}
+	
+	
+	@media (max-width: 854px) and (max-height: 480px) and (orientation: landscape) {
+		div[id*='mediaSelector']::after { 
+			content: "854 x 480 landscape"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 1.0em;
+	    }
+	    .infoWindow {
+	        width: 40%;
+	        height: 395px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 330px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em ;
+	    }
+		.listboxMax {
+	        width: 270px ;
+	        height: 25px ;
+	    }
+	    .searchGridLayout {
+	    	height: 70% ;
+	    }
+	    .searchGridLayout {
+	    	height: 90% ;
+	    }
+	}
+
+/*   LG Optimus LTE  */	
+	@media (max-width: 753px) and (orientation: landscape) {
+		div[id*='mediaSelector']::after { 
+			content: "753 landscape"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 1.0em;
+	    }
+	    .infoWindow {
+	        width: 40%;
+	        height: 330px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 265px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em ;
+	    }
+		.listboxMax {
+	        width: 160px ;
+	        height: 25px ;
+	    }
+	    .searchGridLayout {
+	    	height: 100% ;
+	    }
+	}
+
+/*   iPhone 6 Plus */	
+	@media (max-width: 736px) and (max-height: 414px) and (orientation: landscape) {
+	div[id*='mediaSelector']::after { 
+			content: "736 x 414 landscape"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 1.0em;
+	    }
+	    .infoWindow {
+	        width: 40%;
+	        height: 330px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 265px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em ;
+	    }
+		.listboxMax {
+	        width: 270px ;
+	        height: 25px ;
+	    }
+
+		.infoForm
+		{
+			width: 50%; 
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+	}
+
+/*   iPhone 6  */	
+	@media (max-width: 667px) and (max-height: 375px) and (orientation: landscape) {
+		div[id*='mediaSelector']::after { 
+			content: "667 x 375 landscape"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 1.0em;
+	    }
+	    .infoWindow {
+	        width: 40%;
+	        height: 330px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 265px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em ;
+	    }
+		.listboxMax {
+	        width: 270px ;
+	        height: 25px ;
+	    }
+
+		.infoForm
+		{
+			width: 40%; 
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+	}
+
+/*   Google Nexus 4  */	
+	@media (max-width: 598px) and (max-height: 359px) and (orientation: landscape) {
+		div[id*='mediaSelector']::after { 
+			content: "598 x 359 landscape"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 1.0em;
+	    }
+	    .infoWindow {
+	        width: 40%;
+	        height: 330px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 265px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em ;
+	    }
+		.listboxMax {
+	        width: 270px ;
+	        height: 25px ;
+	    }
+
+		.infoForm
+		{
+			width: 45%; 
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+	}
+	
+	
+	@media (max-width: 640px) and (orientation: landscape) {
+		div[id*='mediaSelector']::after { 
+			content: "640 landscape"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 1.0em;
+	    }
+	    .infoWindow {
+	        width: 70%;
+	        height: 315px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 245px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em ;
+	    }
+		.listboxMax {
+	        width: 270px ;
+	        height: 25px ;
+	    }
+	}
+	
+	/*  Galaxy S III, Galaxy Nexus  */
+	@media (max-width: 640px) and (max-height: 360px) and (orientation: landscape) {
+		div[id*='mediaSelector']::after { 
+			content: "640 x 360 landscape"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 1.0em;
+	    }
+	    .infoWindow {
+	        width: 70%;
+	        height: 315px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 250px ;
+	    }
+		.listboxMax {
+	        width: 270px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em ;
+	    }
+	}
+	
+	
+	@media (max-width: 569px) and (orientation: landscape) {
+		div[id*='mediaSelector']::after { 
+			content: "569 landscape"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 1.0em;
+	    }
+	    .infoWindow {
+	        width: 80%;
+	        height: 250px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 180px ;
+	    }
+		.listboxMax {
+	        width: 270px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em ;
+	    }
+	}
+	
+	
+	@media (max-width: 568px) and (orientation: landscape) {
+		div[id*='mediaSelector']::after { 
+			content: "568 landscape"
+		}
+	    .formLabel {
+	        font-size: 2em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 1.0em;
+	    }
+	    .infoWindow {
+	        width: 80%;
+	        height: 265px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 200px ;
+	    }
+		.listboxMax {
+	        width: 160px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em ;
+	    }
+
+		.infoForm
+		{
+			width: 50%; 
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+	}
+	
+/*   Google Nexus S  */	
+	@media (max-width: 533px) and (orientation: landscape) {
+		div[id*='mediaSelector']::after { 
+			content: "533 landscape"
+		}
+	    .formLabel {
+	        font-size: 1.5em;
+	    }
+	    .nameInfoLabel {
+	        font-size: .75em;
+	    }
+	    .listboxMax {
+	        width: 275px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em ;
+	    }
+	}
+	
+	@media (max-width: 480px) and (orientation: landscape) {
+		div[id*='mediaSelector']::after { 
+			content: "480 landscape"
+		}
+	    .formLabel {
+	        font-size: 1.25em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 12px;
+	    }
+		.infoWindow {
+	        width: 80%;
+	        height: 195px ;
+		}
+	    .infoWindowLayout {
+	    	width: 99%; 
+	    	height: 125px ;
+	    }
+		.listboxMax {
+	        width: 160px ;
+	        height: 25px ;
+	    }
+	    .textbox {
+	        height: 20px ;
+	        padding: 2px ;
+	        font-size: 1em ;
+	    }
+
+		.infoForm
+		{
+			width: 50%; 
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+	}
+	
+	/*  Optimus One */
+	@media (max-width: 320px) and (max-height: 213px) and (orientation: landscape) {
+		div[id*='mediaSelector']::after { 
+			content: "320 x 213 landscape"
+		}
+		.stateProvinceLabel::before { 
+			content: "St/Pr"
+		}
+	    .formLabel {
+	        font-size: 1.5em;
+	    }
+	    .nameInfoLabel {
+	        font-size: 1.0em;
+	    }
+	    .infoWindow {
+	        width: 70%;
+	        height: 315px ;
+	    }
+	    .infoWindowLayout {
+	    	width: 99%; 
+			height: 250px ;
+	    }
+		.listboxMax {
+	        width: 160px ;
+	        height: 25px ;
+	        font-size: 14px;
+	    }
+	    .textbox {
+	        height: 24px ;
+	        padding: 2px ;
+	        font-size: 2em ;
+	    }
+            
+		.infoForm
+		{
+			width: 65%; 
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+	}
+
+	.greenButton .z-button-cm 
+	{ 
+		background-image : none ; 
+		background-color:#00B6CB ; 
+		color : white ;
+		border-radius : 5px ;
+		padding : 5px 10px;
+	}
+	.greenButton .z-button-tl, .greenButton .z-button-tm, .greenButton .z-button-tr, 
+	.greenButton .z-button-bl, .greenButton .z-button-bm, .greenButton .z-button-br, 
+	.greenButton .z-button-cl, .greenButton .z-button-cr 
+	{ 
+		display : none ;
+	}
+
+	.z-window-embedded select:not(.ui-datepicker-month):not(.ui-datepicker-year)
+	{
+		padding : 0px 1px ;
+		color : black ;
+		height : auto ;
+		width : auto ;
+		font-size : 12px ;
+	}
+
+   	.layout-wrapper .topbar .topbar-menu a:link 
+   	{ 
+   		line-height : 50px ;
+   		text-decoration: none ; 
+   	}
+
+	.z-window-embedded hr
+	{
+		margin : 0px ;
+	}
+
+/*
+ *		Job Search bar
+ */
+div.ui-selectcheckboxmenu.categorySelect
+{
+	border-bottom: 1px solid #DDDDDD;
+}
+
+div.categorySelect .ui-selectcheckboxmenu-trigger
+{
+    height: 32px;
+    width: 32px;
+    font-size: 32px;
+    padding: 0;
+}
+
+div.categorySelect .ui-selectcheckboxmenu-trigger .ui-icon
+{
+    height: 32px;
+    width: 32px;
+    margin-top: .7rem;
+    color: #757575;
+    font-size: 32px;
+}
+
+div.categorySelect .ui-selectcheckboxmenu-label
+{
+	top: 11px;
+}
+
+/* For calendars that don't pass server side validation */
+body span.ui-calendar.ui-state-error input:first-child
+{
+    border: 1px dashed red
+}
+
+/* For government forms */        
+
+/*Vermont Form Start*/
+.signatureDate .ui-inputfield {
+	width: 100px !important;
+}
+
+#esigPanel .ui-panel-content {
+	padding: .25em .5em;
+}
+
+#vermontStateW4Form\:eSignGrid .ui-panelgrid-cell {
+	padding: 0;
+}
+
+.ui-panel.noBorderPanel, .ui-panelgrid.noBorderContent .ui-panelgrid-content
+	{
+	border: none;
+}
+
+.ui-panel.borderPanel, .ui-panelgrid.borderContent .ui-panelgrid-content
+	{
+	border-style: solid;
+	border-bottom-color: navy;
+}
+
+.esigPanel .ui-widget-header {
+	font-weight: normal;
+}
+
+.line {
+	width: 100%;
+	border-bottom: 1px solid black;
+}
+
+.line-dash {
+	width: 100%;
+	border-bottom: 2px dotted black;
+}
+
+.middle-alignment {
+	vertical-align: middle;
+}
+
+.top-alignment {
+	vertical-align: top;
+}
+
+.one-percent {
+	width: 1%;
+	vertical-align: top;
+}
+.two-percent {
+	width: 2%;
+	vertical-align: middle;
+}
+.three-percent {
+	width: 3%;
+	vertical-align: middle;
+}
+.five-percent {
+	width: 5%;
+	vertical-align: middle;
+}
+.seven-percent {
+	width: 7%;
+}
+.eight-percent {
+	width: 8%;
+}
+.nine-percent {
+	width: 9%;
+}
+.ten-percent {
+	width: 10%;
+}
+.eleven-percent {
+	width: 11%;
+	vertical-align: top;
+}
+.twenty-percent {
+	width: 20%;
+}
+.twenty-five-percent {
+	width: 25%;
+}
+.thirty-percent {
+	width: 30%;
+}
+.fifty-percent {
+	width: 50%;
+}
+.seventy-five-percent {
+	width: 75%;
+} 
+.eighty-percent {
+	width: 80%;
+}
+.ninety-percent {
+	width: 90%;
+}
+.full-percent {
+	width: 100%;
+}
+
+.bottom_aligner {
+	width: 75%;
+	height: 100%;
+	display: table-cell;
+	padding-left: 10px;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.center_colum {
+	padding-left: 10%
+}
+
+.center_header {
+	padding-left: 30%;
+}
+.right_text {
+	padding-left: 60%;
+	text-align: right;
+	font-weight: bold;
+}
+.right_top_text {
+	padding-left: 60%;
+	text-align: right;
+	font-weight: bold;
+	position:relative;
+  	top:-8px;
+}
+.noBorderGrid.ui-panelgrid>*>tr, .noBorderGrid.ui-panelgrid .ui-panelgrid-cell
+	{
+	border: none;
+}
+
+.borderGrid.ui-panelgrid>*>tr, .borderGrid.ui-panelgrid>*>td,
+	.borderGrid.ui-panelgrid .ui-panelgrid-cell {
+	border-style: solid;
+}
+.center_text {
+	padding-left: 10%;
+	text-align: left;
+}
+.center_text1 {
+	padding-left: 13%;
+	text-align: center;
+}
+.second_column {
+	padding-left: 11px;
+}
+.cell_black {
+	 background-color: black;
+	 color: white;
+	 
+}
+.input_label {
+	padding-left: 10%;
+	text-align: left;
+}
+.left_align_element 
+{
+    margin: auto;
+  	text-align:left;
+}
+/*Vermont Form End*/
+
+/*
+Arizona State W4 
+*/
+
+.bottomBorderOnly {
+    border-bottom: 2px solid black;
+}
+.verticalline {
+    border-left: 1px solid black;
+    height: 500px;
+}
+.center_instructions {
+    padding-left:36%;
+    font-size:150%;
+}
+.formHeader {
+    padding-left:30%;
+    font-size:150%;
+}
+.pannerGrid-border{
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid black;
+}
+.fifteen-percent{
+	width: 15%;
+}
+.five-percent-arizona {
+	width: 5%;
+}
+.seventy-percent-arizona {
+	width: 70%;
+}
+.one-percent-arizona {
+	width: 1%;
+}
+
+	/*
+		Skills Test
+	*/			
+	.stOverlayPanel,
+	.stOverlayPanel .ui-overlaypanel-content
+	{
+		padding: 0 !important;
+	}
+	
+.three-percentOnly {
+	width: 3%;
+}
+
+.two-percentOnly {
+	width: 2%;
+}
+
+.fifteen-percent {
+	width: 15%;
+}
+
+.twenty-percent {
+	width: 20%;
+}
+
+.twentyfive-percent {
+	width: 25%;
+}
+
+.fourty-percent {
+	width: 40%;
+}
+.ninety3Percent {
+	width: 93%;
+}
+.line2Px {
+	width: 100%;
+	border-bottom: 2px solid black;
+}
+.bottomAlign{
+	vertical-align : bottom;
+}

@@ -1,0 +1,66 @@
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+    xmlns:pa="http://primefaces.org/barcelona"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions" >
+
+	<div id="breadcrumb">
+		<div class="page-icon">
+			<p:graphicImage name="images/nav/#{not empty breadcrumbIcon ? breadcrumbIcon.concat('-active') : 'breadcrumbIcon-'.concat(requestScope[AttributeKeys.HEADER_NAV])}.svg" library="barcelona-layout-stn" />
+		</div>
+
+        <h:form id="breadcrumbMenuForm" rendered="#{!empty requestScope[AttributeKeys.LINK_ITEMS_LIST]}">
+			<p:breadCrumb model="#{actionsMenuBean.breadcrumbMenu}" >
+			</p:breadCrumb>
+		</h:form>
+
+		<h:outputText value="#{requestScope[AttributeKeys.LINK_MENU]}"
+			styleClass="ui-breadcrumb ui-module ui-widget ui-widget-header ui-helper-clearfix ui-corner-all"
+			rendered="#{!empty requestScope[AttributeKeys.LINK_MENU]}"
+			escape="false" 
+		/>
+		<p:outputPanel rendered="#{!empty requestScope[AttributeKeys.LINK_MENU]}">
+			<script type="text/javascript">
+				$('#breadcrumb .ui-breadcrumb i:last-of-type').after( '<br/>' )
+			</script>
+		</p:outputPanel>			
+
+		<div class="breadcrumb-actions">
+			<ui:insert name="pageActions" />
+			<p:button value="Chat with Help Desk"
+				widgetVar="liveChatBtn"
+				icon="ui-icon-message"
+				styleClass="secondary"
+				style="display:none"
+				onclick="LC_API.open_chat_window();return false" 
+			/>
+			<p:button value="Leave Message for Help Desk" 
+				widgetVar="noLiveChatBtn" 
+				icon="ui-icon-email"
+				styleClass="secondary" 
+				style="display:none"
+				onclick="LC_API.open_chat_window();return false"
+			/>
+
+			<p:link id="actions-menu" styleClass="button button-icon-text primary" href="javascript:void(0)" 
+				onclick="$('#actions-panel').one('mousedown', function() {event.stopPropagation(); return false})">
+				<p:graphicImage name="images/icons/actions.svg" library="barcelona-layout-stn" type="button" />
+				<h:outputText value="Actions"/>
+			</p:link>
+			<p:overlayPanel id="actions-panel" for="actions-menu" 
+				showEffect="fade" hideEffect="fade" widgetVar="actions-panel"
+				onShow="this.jq.height('auto');this.jq.css('max-height', '' + (window.innerHeight - this.jq.offset().top - 10) + 'px' )"
+				style="overflow-y:auto">
+				<ul class="overlay-panel actions-panel">
+					<pa:menu widgetVar="actionsMenu" model="#{actionsMenuBean.actionsMenu}" styleClass=" animated">
+					</pa:menu>
+				</ul>
+			</p:overlayPanel>
+		</div>
+	</div>
+
+</ui:composition>

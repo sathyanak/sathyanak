@@ -1,0 +1,101 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:st-ui="http://stafftrack.net/ui"
+	xmlns:st-jsf="http://stafftrack.net/jsfext"
+	xmlns:o="http://omnifaces.org/ui"
+	xmlns:of="http://omnifaces.org/functions"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	template="/WEB-INF/templates/ultima-stn/template.xhtml">
+
+	<f:metadata>
+		<f:loadBundle basename="net.stafftrack.resources.CrmActivityMessages"
+			var="crmActivityMsgs" />
+	</f:metadata>
+
+
+	<ui:define name="content">
+		<h:form id="mainForm">
+
+ <p:messages id="msg" for="msg" showDetail="false" autoUpdate="true" globalOnly="true" closable="false" />
+		
+
+
+ 		
+			<p:panel id="weekFiles" styleClass="smallerBlack">
+				<f:facet name="header">
+					<h:outputText value="General Form" />
+					<div class="right-actions">
+						<h:panelGrid id="payRateButtons" border="0" columns="3">
+							
+							<p:commandButton id="addButton"
+								value="#{msgs['stn.common.save.label']}"
+								styleClass="primary success" icon="ui-icon-save"
+								actionListener="#{general.onSave}"
+                   				update="@form"
+								style="vertical-align: middle;" />
+
+
+							<p:commandButton id="cancelBtnTop" styleClass="primary dismiss"
+								value="Cancel" onclick="history.go(-1)" />
+						</h:panelGrid>
+					</div>
+				</f:facet>
+
+
+				<div class="ui-g-12">
+					<div class="ui-g-12 ui-md-6 ui-lg-4">
+						<p:outputLabel value="First Name" for="fName" />
+						<p:inputText placeholder="Enter text here" id="fName" value = "#{general.empVo.firstName}"/>
+					</div>
+					<div class="ui-g-12 ui-md-6 ui-lg-4">
+						<p:outputLabel value="Last Name" for="lName" />
+						<p:inputText id="lName" value = "#{general.empVo.lastName}" required="true"/>
+					</div>
+
+					<div class="ui-g-12 ui-md-6 ui-lg-4">
+						<p:outputLabel value="Initial Name" for="initial" />
+						<p:inputText id="initial" />
+					</div>
+
+					<div class="ui-g-12 ui-md-6 ui-lg-4">
+						<p:outputLabel value="DOB" for="followUpDate" />
+						<p:calendar id="followUpDate" showOn="button" pattern="MM/dd/yyyy" value = "#{general.empVo.dob}"
+							size="10" />
+
+					</div>
+
+					<div class="ui-g-12 ui-md-6 ui-lg-4">
+						<p:outputLabel value="Employer" for="initial" />
+						<p:inputText id="employer" value = "#{general.empVo.type}" />
+					</div>
+
+					<div class="ui-g-12 ui-md-6 ui-lg-4">
+						<p:outputLabel value="City" for="initial" />
+						<p:inputText id="city" />
+					</div>
+
+					<div class="ui-g-12 ui-md-12 ui-lg-12">
+						<p:outputLabel value="Address" for="address" />
+						<p:inputText id="address" size="50" maxlength="50" />
+					</div>
+
+
+					<div class="ui-g-12 ui-md-12 ui-lg-12">
+						<p:outputLabel value="Notes" for="area" />
+						<p:inputTextarea id="area" cols="53" size="50" maxlength="50" />
+					</div>
+
+				</div>
+
+				
+
+			</p:panel>
+
+
+		</h:form>
+	</ui:define>
+</ui:composition>

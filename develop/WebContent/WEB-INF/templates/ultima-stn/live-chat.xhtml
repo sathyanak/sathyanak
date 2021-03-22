@@ -1,0 +1,47 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui"
+    >
+<!-- 		<a href="#" class="live-chat" tabindex="-1">Live Chat <i class="fa fa-comment-o"></i></a> -->
+		
+	<h:outputScript name="jquery/jquery.js" library="primefaces" />
+   
+	<script type="text/javascript">
+		window.__lc = window.__lc || {};
+		window.__lc.license = 8288821;
+		(function() {
+		  var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+		  lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+		  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+		})();
+	</script>
+			
+	<script type="text/javascript">
+		var LC_API = LC_API || {};
+		LC_API.on_after_load = function()
+		{
+			var custom_variables = [
+				{ name: 'Registered Name', value: '#{USER_CONTEXT.userValue.firstName} #{USER_CONTEXT.userValue.lastName}' },
+				{ name: 'User Id', value: '#{USER_CONTEXT.userValue.loginId}' },
+				{ name: 'Address', value: "<h:outputText value="#{USER_CONTEXT.currentOfficeInfo.officeCity} #{USER_CONTEXT.currentOfficeInfo.officeState}" escape="true"/>" },
+				{ name: 'Office Number', value: '#{USER_CONTEXT.currentOfficeInfo.officeNo}' },
+			];
+			LC_API.set_custom_variables(custom_variables);
+			
+			if ( LC_API.agents_are_available() )
+			{
+				PF( 'noLiveChatBtn' ).jq.hide();
+				PF( 'liveChatBtn' ).jq.show();
+			}
+			else
+			{
+				PF( 'noLiveChatBtn' ).jq.show();
+				PF( 'liveChatBtn' ).jq.hide();
+			}
+		};
+	</script>
+						
+</ui:composition>

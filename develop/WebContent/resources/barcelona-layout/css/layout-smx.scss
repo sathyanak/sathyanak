@@ -1,0 +1,28 @@
+$white: #fff;
+$offWhite: #eaeaea;
+$blue: #00B6CB; 
+$teal: #00a78f;
+$navy: #1b4176;
+$lightGray: #f8f8f8;
+$gray: #7b7b7b;
+$darkGray: #464646;
+$red: #C83B3B;
+$orange: #F88734;
+
+$primaryColor: $blue; // Blue
+$primaryLightColor:#2196F3;
+$primaryTextColor:#BBDEFB;
+$primaryTextHoverColor:#E3F2FD;
+$accentColor: $teal; // Teal
+$accentDarkColor: $navy; // Navy
+$accentLightColor:#FFECB3;
+$accentTextColor: $darkGray; // Dark Gray
+$activeMenuItemTextColor:#1976d2;
+$darkActiveMenuItemTextColor:#2196F3;
+$darkMenuItemTextColor:#dee0e3;
+$darkMenuItemInactiveTextColor:#757575;
+$darkMenuItemHoverBgColor:#545454;
+$darkSidemenuBgColor:#343434;
+$darkMenuBgColor:#424242;
+
+@import '../../sass-smx/layout/_layout';

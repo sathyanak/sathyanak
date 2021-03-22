@@ -1,0 +1,459 @@
+	body
+				{
+				background-color : #ffffff; 
+				}
+	.scroll		
+				{
+				scrollbar-3dlight-color : #FFFFFF; 
+				scrollbar-arrow-color : #666633; 
+				scrollbar-darkshadow-color : #000000; 
+				scrollbar-face-color : #999966; 
+				scrollbar-highlight-color : #000000; 
+				scrollbar-shadow-color : #000000; 
+				scrollbar-track-color : #666633;	
+				}
+	.scroll2		
+				{
+				scrollbar-3dlight-color : #ffffff; 
+				scrollbar-arrow-color : #666633; 
+				scrollbar-darkshadow-color : #000000; 
+				scrollbar-face-color : #999966; 
+				scrollbar-highlight-color : #000000; 
+				scrollbar-shadow-color : #000000; 
+				scrollbar-track-color : #666633;	
+				background-color : #dedeac;			
+				}
+	td.SectionTitle
+				{
+				font-family: Verdana, Arial, Helvetica, sans-serif ;
+				font-weight: bold;
+				font-size: 10px;
+				line-height: 14px;
+				color: #FFFFFF;
+				}
+	td.bottom_pipes
+				{
+				font-family: Verdana, Arial, Helvetica, sans-serif ;
+				font-weight: bold;
+				font-size: 8pt;
+				line-height: 6px;
+				color: #000066;
+				}
+	td.SectionTitle2
+				{
+				font-family: Verdana, Arial, Helvetica, sans-serif ;
+				font-weight: bold;
+				font-size: 12px;
+				line-height: 14px;
+				color: #FFFFFF;
+				}
+	td.SectionContentTopLarge
+				{
+				font-family: Verdana, Arial, Helvetica, sans-serif ;
+				font-size: 12px;
+				font-weight:bold;
+				color: #000000;
+				}	
+	td.SectionContentTop
+				{
+				font-family: Verdana, Arial, Helvetica, sans-serif ;
+				font-size: 10px;
+				font-weight:bold;
+				line-height: 12px;
+				color: #000000;
+				}	
+	td.SectionContent
+				{
+				font-family: Verdana, Arial, Helvetica, sans-serif ;
+				font-size: 10px;
+				line-height: 12px;
+				color: #000000;
+				}
+	td.SectionContentHalf
+				{
+				font-family: Verdana, Arial, Helvetica, sans-serif ;
+				font-size: 6.3pt;
+				line-height: 11px;
+				color: #000000;
+				}	
+	td.SectionContentRed
+				{
+				font-family: Verdana, Arial, Helvetica, sans-serif ;
+				font-size: 10px;
+				color:red;
+				line-height: 12px;
+				color: #000000;
+				}	
+	td.SectionContentGreen
+				{
+				font-family: Verdana, Arial, Helvetica, sans-serif ;
+				font-size: 10px;
+				color:green;
+				line-height: 12px;
+				color: #000000;
+				}	
+	td.SectionContent12
+				{
+				font-family: Verdana, Arial, Helvetica, sans-serif ;
+				font-size: 9px;
+				color: #000000;
+				}	
+	td.SectionContent7
+				{
+				font-family: Verdana, Arial, Helvetica, sans-serif ;
+				font-size: 12px;
+				line-height: 12px;
+				color: #000000;
+				}
+	td.SectionContent11
+				{
+				font-family: Verdana, Arial, Helvetica, sans-serif ;
+				color: #000066;
+				font-size:10pt;
+				font-weight:bold;
+				}	
+	td.SectionContent10
+				{
+				font-family: Verdana, Arial, Helvetica, sans-serif ;
+				color: #ffffff;
+				font-size:12px;
+				font-weight:bold;
+				}	
+	td.SectionContent9
+				{
+				font-family: Verdana, Arial, Helvetica, sans-serif ;
+				color: #000000;
+				}	
+	td.SectionContent8
+				{
+				font-family: Verdana, Arial, Helvetica, sans-serif ;
+				font-size: 11px;
+				color: #000000;
+				}	
+	td.SectionContent6
+				{
+				background-color: #d0d0d0;
+				}	
+	td.SectionContent60
+				{
+				background-color: #000000;
+				}					
+	td.SectionContent5
+				{
+				font-family: Verdana, Arial, Helvetica, sans-serif ;
+				font-size: 10px;
+				line-height: 14px;
+				color: #000000;
+				}	
+	td.SectionContent5a
+				{
+				font-family: Verdana, Arial, Helvetica, sans-serif ;
+				font-size: 13px;
+				line-height: 14px;
+				color: #000000;
+				font-weight:bold;
+				}		
+	td.SectionContent4
+				{
+				font-family: Verdana, Arial, Helvetica, sans-serif ;
+				font-size: 10px;
+				line-height: 12px;
+				color: #ffffff;
+				}				
+	td.SectionContent3
+				{
+				font-family: Verdana, Arial, Helvetica, sans-serif ;
+				font-size: 10px;
+				font-weight:bold;
+				line-height: 12px;
+				color: #000000;
+				}	
+	td.SectionContent30
+				{
+				font-family: Verdana, Arial, Helvetica, sans-serif ;
+				font-size: 10px;
+				font-weight:bold;
+				line-height: 12px;
+				color: #000000;
+				}	
+	td.SectionContent2
+				{
+				font-family: Verdana, Arial, Helvetica, sans-serif ;
+				font-size: 10px;
+				line-height: 12px;
+				background-color: #d0d0d0;
+				}	
+	td.SectionContentRed
+				{
+				font-family: Verdana, Arial, Helvetica, sans-serif ;
+				font-size: 10px;
+				line-height: 12px;
+				color: #ff0000;
+				}		
+	td.SectionContentGrey
+				{
+				font-family: Verdana, Arial, Helvetica, sans-serif ;
+				font-size: 10px;
+				line-height: 12px;
+				color: #a0a0a0;
+				}							
+	select
+				{
+				font-family: Verdana, Arial, Helvetica, sans-serif ;
+				font-size: 10px;
+				line-height: 10px;
+				color: #000000;
+				}
+	input
+				{
+				font-family: Verdana, Arial, Helvetica, sans-serif ;
+				font-size: 10px;
+				line-height: 10px;
+				color: #000000;
+				}				
+	td.TitleContent
+				{
+				font-family: Verdana, Arial, Helvetica, sans-serif ;
+				font-size: 20px;
+				color: #000066;
+				font-weight:bold;
+				}	
+					
+	td.SectionContentWhite
+				{
+				font-family: Verdana, Arial, Helvetica, sans-serif ;
+				font-size: 10px;
+				color: #ffffff;
+				font-weight: bold;
+				}					
+	td.SectionContentFlag
+				{
+				font-family: Verdana, Arial, Helvetica, sans-serif ;
+				font-size: 10px;
+				color: #ffffff;
+				font-weight:bold;
+				}		
+	td.SectionContentFlagOff
+				{
+				font-family: Verdana, Arial, Helvetica, sans-serif ;
+				font-size: 10px;
+				color: #888888;
+				}						
+	td.SectionContent1
+				{
+				font-family: verdana, Helvetica, sans-serif ;
+				font-size: 12px;
+				color: #ffffff;
+				font-weight:bold;
+				}		
+	td.SectionContentSmall
+				{
+				font-family: Verdana, Arial, Helvetica, sans-serif ;
+				font-size: 10px;
+				line-height: 12px;
+				color: #000000;
+				}		
+	td.SectionContentReallySmall
+				{
+				font-family: Verdana, Arial, Helvetica, sans-serif ;
+				font-size: 10px;
+				line-height: 10px;
+				color: #000000;
+				}			
+	td.SectionContentReallySmall2
+				{
+				font-family: Verdana, Arial, Helvetica, sans-serif ;
+				font-size: 10px;
+				line-height: 10px;
+				color: #f0f0f0;
+				}			
+	td.PageTitle
+				{
+				font-family: Verdana, Arial, Helvetica, sans-serif ;
+				font-weight: bold;
+				font-size: 14px;
+				line-height: 16px;
+				color: #000088;
+				}
+	td.SectionContentHalfBlack
+				{
+				font-family: Verdana, Arial, Helvetica, sans-serif ;
+				font-size: 5.2pt;				
+				color:black;
+				font-weight:bold;
+				vertical-align:text-top;
+				}
+	.leftButtonOn
+				{
+				width:115px;
+				font-family:verdana, Arial;
+				font-size:9pt;
+				color:#ffffff;
+				font-weight:bold;
+				background-color:#999999;
+				text-align:center;
+				}		
+	.leftButtonOff
+				{
+				width:115px;
+				font-family:verdana, Arial;
+				font-size:9pt;
+				color:#ffffff;
+				font-weight:bold;
+				background-color:#666633;
+				text-align:center;
+				}		
+	.ButtonBar
+				{
+				background-color : #ffffff;
+				}	
+	.ButtonBar2
+				{
+				background-color : #313100;
+				}	
+	.ButtonBar3
+				{
+				background-color : #F7A569;
+				}	
+	.LeftPageTitle
+				{
+				background-color : #bcbdad;
+				}		
+	.LeftTitleUnderline
+				{
+				background-color : #000000;
+				}		
+	.MainTitleUnderline
+				{
+				background-color : #000000;
+				}	
+	.DividerBlack
+				{
+				background-color : #000000;
+				}			
+	.InputColor1
+				{
+				background-color : #ffffff;
+				font-size: 10px;
+				line-height: 10px;
+				color: #000000;
+				}							
+	.BoxBack			
+				{
+				background-color : #f1f1f1;
+				}
+	.TableEdge
+				{
+				border-width :thin;
+				border-style : solid;
+				border-color : #495259;
+				}															
+
+a:link {
+	FONT-SIZE: 10px; COLOR: #000088; LINE-HEIGHT: 12px; FONT-FAMILY: Verdana, arial, helvetica, sans-serif; TEXT-DECORATION: none
+}
+a:visited {
+	FONT-SIZE: 10px; COLOR: #000088; LINE-HEIGHT: 12px; FONT-FAMILY: Verdana, arial, helvetica, sans-serif; TEXT-DECORATION: none
+}
+a:active {
+	FONT-SIZE: 10px; COLOR: #000088; LINE-HEIGHT: 12px; FONT-FAMILY: Verdana, arial, helvetica, sans-serif; TEXT-DECORATION: none
+}
+
+a:hover			
+				{
+				font-family: Verdana, Arial, Helvetica, sans-serif ;
+				font-size: 10px;
+				line-height: 12px;
+				color:#000088;
+				text-decoration: underline;
+				}	
+	.textArea {
+    			font-family:Verdana, Arial, Helvetica, sans-serif;
+			    font-size:10px;  
+			    line-height: 12px;  
+			    color:black;
+				}
+	.TileBottomLinks
+				{
+				color:#000066;
+				font-size:7pt;
+				font-family:Verdana, sans-serif ;
+				text-decoration:underline;
+				}
+	.reportWriterViewLink
+				{
+				color:#000066;
+				font-size:8pt;
+				font-family:"lucida console","american typewriter","courier new",courier, monospace ;
+				text-decoration:underline;
+				}	
+	.hideable 
+				{ 
+				position: relative; 
+				visibility: hidden;
+			    }
+	.TopPageLinks
+				{
+				text-decoration:underline;
+				font-weight:bold;
+				}
+	.simpleLinks
+				{
+				font-family: Verdana, Arial, Helvetica, sans-serif ;
+				font-size: 10px;
+				line-height: 12px;
+				color:#000066;
+				text-decoration:underline;
+				}
+	.linksNoDeco
+				{
+				color:#000066;
+				font-size:7pt;
+				font-family:Verdana, sans-serif;
+				text-decoration:none;			
+				}
+	.reserveFlagText
+				{
+				font-family:Verdana, Arial, Helvetica, sans-serif;
+				font-size:5.2pt;
+				color:black;
+				font-weight:bold;
+				vertical-align:super;
+				}
+	.numberLinkText
+				{
+				font-weight:bold;
+				font-size:13pt;
+				}
+.floater {
+	position:absolute;
+	z-index:2;
+	top:0;
+	left:0;
+	display:none;
+	padding:0;
+}
+
+.floater td {
+	font-family:gill, Helvetica, sans-serif;
+	background-color:white;
+	border:1px inset #979797;
+	color:black;
+}
+
+.matchedSmartInputItem {
+	font-size:0.8em;
+	padding:5px 10px 1px 5px;
+	margin:0;
+	cursor:pointer;
+}
+
+.selectedSmartInputItem {
+	color:white;
+	background-color:#3875d7;
+}
+
+#smartInputResults {
+	padding: 0;
+	margin: 0;
+}

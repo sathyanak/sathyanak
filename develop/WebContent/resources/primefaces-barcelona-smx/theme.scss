@@ -1,0 +1,24 @@
+$white: #fff;
+$offWhite: #eaeaea;
+$blue: #00B6CB; 
+$medBlue: #12a3b4;
+$lightBlue: lighten($blue,10%);
+$teal: #00a78f;
+$lightTeal: #00baa1;
+$navy: #1b4176;
+$lightGray: #f8f8f8;
+$gray: #7b7b7b;
+$darkGray: #464646;
+$red: #C83B3B;
+$orange: #F88734;
+
+$primaryColor: $blue; // Blue
+$primaryDarkColor: $medBlue; // Blue, sligthly Darker
+$primaryLightColor: $lightBlue; // Blue, lightened
+$primaryTextColor: #f8f8f8; 
+$accentColor: $teal; // Teal
+$accentDarkColor: $navy; // Navy
+$accentLightColor: $lightTeal; // Lighter Teal
+$accentTextColor: $darkGray; // Dark Gray
+
+@import '../sass-smx/theme/_theme';

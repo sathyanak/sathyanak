@@ -1,0 +1,60 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:st-ui="http://stafftrack.net/ui"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:pu="http://primefaces.org/ultima"
+    xmlns:c="http://java.sun.com/jsp/jstl/core"
+    template="/WEB-INF/templates/ultima-stn/template.xhtml"
+    >
+    
+    <h:form id="menuform">
+        <div class="layout-menu">
+            <div class="nano">
+                <div class="nano-content menu-scroll-content">
+					<ul class="ultima-menu">
+						<li class="search-item">
+							<span class="md-inputfield location"> 
+								tttttttt
+							</span>
+						</li>
+					</ul>
+
+				  <div class="card">
+        <h5>Toggleable</h5>
+        <p:menu toggleable="true">
+            <p:submenu label="Options">
+                <p:menuitem value="Save (Non-Ajax)" 
+                            icon="pi pi-save"/>
+                <p:menuitem value="Update"  icon="pi pi-refresh"/>
+                <p:menuitem value="Delete"  icon="pi pi-times"/>
+            </p:submenu>
+            <p:submenu label="Navigations">
+                <p:menuitem value="Website" url="http://www.primefaces.org" icon="pi pi-external-link"/>
+            
+            </p:submenu>
+        </p:menu>
+    </div>
+                    <pu:menu widgetVar="me">
+
+					      <p:submenu id="_st_CDMenu" label="Crew Desk" icon="fa fa-image sm-icon-crewdesk" >
+		                        <p:menuitem id="cdMain" value="Crew Desk Main">
+		                        
+		                        </p:menuitem>
+	
+		                        <p:menuitem id="cdWorkforce" value="Workforce" url="www.google.com" />
+	
+		                        <p:menuitem id="cdTakeaction" value="Take Action"  url="www.google.com"/>
+	
+		                        <p:menuitem id="cdWhiteboard" value="Whiteboard"  url="www.google.com"/>
+	
+		                                   </p:submenu>
+			          
+                    </pu:menu>
+   				</div>
+   			</div>
+    	</div> 
+    </h:form>
+</ui:composition>

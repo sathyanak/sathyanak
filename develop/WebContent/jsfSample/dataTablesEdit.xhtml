@@ -1,0 +1,183 @@
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:st-ui="http://stafftrack.net/ui"
+	  xmlns:o="http://omnifaces.org/ui"
+	  xmlns:of="http://omnifaces.org/functions" 
+	xmlns:st-jsf="http://stafftrack.net/jsfext"
+	template="/WEB-INF/templates/ultima-stn/template.xhtml">
+
+<ui:define name="content">
+  
+<h:form id = "form"> 
+
+	<p:commandButton id = "saty1" icon="ui-icon-check" styleClass="ui-priority-primary" value = "Save" actionListener="${standard.updateCars}" update="empList"></p:commandButton>
+
+	<p:button id = "two" icon="ui-icon-check" styleClass="ui-priority-primary" 
+	value = "Execute Js" onclick = "testCall()"></p:button>
+
+
+
+
+    <p:dataTable 
+	    var="editableList" id="empList"
+	    value="#{standard.list}"  
+	    paginator="true"
+	    rowIndexVar = "index"
+	    widgetVar = "listJs"
+	    reflow="true"
+	    paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}"
+	    rows="5"
+	    editable = "true"
+	     editMode="cell"
+	   selectionMode="single" selection="#{editableList.empId}"  rowKey="#{car.id}"
+	 	
+	    
+    >
+     <f:facet name="header">
+        List of Employees (Editable dataTable)
+        
+          <p:outputPanel>
+                <h:outputText value="Search all fields:" />
+                </p:outputPanel>
+    </f:facet>
+    
+  
+    
+    <p:column headerText="Id" >
+        <h:outputText value="#{editableList.empId}" />
+    </p:column>
+ 
+    <p:column headerText="Name">
+            
+         <p:cellEditor>  
+            <f:facet name="output">  
+                <h:outputText value="#{editableList.name}"/>  
+            </f:facet>  
+            <f:facet name="input">  
+                <p:inputText id="modelInput" value="#{editableList.name}" />  
+            </f:facet>  
+        </p:cellEditor>  
+        
+        
+    </p:column>
+    
+     <p:column headerText="Department">
+        <p:cellEditor>  
+        <f:facet name="output">  
+                <h:outputText value="#{editableList.department}"/>  
+            </f:facet>  
+            <f:facet name="input">  
+        <p:selectOneMenu id = "select" value="#{editableList.department}" onchange = "changeSel(this, #{index})" >       
+							<f:selectItem itemLabel="Sales" itemValue="Sales" />
+							<f:selectItem itemLabel="Business" itemValue="Business" />
+							<f:selectItem itemLabel="Technology" itemValue="Technology" />
+							<f:selectItem itemLabel="HR" itemValue="HR" />
+							<f:selectItem itemLabel="Training" itemValue="Training" />s
+							
+			</p:selectOneMenu>
+			</f:facet>
+        </p:cellEditor>
+    </p:column>
+ 
+      
+     <p:column headerText="vehicle" rendered = "false">            
+         <p:cellEditor>  
+            <f:facet name="output">  
+                <h:outputText value="#{editableList.vehicle}"/>  
+            </f:facet>  
+            <f:facet name="input">  
+                <p:inputText id="vehicleInput" value="#{editableList.vehicle}"/>  
+            </f:facet>  
+        </p:cellEditor>   
+    </p:column>
+    
+    
+    <p:column headerText="vehicle" >     
+      <p:inputText id="vehicleInputWrite" value="#{editableList.vehicle}"  disabled = "#{editableList.department eq 'Training'}"/>  
+    </p:column>
+    
+     <p:column headerText="Expense" >     
+       <p:cellEditor>  
+            <f:facet name="output">  
+                <h:outputText value="#{editableList.exp}"/>  
+            </f:facet>  
+            <f:facet name="input">  
+                <p:inputText id="exp" value="#{editableList.exp}"  >  </p:inputText>
+            </f:facet>  
+        </p:cellEditor>   
+    </p:column>
+    
+     <p:column headerText="Percent" >     
+      <h:outputText id="expPercent" value="#{editableList.expPercent}"  disabled = "#{editableList.department eq 'Training'}"/>  
+    </p:column>
+    
+<!--       <p:column headerText="Vehicle"> -->
+<!--         <h:inputText id = "dummy" value="#{list.vehicle}" disabled = "#{list.department ne '1'}" > </h:inputText>          -->
+<!--     </p:column> -->
+    
+<!--       <p:column headerText="Vehicle" rendered = "#{list.department eq '1'}" > -->
+<!--         <h:inputText id = "ditto" value="#{list.vehicle}" > </h:inputText>          -->
+<!--     </p:column> -->
+    
+    
+ 
+    <p:column headerText="Phone">
+        <h:outputText value="#{editableList.phone}" id = 'ttt'/>
+    </p:column>
+    
+    
+   
+    
+    <p:column styleClass="table-icon"  headerText="Select" style="width:5%" toggleable="false" >
+    <p:commandButton value = "SELECT " action="#{standard.checked()}" />
+    </p:column>
+    
+</p:dataTable>
+
+
+
+
+</h:form>  
+
+<script>
+
+
+
+function testCall()
+{
+	obj = document.getElementById("form:sss:3");	
+	alert (obj.value);
+}
+
+
+function changeSel(thisObj, index)
+{
+	obj = document.getElementById("form:empList:" + index + ":ttt");	
+	//alert(obj);
+	obj.innerHTML = '100';
+	
+	//alert(thisObj.options[thisObj.selectedIndex].value);
+	obj = document.getElementById("form:empList:" + index + ":vehicleInputWrite");
+	if (thisObj.options[thisObj.selectedIndex].value == 'Training')
+	obj.disabled = true;
+}
+
+
+function seethis(item)
+{
+	
+	alert(item.name);
+}
+
+</script>
+
+    </ui:define>
+    	
+</ui:composition>
+
+
+

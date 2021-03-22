@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="118px" height="118px" viewBox="0 0 118 118" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>placeholder-bio</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="118" height="118" rx="4"></rect>
+    </defs>
+    <g id="StaffTrack" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="StaffTrack-Associate-Main" transform="translate(-114.000000, -140.000000)">
+            <g id="Group-5" transform="translate(60.000000, 120.000000)">
+                <g id="placeholder-bio" transform="translate(54.000000, 20.000000)">
+                    <g id="Rectangle-8">
+                        <use fill="#E0E5EE" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        <rect x="0" y="0" width="118" height="118" rx="4"></rect>
+                    </g>
+                    <path d="M58.5,27 C72.576,27 84,38.4155 84,52.5 C84,66.5845 72.576,78 58.5,78 C44.4155,78 33,66.5845 33,52.5 C33,38.4155 44.4155,27 58.5,27 Z M8,116.177778 C8,99.2888889 42.3333333,90 59.5,90 C76.6666667,90 111,99.2888889 111,116.177778 L8,116.177778 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

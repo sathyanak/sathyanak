@@ -1,0 +1,97 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:st-ui="http://stafftrack.net/ui"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:o="http://omnifaces.org/ui"
+	xmlns:of="http://omnifaces.org/functions"
+	xmlns:st-jsf="http://stafftrack.net/jsfext"
+	template="/WEB-INF/templates/ultima-stn/template.xhtml">
+
+
+	<ui:define name="content">
+		<h:form id="mainForm">
+			<p:dataTable var="dataList" id="dataList" value="#{openDialog.list}"
+				paginator="true" rowIndexVar="index" widgetVar="listJs"
+				reflow="true" first="6"
+				paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}"
+				rows="5">
+
+
+				<p:column headerText="Id" style="width:30px;">
+					<h:outputText value="#{dataList.empId}" />
+				</p:column>
+				<p:column headerText="Name">
+					<h:outputText value="#{dataList.name}" escape="false" />
+				</p:column>
+				<p:column headerText="Phone">
+					<h:outputText value="#{dataList.phone}" id='ttt' />
+				</p:column>
+			</p:dataTable>
+
+			<h:outputLink value="javascript:void(0)" onclick="PF('dlg').show();"
+				title="login">
+      			  Open Dialog Link
+   				 </h:outputLink>
+
+			<p:commandButton id="addButton" value="Add"
+				actionListener="#{openDialog.updateGrid()}" styleClass="primary">
+
+			</p:commandButton>
+
+
+		</h:form>
+
+		<p:dialog widgetVar="dlg">
+			<h:form id="subForm">
+				<h:panelGrid columns="2" cellpadding="5">
+					<h:outputLabel value="St Pay:" />
+					<p:inputText id="stPay" value="" required="true" label="name">
+					</p:inputText>
+
+					<h:outputLabel value="Ot Pay:" />
+					<p:inputText id="otPay" value="" required="true" label="Phone"
+						widgetVar="sss" />
+
+					<h:outputLabel value="St Pay" />
+					<p:inputText id="dtPay" value="" required="true" label="vehicle" />
+
+					<f:facet name="footer">
+						<p:commandButton id="P" icon="ui-icon-check" value="Save"
+							onclick="jsValidate()" actionListener="#{openDialog.updateGrid()}" />
+					</f:facet>
+
+				</h:panelGrid>
+			</h:form>
+
+			<script>
+	
+		
+		
+		
+		function jsValidate(this) {
+			//alert("sss")
+			dtPay = document.getElementById("subForm:dtPay");
+			dtPay.value = this.value * 1.5;
+			
+			otPay = document.getElementById("subForm:otPay");
+			otPay.value = this.value * 2;
+			
+			return true;
+		}
+	
+		
+		</script>
+
+		</p:dialog>
+
+
+
+	</ui:define>
+
+</ui:composition>
+
+
+

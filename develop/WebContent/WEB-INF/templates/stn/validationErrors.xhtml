@@ -1,0 +1,82 @@
+<!--
+$Id: validationErrors.xhtml,v 1.9 2018/07/06 07:33:18 anthony Exp $
+-->
+<!-- Validation errors -->
+<ui:composition  xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:p="http://primefaces.org/ui"
+	  xmlns:of="http://omnifaces.org/functions"
+	  xmlns:c="http://java.sun.com/jsp/jstl/core"
+      >
+   	<p:importConstants type="org.apache.struts.Globals" var="StrutsGlobals" />
+
+	<c:set var="strutsRequestErrors" value="#{actionsMenuBean.strutsErrors}" />
+	<c:set var="strutsSessionErrors" scope="view" value="#{actionsMenuBean.strutsErrors}" />
+
+	<p:outputPanel id="messagesPanel" >
+  		<c:set var="msgList" value="#{of:coalesce(strutsRequestErrors,strutsSessionErrors)}" />
+
+	  	<h:panelGroup rendered="#{not empty msgList}" >
+	  		<h:outputText rendered="#{not empty sessionScope['WARNING_MESSAGE']}"
+	  			styleClass="SectionContentRed bold"  
+	  			value="Warnings" />
+	  		<h:outputText rendered="#{empty sessionScope['WARNING_MESSAGE']}" 
+	  			styleClass="SectionContentRed bold"  
+	  			value="Validation Errors" />
+
+	  		<!-- Iterate the Struts error messages -->
+
+	  		<!--  Struts Error Messages -->
+	  		<dl>
+	  		<ui:repeat var="errorMsg" value="#{msgList}" >
+	  			<dd>
+	  				<h:outputText rendered="#{!errorMsg.resource}" value="#{errorMsg.key}" escape="false" />
+	  				<h:outputText rendered="#{errorMsg.resource}"  
+	  					value="#{ of:format3(requestScope[StrutsGlobals.MESSAGES_KEY].getMessage(errorMsg.key), errorMsg.values[0], errorMsg.values[1], errorMsg.values[2] )}" 
+	  					escape="false" />
+	  			</dd>
+	  		</ui:repeat>
+	  		</dl>
+	  		
+  		</h:panelGroup>
+  		
+		  		<!-- ================================= -->
+
+	  	<h:panelGroup rendered="#{not empty sessionScope['GLOBAL_MESSAGE']}" >
+	  		<h:outputText styleClass="SectionContent" value="Messages" />
+			<br/>
+			<h:outputText value="#{sessionScope['GLOBAL_MESSAGE']}" />
+			<c:set var="GLOBAL_MESSAGE" scope="session" value="#{null}" />
+	  	</h:panelGroup>
+	  	
+		<span id="validationErrorsHeader" style="display: none">
+				<table>	
+					<tr>
+						<td class="SectionContentRed" ><b>Validation Errors</b></td>
+					</tr>
+				</table>
+		</span>
+		<span id="validationErrorsBody" style="display: none">
+		</span>
+
+		<p:messages globalOnly="true" />
+		<p:outputPanel rendered="#{not empty facesContext.maximumSeverity}" >
+			<script>
+				$('.section-wrapper.edge-to-edge:first').addClass('ui-state-error') ;
+			</script>
+		</p:outputPanel>
+		<p:outputPanel rendered="#{empty facesContext.maximumSeverity}" >
+			<script>
+				$('.section-wrapper.edge-to-edge:first').removeClass('ui-state-error') ;
+			</script>
+		</p:outputPanel>
+  	
+	</p:outputPanel>
+	
+  	<script>
+  		$("#messagesPanel").prependTo( $(".layout-main-content-area") ) ;
+  	</script>
+</ui:composition>
+	

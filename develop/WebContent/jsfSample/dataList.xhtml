@@ -1,0 +1,134 @@
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	 xmlns:pu="http://primefaces.org/ultima"
+	xmlns:st-ui="http://stafftrack.net/ui"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:o="http://omnifaces.org/ui"
+	xmlns:of="http://omnifaces.org/functions"
+	xmlns:st-jsf="http://stafftrack.net/jsfext"
+	template="/WEB-INF/templates/ultima-stn/template.xhtml">
+
+	<ui:define name="head">
+		<style type="text/css">
+		
+		
+		 .filterSection.ui-fluid .ui-selectonemenu
+            {
+                width: auto;
+            }
+            
+		.ui-datepicker-trigger {
+				border: none !important;
+			border-radius: 4px !important;
+			padding: 1px !important;
+			margin: 0px 0px 0px 0px !important;
+			margin-top: -2px !important;
+			margin-left: -2px !important;
+			margin-right: 4px !important;
+		}
+		
+		.ui-calendar .ui-inputfield {
+			border: 1px solid #A8B7C7 !important;
+			border-radius: 4px !important;
+			width: 110px !important;
+			margin: 0px 0px 0px 10px !important;
+			height: 30px !important;
+			font-size: 14px !important;
+	}
+	</style>
+	
+	<script type="text/javascript">
+			//<![CDATA[ 
+			function submitForm(deliveryType,isValidate)
+			{				
+				 	 submitReportForm();
+			}
+			//]]> 
+		</script>
+		
+		
+
+	</ui:define>
+
+	<ui:define name="content">
+		<h:form id="form">
+		
+			<p:remoteCommand name="submitReportForm" ajax="false" actionListener="#{standard.testRowclick}" />
+			<p:panel id="weekFiles" style="width:auto" styleClass="card noPad" header="">
+			<f:facet name="header">
+				<h:outputText value="A Sample Search List" />
+				<div class="right-actions">
+				<h:panelGrid id="payRateButtons" border="0" columns="3">
+					<p:commandButton id="historyButton" value="history" styleClass="secondary" action="sathyan.xhmtl" ajax="false" />
+					<p:commandButton id="cancelBtnTop" styleClass="primary dismiss" value="Cancel" onclick="history.go(-1)" />
+				</h:panelGrid>
+				</div>
+			</f:facet>
+			
+			
+
+
+
+			<div class="card noMargin">
+				<div class="ui-g-3">
+					<p:outputLabel value="Showing Results For: " />
+				</div>
+				<div class="right-actions">
+					<p:commandButton id="goBtn" value="Go" styleClass="secondary" ajax="false"   actionListener="#{standard.testRowclick()}" oncomplete="window.close();">
+						
+					</p:commandButton>
+			
+
+					<p:commandButton id="clearBtn" value="Reset Filters" styleClass="resetFilBtn"  action="#{crmActivitysController.onResetForm( )}"  />
+				
+					<p:commandButton id="exportRptBtn" type="button"
+								icon="fa fa-file-excel-o"
+								styleClass="secondary" 
+								ajax="false"
+								onclick="submitForm('12', true); return false;">
+								<p:tooltip for="exportRptBtn" value="Export to Excel" />
+							</p:commandButton>
+				</div>
+			</div>						
+			
+			<div class="card ui-g-12 ui-fluid filterSection smallerBlue1Semibold noMargin">	
+				 <div class="caps ui-g-2 ui-md-2 ui-lg-2">				 
+				 	From: <p:calendar  showOn="button" pattern="MM/dd/yyyy" size="10">
+							</p:calendar>
+				 </div>				 
+				  <div class="caps ui-g-2 ui-md-2 ui-lg-2">				  
+				  	To: <p:calendar  showOn="button" pattern="MM/dd/yyyy" size="10">
+							</p:calendar>
+				 </div>			
+			</div>
+
+				<p:dataTable id="activityResultListDataTable"
+					widgetVar="activityResultListDataTable" var="list"
+					styleClass="borderedTableData smallerBlack"
+					selectionMode="single" 					
+					rowKey="#{list.empId}"					
+					value="#{standard.list}" 
+					rendered="true"
+					paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}"
+					rows="5"
+					paginator="true" 
+					rowIndexVar="index">
+
+ 					<p:ajax event="rowSelect" listener="#{standard.onRowSelect}" />
+					<p:column headerText="Employee Id"><h:outputText value="#{list.empId}" /></p:column>
+					<p:column headerText="Full Name"><h:outputText value="#{list.name}" /></p:column>
+					<p:column headerText="Phone"><h:outputText value="#{list.phone}" /></p:column>
+					<p:column headerText="Vehicle"> <h:outputText value="#{list.vehicle}" /></p:column>
+				</p:dataTable>
+
+			</p:panel>
+		</h:form>
+	</ui:define>
+</ui:composition>
+
+
+

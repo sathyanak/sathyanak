@@ -1,0 +1,28 @@
+<ui:composition
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:st-jsf="http://stafftrack.net/jsfext" >
+	
+ <div class="footer clearfix">
+		<div class="ui-g footer-content">		
+     	 		<p:graphicImage name="images/logos/staff-management-logo.svg" library="barcelona-layout-stn" />
+     	 
+			      <p>
+			       <h:outputText id="footerlabeloneid" value="#{msgs['stn.common.footer.one.label']}" />				        	       
+			      </p>
+			      <p>
+			        <h:outputText id="footerlabelid" value="#{msgs['stn.common.footer.two.label']}"  /> 
+			        <h:outputText id="showtooltip" value="#{msgs['stn.common.footer.version.label']}"  /> 
+			       		 <p:tooltip id="toolTipFade" for="showtooltip" position="top"  >					
+								 <p:outputPanel id="tooltip-content-wrapper">								 
+			           					   <h:outputText value="#{TOOLTIP_CONTENT} #{initParam['ST_VERSION_SUFFIX']}" />		           					 
+			       				 </p:outputPanel>        
+						</p:tooltip>								           
+			      </p>
+		</div>
+	</div>
+	
+</ui:composition>

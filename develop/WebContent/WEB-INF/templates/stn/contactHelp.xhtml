@@ -1,0 +1,65 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:st-ui="http://stafftrack.net/ui"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:st-jsf="http://stafftrack.net/jsfext"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions" >
+	
+	<style>
+	   .contactInfoGrid .ui-widget-content
+	   {
+	       border: 0px solid transparent;
+	       padding: 2px 5px
+	   }
+	   
+	   body .contactInfoGrid .ui-panelgrid-cell
+	   {
+	       padding: 1px
+	   }
+	</style>
+
+	<p:dialog id="contactHelpDlg" 
+		widgetVar="contactHelpDlg" 
+		header="Contact Help"
+		styleClass="" 
+		width="450px" >
+		<p:panel>
+			For urgent needs please contact the IT Help Desk
+			<br/>
+				
+			<p:panelGrid 
+				columns="2" 
+				layout="grid" 
+				styleClass="contactInfoGrid"
+				columnClasses="ui-g-4, ui-g-8" >
+				<h:outputText value="Phone" />
+				<h:outputText value="1 (800) 850-2558" />
+
+				<h:outputText value="Email" />
+				<a href="mailto:itsupport@trueblue.com">itsupport@trueblue.com</a>
+			</p:panelGrid>
+
+			<br/>
+			<h:outputText value="For general help, requests, and enhancement requests" />
+			<br/>
+
+			<p:panelGrid 
+				columns="2" 
+				layout="grid" 
+				styleClass="contactInfoGrid"
+				columnClasses="ui-g-4, ui-g-8" >
+				<h:outputText value="IT Service Team" />
+				<a href="https://trueblue.service-now.com/true" target="_blank">https://trueblue.service-now.com/true</a>
+
+				<h:outputText value="Stafftrack Support" />
+				<a href="mailto:stafftrack-support-desk@trueblue.com">stafftrack-support-desk@trueblue.com</a>
+			</p:panelGrid>
+			
+			<p:button value="Close" style="display:block; margin: 10px auto" onclick="PF('contactHelpDlg').hide(); return false " href="" />
+			 
+		</p:panel>
+	</p:dialog>
+</ui:composition>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf15973312689650" configfile="/develop/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="*" id="pf16163978202630" outlinks="pf16163978202631" path="*"/>
+  <nodes xsi:type="pageflow:PFPage" name="js/newsFeeds/newsfeedssList.xhtml" id="pf16163978202642" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf16163978202631" path="/js/newsFeeds/newsfeedssList.xhtml"/>
+  <links id="pf16163978202631" target="pf16163978202642" source="pf16163978202630" outcome="newsFeedsPage" redirect="true"/>
+</pageflow:Pageflow>

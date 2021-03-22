@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+            "http://www.w3.org/TR/html4/loose.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+	  xmlns:c="http://java.sun.com/jsp/jstl/core"
+      >
+
+    <h:head>
+        <f:facet name="first">
+        	<ui:insert name="first" />
+        </f:facet>
+        
+        <ui:insert name="title"><title>Stafftrack</title></ui:insert>
+
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700|Open+Sans:400,600,700" rel="stylesheet" />
+
+		<script>
+			function shrinkTitlebar()
+			{
+				var element = jQuery(".ui-dialog-titlebar:not(.ui-draggable-handle)", parent.document) ;
+				//console.log( "element ", element ) ;
+				//console.log( "found ", element.length, " elements" ) ;
+				if ( element.length > 0 )
+					element.each( function( index ) { $(this).addClass( "ui-dialog-no-title" ) }) ;
+			} ;
+		</script>
+
+        <ui:insert name="head"/>
+    </h:head>
+
+   	<p:importConstants type="net.stafftrack.ui.web.util.AttributeKeys" var="AttributeKeys" />
+   	<p:importConstants type="net.stafftrack.fw.security.bl.constants.SecuredResources" var="SecuredResources" />
+   	<p:importConstants type="net.stafftrack.fw.security.bl.constants.SystemOperations" var="SystemOperations" />
+
+    <h:body>
+<!-- Main Wrapper -->
+		<ui:insert name="content"/>
+		<ui:insert name="ajaxStatus">
+			<p:ajaxStatus widgetVar="ajaxStatus"
+				onstart="PF('statusDlg').show()"
+				oncomplete="PF('statusDlg').hide()" 
+				onerror="PF('statusDlg').hide()" 
+			>
+			</p:ajaxStatus>
+			<p:dialog widgetVar="statusDlg" 
+				modal="true" 
+				closable="false" 
+				height="50" width="200" 
+				showEffect="fade" hideEffect="fade"
+				style="text-align:center"
+			>
+				<span style="display:inline-block; margin: 20px auto 10px auto; ">Please Wait</span>
+			</p:dialog>
+		</ui:insert>
+        <h:outputStylesheet name="css/layout-stafftrack.css" library="ultima-layout-stn" />
+		<h:outputScript name="js/stn.js" library="ultima-layout-stn" />
+    </h:body>
+</html>

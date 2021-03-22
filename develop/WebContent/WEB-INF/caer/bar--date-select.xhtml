@@ -1,0 +1,44 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:pa="http://primefaces.org/barcelona">
+    
+    <div class="bar--date-select">
+		<div class="ui-g">
+			<h:form id="dateSelectForm">
+		    	<p:remoteCommand name="updateFilterDateChange" update="startDate, endDate"  
+		    					 action="#{dashboardController.handleFilterDateChange}"/>
+			
+				<div class="ui-g-3 ui-md-2">
+					<p:commandButton value="Last 7" styleClass="navy-btn btn-100 button-range active" 
+									 onclick="changeRangeButton( this )"/>
+				</div>
+				<div class="ui-g-3 ui-md-2">
+					<p:commandButton value="Last 30" styleClass="navy-btn btn-100 button-range" 
+									 onclick="changeRangeButton( this )"/>
+				</div>
+				<div class="ui-g-3 ui-md-2">
+					<p:commandButton value="Last 90" styleClass="navy-btn btn-100 button-range" 
+									 onclick="changeRangeButton( this )"/>
+				</div>
+				<div class="ui-g-3 ui-md-2">
+					<h:panelGroup id="startDate" styleClass="md-inputfield">
+						<p:calendar id="start_date" navigator="true" styleClass="ui-inputfield-sm" value="#{dashboardController.filterStartDate}" />
+						<p:outputLabel for="start_date" value="Start Date" styleClass="md-inputfield-sm" />
+					</h:panelGroup>	
+				</div>
+				<div class="ui-g-3 ui-md-2">
+					<h:panelGroup id="endDate" styleClass="md-inputfield">
+						<p:calendar id="end_date" navigator="true" styleClass="ui-inputfield-sm" value="#{dashboardController.filterEndDate}" />
+						<p:outputLabel for="end_date" value="End Date" styleClass="md-inputfield-sm" />
+					</h:panelGroup>	
+				</div>
+				<div class="ui-g-3 ui-md-2"><p:commandButton outcome="/caer/dashboard.jsf" value="Go" styleClass="button-date-filter" /></div>
+			</h:form>
+		</div> 
+    </div>
+        	
+</ui:composition>

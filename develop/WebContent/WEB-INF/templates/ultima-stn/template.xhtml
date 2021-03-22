@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+	  xmlns:o="http://omnifaces.org/ui"
+	  xmlns:c="http://java.sun.com/jsp/jstl/core"
+	  xmlns:st-jsf="http://stafftrack.net/jsfext"
+      >
+      
+      
+
+    <h:head>
+        <f:facet name="first">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+            <meta name="apple-mobile-web-app-capable" content="yes" />
+		    <meta name="MSSmartTagsPreventParsing" content="TRUE" />
+            <meta name="theme-color" content="#{guestPreferences.themeColors[guestPreferences.theme]}" />
+		    <meta http-equiv="pragma" content="no-cache" />
+		    <meta http-equiv="cache-control" content="public, no-store, no-cache, must-revalidate" />
+		    <meta http-equiv="expires" content="0" />
+		    <meta http-equiv="cache-control" content="post-check=0, pre-check=0" />
+        </f:facet>
+
+        <title>#{msgs['stn.common.stafftrack.title']} : <ui:insert name="title">Stafftrack</ui:insert></title>
+
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700|Open+Sans:400,600,700" rel="stylesheet" />
+
+        <h:outputScript name="js/nanoscroller.js" library="ultima-layout-stn" />
+        <h:outputScript name="js/layout.js" library="ultima-layout-stn" />
+        <h:outputScript name="js/jquery.matchHeight.js" library="ultima-layout-stn" />
+        <h:outputScript name="js/ripple.js" library="ultima-layout-stn" />
+        <h:outputScript name="js/swipe.js" library="ultima-layout-stn" />
+        <ui:insert name="head"/>
+        <style>
+            #livechat-compact-container 
+            {
+                display: none;
+            }
+            // LC_Invite.lc_open_chat('M9KMDB496S', 0)
+        </style>
+    </h:head>
+
+    <h:body styleClass="main-body}">
+      
+        
+        <c:if test="#{empty param.print}">
+	        <div class="layout-wrapper menu-layout-static">
+    			
+    			
+    			<ui:include src="/WEB-INF/templates/ultima-stn/contactHelp.xhtml" />
+	            <ui:include src="/WEB-INF/templates/ultima-stn/topbar.xhtml" />
+    			<ui:remove>
+	            <ui:include src="/WEB-INF/templates/ultima-stn/rightpanel.xhtml" />
+	            </ui:remove>
+	           
+	            
+	            <div class="layout-main">
+	            	<div class="ui-g">
+	                	<ui:insert name="content">Nothing to see here</ui:insert>
+	                	                	
+                   
+            			<ui:include src="/WEB-INF/templates/ultima-stn/breadcrumbPanel.xhtml" />
+            			 
+           			</div>
+
+					
+	                <ui:include src="/WEB-INF/templates/ultima-stn/footer.xhtml" />
+	            </div>
+				<!-- Menu must be below content so the Struts page controllers will populate menu item lists -->
+				
+				<!-- Menu must be below content so the Struts page controllers will populate menu item lists -->
+	            <ui:include src="/WEB-INF/templates/ultima-stn/menu.xhtml" />
+	            
+	        </div>
+        
+        	<c:if test="#{param.set ne 'A'}">
+			<p:ajaxStatus widgetVar="ajaxStatus"
+				onstart="PF('statusDlg').show()"
+				oncomplete="PF('statusDlg').hide()" 
+			>
+			</p:ajaxStatus>
+			<p:dialog widgetVar="statusDlg" 
+				modal="true" 
+				closable="false" 
+				height="50" width="200" 
+				showEffect="fade" hideEffect="fade"
+				style="text-align:center"
+			>
+				<span style="display:inline-block; margin: 20px auto 10px auto; ">Please Wait 1234 #{param.set}</span>
+			</p:dialog>
+			</c:if>
+        </c:if>
+		<!-- Modals -->
+		<ui:insert name="modals">
+		</ui:insert>
+
+        <h:outputStylesheet name="css/nanoscroller.css" library="ultima-layout-stn" />
+        <h:outputStylesheet name="css/animate.css" library="ultima-layout-stn" />
+        <h:outputStylesheet name="css/ripple.css" library="ultima-layout-stn" />
+        <h:outputStylesheet name="css/layout-stafftrack.css" library="ultima-layout-stn" />
+		<p:outputPanel rendered="#{!empty requestScope[AttributeKeys.NEED_SCRIPTACULOUC]}">
+    		<script language='javascript' src='/js/common/scriptaculous.js'></script>
+    		<script language='javascript' src='/js/common/autocomplete.js'></script>
+  			<LINK REL='stylesheet' type='text/css' href='/common/misc/autocomplete.css' />
+		</p:outputPanel>       
+		
+		 
+
+		<script>
+			function strutsOnLoad( )
+			{
+				// [#{requestScope[AttributeKeys.ON_LOAD_FUNCTION]}]
+				<p:columnGroup rendered="#{not empty requestScope[AttributeKeys.ON_LOAD_FUNCTION]}" >
+					try
+					{
+						#{requestScope[AttributeKeys.ON_LOAD_FUNCTION]}
+					}
+					catch (e)
+					{
+						alert( "Error running page onLoad " + e.message ) ;
+					}
+				</p:columnGroup>
+			}
+
+			function strutsAfterOnLoad( )
+			{
+				<p:columnGroup rendered="#{not empty requestScope[AttributeKeys.AFTER_ON_LOAD_FUNCTION]}" >
+					try
+					{
+						#{requestScope[AttributeKeys.AFTER_ON_LOAD_FUNCTION]}
+					}
+					catch (e)
+					{
+						alert( "Error running page afterOnLoad " + e.message ) ;
+					}
+				</p:columnGroup>
+			}
+		</script>
+		<h:outputScript name="js/stn.js" library="ultima-layout-stn" />
+		<h:outputScript name="js/jsf-struts-shim.js" library="ultima-layout-stn" />
+		
+    </h:body>
+
+</html>

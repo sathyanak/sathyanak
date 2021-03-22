@@ -1,0 +1,220 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:st-ui="http://stafftrack.net/ui"
+	xmlns:o="http://omnifaces.org/ui"
+	xmlns:of="http://omnifaces.org/functions"
+	xmlns:st-jsf="http://stafftrack.net/jsfext"
+	template="/WEB-INF/templates/ultima-stn/template.xhtml">
+	
+	<ui:define name="head">
+
+
+	<style type="text/css">
+			 	.resetFilBtn {
+	                background-color: #9B9B9B !important;
+	            }
+	            .dummby-css.ui-button.ui-button-icon-only .ui-icon{
+					margin-left : -12px  !important;
+				}				
+				.ui-datatable .ui-paginator {
+	                background-color: white;
+	            }
+	            .filterlabel {
+		  			font-family: Source Sans Pro !important;  			 
+				}				
+				.filterSection.ui-fluid .ui-selectonemenu {
+		           	width: auto;
+		        }	           
+		        .filterSection.ui-fluid > div {
+		        	display:  flex;
+		            align-items:  center;
+		        } 
+				ul.ui-menu-child {
+				    white-space: nowrap;
+				    width: auto !important;
+				} 
+				.downloadDocIcon{
+	    			background-image: url("/images/fileDownloadIcon.png") !important;
+				}
+				.resetFilBtn {
+	                background-color: #9B9B9B !important;
+	            }
+	            .ui-outputlabel .ui-widget {
+	            	text-align: left !important; 
+	            	width: auto !important;
+	            	padding: 3px 0 !important;       	
+	            }
+	            .ui-calendar .ui-inputfield {
+					border: 1px solid #A8B7C7 !important;
+					border-radius: 4px !important;
+					width: 110px !important;
+					margin: 0px 0px 0px 10px !important;
+					height: 30px !important;
+					font-size: 14px !important;
+				}		
+				.ui-datepicker-trigger {
+					border: none !important;
+				  	border-radius: 4px !important;
+				  	padding:1px !important;
+				  	margin :0px 0px 0px 0px  !important;
+				  	margin-top: -2px !important;
+					margin-left: -2px !important;
+					margin-right: 4px !important;
+				}
+				
+				 .ui-calendar .ui-inputfield {
+				border: 1px solid #A8B7C7 !important;
+				border-radius: 4px !important;
+				width: 110px !important;
+				margin: 0px 0px 0px 10px !important;
+				height: 30px !important;
+				font-size: 14px !important;
+			}		
+			.ui-datepicker-trigger {
+				border: none !important;
+			  	border-radius: 4px !important;
+			  	padding:1px !important;
+			  	margin :0px 0px 0px 0px  !important;
+			  	margin-top: -2px !important;
+				margin-left: -2px !important;
+				margin-right: 4px !important;
+			}
+			
+				td {
+					padding: 4px 4px 4px 4px !important;
+					vertical-align:top !important;
+				}
+				.redcolor {				
+					color: red;
+				}
+				.toLablClass {
+					font-family: Source Sans Pro, Roboto, Myriad Set Pro, Lucida Grande, Helvetica Neue, Helvetica, Arial, Verdana, sans-serif ;
+					font-size: 14px ;
+					font-style: normal;
+					font-variant: normal;
+					font-weight: 600;
+					letter-spacing: normal;
+					line-height: normal;
+					text-decoration: none solid rgb(84, 105, 141);
+					text-align: start;
+					text-indent: 0px;
+					text-transform: uppercase;
+					vertical-align: baseline;
+					white-space: normal;
+					word-spacing: 0px;
+					color: rgb(84, 105, 141);
+				}			
+	        </style>
+	</ui:define>
+
+
+	<ui:define name="content">
+			
+		<div class="ui-g-12">
+			<p:panel id="weekFiles" styleClass="smallerBlack">
+
+			<f:facet name="header">
+				<h:outputText value="Pay Rates 123" />
+				<div class="right-actions">
+					<h:panelGrid id="payRateButtons" border="0" columns="3">
+						<p:commandButton id="historyButton" value="history"
+							styleClass="secondary" />
+
+						<p:commandButton id="addButton"
+							value="#{msgs['stn.common.save.label']}"
+							styleClass="primary success" icon="ui-icon-save"
+							style="vertical-align: middle;">
+						</p:commandButton>
+
+						<p:commandButton id="cancelBtnTop" styleClass="primary dismiss"
+							value="Cancel" onclick="history.go(-1)" />
+					</h:panelGrid>
+				</div>
+			</f:facet>
+
+			
+			<div class="ui-g ui-fluid filterSection noMargin">
+				
+	            <div class="ui-g-3">
+	            	<p:outputLabel value="Showing Results For: " /> 
+	            </div>
+	            <div class="right-actions">
+		            <p:commandButton id="goNationalBtn" 
+            			value="Go"
+            			style="width:auto;"
+            			styleClass="secondary"
+            		
+            			>
+            			
+            		</p:commandButton>
+	 				<p:commandButton id="clearNationalBtn"  
+	 					value="Reset"
+	 					style="width:auto;"
+	 					styleClass="resetFilBtn"
+	 					 					>
+	 					<f:param name="newsType" value="N" />
+	            	</p:commandButton>            	
+              	</div>
+              </div>
+				
+ 
+	        <div class="ui-g-12 ui-g-12 ui-g-12">
+	        
+	        
+	        </div>
+	         <div class="ui-g-12">  
+	         </div>
+	         
+	  	   <div class="ui-g-3 filterSection noMargin">
+	            	<h:outputText value="To" styleClass="toLablClass" />
+						<p:calendar id="postedToOfficeDt" 
+							showOn="button"
+							
+							pattern="MM/dd/yyyy"
+							validatorMessage="Date is not valid">							
+						</p:calendar>
+						<p:message for="postedToOfficeDt" />
+	            </div>
+	            
+	            <div class="ui-g-3">
+	            		<h:outputText value="To" styleClass="toLablClass" />
+						<p:calendar id="postedToOfficeDt1" 
+							showOn="button"
+							
+							pattern="MM/dd/yyyy"
+							validatorMessage="Date is not valid">							
+						</p:calendar>
+						<p:message for="postedToOfficeDt1" />
+	            </div>
+	            
+	            <div class="ui-g-3">
+	            		<h:outputText value="To" />
+						<p:calendar id="postedToOfficeDt2" 
+							showOn="button"							
+							pattern="MM/dd/yyyy"
+							validatorMessage="Date is not valid">							
+						</p:calendar>
+						<p:message for="postedToOfficeDt2" />
+	            </div>
+	            
+	            <div class="ui-g-3">
+	            		<h:outputText value="Status" styleClass="toLablClass" />
+						<p:selectOneMenu id="brandStatus"
+		                 	styleClass="listboxButton" 
+		                 	style="width:100px" >                    	
+		                  	<f:selectItem itemLabel="All Statuses" itemValue="#{null}" itemDescription="All" />   	                   		                 	
+			            </p:selectOneMenu>
+	            </div>
+	       
+            
+              	
+		</p:panel>
+	</div>
+	
+	</ui:define>
+
+</ui:composition>
+

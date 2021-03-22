@@ -1,0 +1,81 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:st-ui="http://stafftrack.net/ui"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:o="http://omnifaces.org/ui"
+	xmlns:of="http://omnifaces.org/functions"
+	xmlns:st-jsf="http://stafftrack.net/jsfext"
+	template="/WEB-INF/templates/ultima-stn/template.xhtml">
+
+
+	<ui:define name="content">
+
+
+		<h:form>
+			<p:panel>
+
+				<f:facet name="header">
+					<h:outputLabel value="Indian Railway" />
+				</f:facet>
+
+				<div class="ui-g-12">
+
+					<div class="ui-g-4">
+						<p:outputLabel value="Irctc News" />
+						<p:inputText name="heading" value="Indian Railway News"
+							id="heading" />
+					</div>
+
+					<div class="ui-g-4" />
+					<div class="ui-g-4" />
+				</div>
+
+				<div class="ui-g-12">
+
+
+					<div class="card">
+						<p:outputLabel value="#{editorView.text}" escape="false" id="para"
+							styleClass="none" />
+
+
+					</div>
+
+				</div>
+				<p:commandButton value="Open Editor" icon="pi pi-save"
+					styleClass="primary success" onclick="PF('dlg').show();" />
+
+
+				<p:dialog header="Content" widgetVar="dlg" showEffect="fade"
+					hideEffect="fade" height="300">
+
+					<p:textEditor widgetVar="editor2" value="#{editorView.text}"
+						height="300" placeholder="Enter your content">
+
+						<f:facet name="toolbar">
+							<span class="ql-formats">
+								<button class="ql-bold" />
+								<button class="ql-italic" />
+								<button class="ql-underline" />
+								<button class="ql-strike" />
+							</span>
+							<span class="ql-formats"> <select class="ql-font" /> <select
+								class="ql-size" />
+							</span>
+							<span cl
+						</f:facet>
+					</p:textEditor>
+
+					<p:commandButton value="Submit" icon="pi pi-save"
+						styleClass="primary success" onclick="PF('dlg').close();" />
+				</p:dialog>
+
+			</p:panel>
+		</h:form>
+	</ui:define>
+</ui:composition>
+
+
+

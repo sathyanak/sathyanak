@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Nav/Icons/payroll</title>
+    <desc>Payroll menu item icon</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Nav/Icons/payroll">
+            <g id="Group">
+                <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+            </g>
+            <path d="M12.8,10.9 C10.53,10.31 9.8,9.7 9.8,8.75 C9.8,7.66 10.81,6.9 12.5,6.9 C14.28,6.9 14.94,7.75 15,9 L17.21,9 C17.14,7.28 16.09,5.7 14,5.19 L14,3 L11,3 L11,5.16 C9.06,5.58 7.5,6.84 7.5,8.77 C7.5,11.08 9.41,12.23 12.2,12.9 C14.7,13.5 15.2,14.38 15.2,15.31 C15.2,16 14.71,17.1 12.5,17.1 C10.44,17.1 9.63,16.18 9.5,15 L7.32,15 C7.44,17.19 9.08,18.42 11,18.83 L11,21 L14,21 L14,18.85 C15.95,18.5 17.5,17.35 17.5,15.3 C17.5,12.46 15.07,11.5 12.8,10.9 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

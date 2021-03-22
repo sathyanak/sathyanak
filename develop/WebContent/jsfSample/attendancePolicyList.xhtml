@@ -1,0 +1,326 @@
+<!DOCTYPE html [
+    <!ENTITY nbsp "&#160;">
+] >
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:st-ui="http://stafftrack.net/ui"
+	xmlns:o="http://omnifaces.org/ui"
+	xmlns:of="http://omnifaces.org/functions"
+	xmlns:st-jsf="http://stafftrack.net/jsfext"
+	template="/WEB-INF/templates/ultima-stn/template.xhtml">
+	
+	
+	<f:metadata>
+     	<f:loadBundle basename="net.stafftrack.resources.AttendancePolicyMessages" var="attdPolicyMsgs" /> 
+    </f:metadata>
+
+	<ui:define name="head">
+		 <style type="text/css">
+            .dummby-css.ui-button.ui-button-icon-only .ui-icon{
+				margin-left : -12px  !important;
+			}				
+			.ui-datatable .ui-paginator {
+                background-color: white;
+            }
+            .filterlabel {
+	  			font-family: Source Sans Pro !important;  			 
+			}				
+			.filterSection.ui-fluid .ui-selectonemenu {
+	           	width: auto;
+	        }	           
+	        .filterSection.ui-fluid > div {
+	        	display:  flex;
+	            align-items:  center;
+	        } 
+			ul.ui-menu-child {
+			    white-space: nowrap;
+			    width: auto !important;
+			} 
+            .ui-outputlabel .ui-widget {
+            	text-align: left !important; 
+            	width: auto !important;
+            	padding: 3px 0 !important;       	
+            }            
+			td {
+				padding: 4px 4px 4px 4px !important;
+				vertical-align:top !important;
+			}
+			.toLablClass {
+				font-family: Source Sans Pro, Roboto, Myriad Set Pro, Lucida Grande, Helvetica Neue, Helvetica, Arial, Verdana, sans-serif ;
+				font-size: 14px ;
+				font-style: normal;
+				font-variant: normal;
+				font-weight: 600;
+				letter-spacing: normal;
+				line-height: normal;
+				text-decoration: none solid rgb(84, 105, 141);
+				text-align: start;
+				text-indent: 0px;
+				text-transform: uppercase;
+				vertical-align: baseline;
+				white-space: normal;
+				word-spacing: 0px;
+				color: rgb(84, 105, 141);
+			}	
+			.titleClass {
+				font-family: Source Sans Pro, Roboto, Myriad Set Pro, Lucida Grande, Helvetica Neue, Helvetica, Arial, Verdana, sans-serif ;
+				font-size: 21px ;
+				font-style: normal;
+				font-variant: normal;
+				font-weight: 600;
+				letter-spacing: normal;
+				line-height: 22px;
+				text-decoration: none solid rgb(6, 28, 63);
+				text-align: start;
+				text-indent: 0px;
+				vertical-align: baseline;
+				white-space: normal;
+				word-spacing: 0px;
+				color: #061C3F;
+			}			
+        </style>
+	</ui:define>
+
+	<ui:define name="content">
+		<!-- Attendance Policy -->
+		<div class="ui-g-12">
+		<h:form prependId="false" id="attendancePolicyForm" >
+		<p:panel id="attendancePolicyPanel" style="width:auto" styleClass="card noPad" header="" >
+			<f:facet name="header"><h:outputText value="#{attdPolicyMsgs['attendancePolicy.title']}" /> </f:facet>					
+			<f:facet name="actions">
+			<div class="right-actions">
+				<p:commandButton id="saveButton" 										   
+			       styleClass="primary success"
+           		   action="#{attendancePolicyController.onSaveAttendancePolicy()}"
+           		   icon="ui-icon-save"
+           		   value="save"
+           		   update="@form"
+           		   style="vertical-align: middle;" >			       
+     			</p:commandButton>
+				<p:commandButton id="cancelbtn"
+					value="#{msgs['pro.common.cancel.label']}"
+					styleClass="primary dismiss"  
+					action="#{attendancePolicyController.onCancel()}"
+					>
+				</p:commandButton>			
+			</div>
+			</f:facet>
+			
+			<!-- Warning Letters -->
+			<div class="card ui-g ui-fluid filterSection noMargin">
+	            <div class="ui-g-12">
+              		<div class="ui-grid-col-3">	
+						<h:outputText value="&nbsp;#{attdPolicyMsgs['attendancePolicy.attendancePolicyMaxPointsId.label']}" styleClass="toLablClass" />
+					</div>
+					<div class="ui-grid-col-9">
+						<p:inputText id="attendancePolicyMaxPoints" 
+	                	 value="#{attendancePolicyController.attendancePolicyMaxPoints}"
+	                     maxlength="5"
+	                     styleClass="inputText"
+	                     style="width:60px" >
+		            	</p:inputText>
+               			<p:message for="attendancePolicyMaxPoints" />
+					</div>
+				</div>
+				<div class="ui-g-12">
+					<div class="ui-grid-col-3">	
+						<h:outputText value="&nbsp;#{attdPolicyMsgs['attendancePolicy.attendancePolicyPeriodId.label']}" styleClass="toLablClass" />
+					</div>
+					<div class="ui-grid-col-9">
+						<p:inputText id="attendancePolicyPeriod" 
+		                	 value="#{attendancePolicyController.attendancePolicyPeriod}"
+		                     maxlength="3"
+		                     styleClass="inputText"
+		                     style="width:60px" >
+		            	</p:inputText>
+               			<p:message for="attendancePolicyPeriod" />
+					</div>
+              	</div>
+              	<p:spacer height="10px"/>
+              	<div class="ui-g-12">
+		        	<h:outputText styleClass="titleClass" value="#{attdPolicyMsgs['warningLetters.title']}" />
+		        </div>
+		        <p:spacer height="8px"/>
+		        <div class="ui-g-12">
+					<div class="ui-grid-col-2">	
+						<h:outputText value="&nbsp;#{attdPolicyMsgs['warningLetters.points.label']}" styleClass="toLablClass" />
+					</div>
+					<div class="ui-grid-col-3">
+						<h:outputText value="#{attdPolicyMsgs['warningLetters.letter.label']}" styleClass="toLablClass" />
+					</div>
+					<div class="ui-grid-col-7">
+						<h:outputText value="" styleClass="toLablClass" />
+					</div>
+              	</div>
+              	<div class="ui-g-12">
+					<div class="ui-grid-col-2">	
+						<p:inputText id="points1" 
+		                	 value="9.9"
+		                     maxlength="3"
+		                     styleClass="inputText"
+		                     style="width:40px" >
+		            	</p:inputText>
+               			<p:message for="points1" />
+					</div>
+					<div class="ui-grid-col-3">
+						<h:outputText value="2L" styleClass="toLablClass" />&nbsp;
+						<h:outputText value="Delete" styleClass="toLablClass" />
+					</div>
+				</div>
+				<div class="ui-g-12">
+					<div class="ui-grid-col-2">	
+						<p:inputText id="points2" 
+		                	 value="9.9"
+		                     maxlength="3"
+		                     styleClass="inputText"
+		                     style="width:40px" >
+		            	</p:inputText>
+               			<p:message for="points2" />
+					</div>
+					<div class="ui-grid-col-3">
+						<h:outputText value="3L" styleClass="toLablClass" />&nbsp;
+						<h:outputText value="Delete" styleClass="toLablClass" />
+					</div>
+              	</div>
+              	<div class="ui-g-12">
+					<div class="ui-grid-col-2">	
+						<h:outputText value="#{attdPolicyMsgs['warningLetters.termination.label']}" styleClass="toLablClass" />
+					</div>
+					<div class="ui-grid-col-3">
+						<h:outputText value="3L" styleClass="toLablClass" />
+					</div>
+              	</div>	
+              	<div class="ui-g-12">
+					<div class="ui-grid-col-2">	
+						<h:outputText value="#{attdPolicyMsgs['warningLetters.additionalLtr.label']}" styleClass="smallerLinkColor" />
+					</div>
+					<div class="ui-grid-col-3">
+						<h:outputText value="" />
+					</div>
+					<div class="ui-grid-col-7">
+						<h:outputText value="" />
+					</div>
+              	</div>	
+              	
+              	<!-- Attendance Code Violations -->
+              	<p:spacer height="20px"/>
+              	<div class="ui-g-12">
+		        	<h:outputText styleClass="titleClass" value="#{attdPolicyMsgs['attendanceCode.title']}" />
+		        </div>
+		        <p:spacer height="8px"/>
+		        <div class="ui-g-12">
+					<div class="ui-grid-col-2">	
+						<h:outputText value="&nbsp;#{attdPolicyMsgs['attendanceCode.code.label']}" styleClass="toLablClass" />
+					</div>
+					<div class="ui-g-7">
+						<div class="ui-grid-col-3">
+							<h:outputText value="#{attdPolicyMsgs['attendanceCode.weight.label']}" styleClass="toLablClass" />
+						</div>
+						<div class="ui-grid-col-9">
+							<h:outputText value="#{attdPolicyMsgs['attendanceCode.series.label']}" styleClass="toLablClass" />
+						</div>
+					</div>
+              	</div>
+              	<div class="ui-g-12">
+					<div class="ui-grid-col-2">	
+						<h:outputText value="&nbsp;SK" styleClass="toLablClass" />						
+					</div>
+					<div class="ui-g-7">
+						<div class="ui-grid-col-3">
+							<p:inputText id="weight1" 
+			                	 value="1.0"
+			                     maxlength="3"
+			                     styleClass="inputText"
+			                     style="width:40px" >
+			            	</p:inputText>
+	               			<p:message for="weight1" />
+						</div>
+						<div class="ui-grid-col-9">
+							<h:outputText value="Delete" styleClass="toLablClass" />
+						</div>
+					</div>
+				</div>
+				<div class="ui-g-12">
+					<div class="ui-grid-col-2">	
+						<h:outputText value="&nbsp;LE" styleClass="toLablClass" />						
+					</div>
+					<div class="ui-g-7">
+						<div class="ui-grid-col-3">
+							<p:inputText id="weight2" 
+			                	 value="0.5"
+			                     maxlength="3"
+			                     styleClass="inputText"
+			                     style="width:40px" >
+			            	</p:inputText>
+	               			<p:message for="weight2" />
+						</div>
+						<div class="ui-grid-col-9">
+							<h:outputText value="Delete" styleClass="toLablClass" />
+						</div>
+					</div>
+              	</div>
+              	<div class="ui-g-12">
+					<div class="ui-grid-col-2">	
+						<h:outputText value="&nbsp;#{attdPolicyMsgs['attendanceCode.additionalVioltn.label']}" styleClass="smallerLinkColor" />
+					</div>
+					<div class="ui-grid-col-3">
+						<h:outputText value="" />
+					</div>
+					<div class="ui-grid-col-7">
+						<h:outputText value="" />
+					</div>
+              	</div>	
+              	
+              	<!-- Perfect Attendance Incentive -->
+	            <p:spacer height="20px"/>
+	            <div class="ui-g-12">
+		        	<h:outputText styleClass="titleClass" value="#{attdPolicyMsgs['perfectAttendance.title']}" />
+		        </div>
+		        <p:spacer height="8px"/>
+		        <div class="ui-g-12">
+					<h:outputText value="#{attdPolicyMsgs['perfectAttendance.enable.label']}" styleClass="toLablClass" />
+				</div>
+				<div class="ui-g-12">
+					<div class="ui-grid-col-3">	
+						<h:outputText value="#{attdPolicyMsgs['perfectAttendance.pointWtCredit.label']}" styleClass="toLablClass" />
+					</div>
+					<div class="ui-grid-col-9">
+						<p:inputText id="weightToCredit" 
+		                	 value="0.25"
+		                     maxlength="4"
+		                     styleClass="inputText"
+		                     style="width:40px" >
+		            	</p:inputText>
+               			<p:message for="weightToCredit" />
+					</div>					
+				</div>
+				<div class="ui-g-12">
+					<div class="ui-grid-col-3">	
+						<h:outputText value="#{attdPolicyMsgs['perfectAttendance.daysWithNoViolation.label']}" styleClass="toLablClass" />
+					</div>
+					<div class="ui-grid-col-9">
+						<p:inputText id="daysWithNoVioltn" 
+		                	 value="2"
+		                     maxlength="3"
+		                     styleClass="inputText"
+		                     style="width:40px" >
+		            	</p:inputText>
+               			<p:message for="daysWithNoVioltn" />
+					</div>
+				</div>
+				<div class="ui-g-12">
+					<h:outputText value="#{attdPolicyMsgs['perfectAttendance.note.text']}" />
+				</div>
+	        </div>			
+	        
+		
+		</p:panel>
+		</h:form>
+		</div>
+
+	</ui:define>
+
+</ui:composition>

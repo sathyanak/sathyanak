@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      >
+    <h:body>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	 xmlns:pu="http://primefaces.org/ultima"
+	xmlns:st-ui="http://stafftrack.net/ui"
+	  xmlns:o="http://omnifaces.org/ui"
+	  xmlns:of="http://omnifaces.org/functions" 
+	xmlns:st-jsf="http://stafftrack.net/jsfext"
+	template="/WEB-INF/templates/ultima-stn/template.xhtml">
+
+
+    <ui:define name="content">
+    
+    
+    
+    	
+   
+   		<p:panel id="takeActions" header="Payroll Take Action">
+		<p:outputPanel styleClass = "borderedTableData">
+
+		<!-- Attendance with missing Work Orders -->		
+			<div class="borderedTableData ui-g ui-fluid">
+				<div class="ui-g-2 ui-md-2 ui-lg-2  ">Take Action Items</div>
+				<div class="smallerBlue1Semibold caps ui-g-2 ui-md-2 ui-lg-2 ">
+					<h:outputText value="YESTERDAY" />
+				</div>
+				<div class="smallerBlue1Semibold caps ui-g-2 ui-md-2 ui-lg-2">
+					<h:outputText value="Today" />
+				</div>
+				<div class="smallerBlue1Semibold caps ui-g-2 ui-md-2 ui-lg-2">
+					<h:outputText value="Week 18-2018"/>
+				</div>
+				<div class="smallerBlue1Semibold ui-g-2 ui-md-2 ui-lg-2">
+					<h:outputText value="Week 17-2018"/>
+				</div>
+			</div>
+			
+		</p:outputPanel>	
+		
+		
+		<p:outputPanel styleClass = "borderedTableData">
+
+		<!-- Attendance with missing Work Orders -->		
+			<div class="borderedTableData ui-g ui-fluid">
+				<div class="ui-g-2 ui-md-2 ui-lg-2  ">Take Action Items</div>
+				<div class="smallerBlue1Semibold caps ui-g-2 ui-md-2 ui-lg-2 ">
+					<h:outputText value="YESTERDAY" />
+				</div>
+				<div class="smallerBlue1Semibold ui-g-2 ui-md-2 ui-lg-2">
+					<h:outputText value="Today" />
+				</div>
+				<div class="smallerBlue1Semibold ui-g-2 ui-md-2 ui-lg-2">
+					<h:outputText value="Week 18-2018"/>
+				</div>
+				<div class="smallerBlue1Semibold ui-g-2 ui-md-2 ui-lg-2">
+					<h:outputText value="Week 17-2018"/>
+				</div>
+			</div>
+			
+		</p:outputPanel>	
+			
+		
+		
+		
+	<div class="card ui-g ui-fluid">
+	
+						<div class="smallerAlert ui-g-12 ui-md-4 ui-lg-2">smallerAlert</div>
+						<div class="smallerAlertSemibold ui-g-12 ui-md-4 ui-lg-2">smallerAlertSemibold</div>
+						<div class="smallerBlack ui-g-12 ui-md-4 ui-lg-2">smallerBlack</div>
+						<div class="smallerBlue1 ui-g-12 ui-md-4 ui-lg-2">smallerBlue1</div>
+						
+					
+						
+						
+						<div class="smallerBlue1Semibold ui-g-12 ui-md-4 ui-lg-2">smallerBlue1Semibold</div>
+					
+						
+						<div class="smallerRed2 ui-g-12 ui-md-4 ui-lg-2">smallerRed2</div>
+							<div class = "seperator"/>
+						<div class="smallerGrey1 ui-g-12 ui-md-4 ui-lg-2">smallerGrey1</div>
+						<div class="smallerGrey1Semibold ui-g-12 ui-md-4 ui-lg-2">smallerGrey1Semibold</div>
+						<div class="smallerGrey1Bold ui-g-12 ui-md-4 ui-lg-2">smallerGrey1Bold</div>
+						<div class="smallerGrey2Bold ui-g-12 ui-md-4 ui-lg-2">smallerGrey2Bold</div>
+						<div class="smallerLinkColor ui-g-12 ui-md-4 ui-lg-2">smallerLinkColor</div>
+						<div class="smallerLinkColorSemibold ui-g-12 ui-md-4 ui-lg-2">smallerLinkColorSemibold</div>
+						<div class="smallerLinkColorBold ui-g-12 ui-md-4 ui-lg-2">smallerLinkColorBold</div>
+						<div class="smallerPrimary ui-g-12 ui-md-4 ui-lg-2">smallerPrimary</div>
+						<div class="smallerWhiteSemibold successBg ui-g-12 ui-md-4 ui-lg-2" >
+							<h:outputText value="smallerWhiteSemibold" />
+						</div>
+					</div>
+			
+					
+	<div class="card ui-g ui-fluid">
+	
+						<div class="smallerAlert ui-g-12 ui-md-4 ui-lg-2">
+						<p:commandButton value = "Success" styleClass = "primary Success"/>
+						</div>
+						
+						<div class="smallerAlert ui-g-2 ui-md-2 ui-lg-2">
+						
+						</div>
+						
+						<div class="smallerAlert ui-g-12 ui-md-4 ui-lg-2">
+						<p:commandButton value = "Alert" styleClass = "primary alert"/>
+						</div>
+						
+						<div class="smallerAlert ui-g-2 ui-md-2 ui-lg-2">
+						
+						</div>
+						
+						<div class="smallerAlert ui-g-12 ui-md-4 ui-lg-2">
+						<p:commandButton value = "Warning" styleClass = "secondary warning"/>
+						</div>
+						
+						<div class="smallerAlert ui-g-2 ui-md-2 ui-lg-2">
+						
+						</div>
+						
+						<div class="smallerAlert ui-g-12 ui-md-4 ui-lg-2">
+						<p:commandButton value = "Warning" styleClass = "primary warning"/>
+						</div>
+						
+						<div class="smallerAlert ui-g-2 ui-md-2 ui-lg-2">
+						
+						</div>
+						
+							
+						<div class="smallerAlert ui-g-12 ui-md-4 ui-lg-2">
+						<p:commandButton value = "Secondary" styleClass = "secondary"/>
+						</div>
+						
+						<div class="smallerAlert ui-g-2 ui-md-2 ui-lg-2">						
+						</div>
+						
+						<div class="smallerAlert ui-g-12 ui-md-4 ui-lg-2">
+						<p:commandButton value = "Default" />
+						</div>
+						
+					</div>
+	
+	
+	
+	 
+		                    
+		
+	</p:panel>
+	
+ 
+
+    </ui:define>
+    	
+</ui:composition>
+</h:body>
+</html>
+

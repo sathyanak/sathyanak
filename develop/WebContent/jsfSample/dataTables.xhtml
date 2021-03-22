@@ -1,0 +1,216 @@
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:st-ui="http://stafftrack.net/ui"
+	 xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:o="http://omnifaces.org/ui"
+	xmlns:of="http://omnifaces.org/functions"
+	xmlns:st-jsf="http://stafftrack.net/jsfext"
+	template="/WEB-INF/templates/ultima-stn/template.xhtml">
+
+	<ui:define name="content">
+
+		<h:form id="form">
+
+
+<!-- <p:photoCam widgetVar="pc"/> -->
+<!-- <p:commandButton type="button" value="Capture" onclick=""/> -->
+
+
+<div class="toggle-wrapper button-toggle">
+							<div class="bio-toggle">
+								<p:commandButton id="bio-toggle" title="View More" styleClass="button button-toggle" type="button" />
+							</div>
+						</div>
+						
+				<p:link href = 'www.google.com' value = 'sathyan' onclick="return setMe()"> </p:link>		
+		 <h:outputLabel for="ajax" value="Ajax:" />
+        <p:inplace id="ajax" editor="true">
+            <p:inputText value="#{inplaceView.text}" required="true" label="text" />
+        </p:inplace>
+ 
+			<h:inputText id="text" widgetVar="testWid" name="text"
+				value="Sathyan" />
+				
+				<!-- 			<p:dataTable var="list" id="empList" value="#{standard.list}"
+				paginator="true" rowIndexVar="index" widgetVar="listJs"
+				reflow="true"
+				first = "6"
+				paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}"
+				rows="5">
+				<f:facet name="header">
+        List of Employees (Editable dataTable)
+        
+          <p:outputPanel>
+						<h:outputText value="Search all fields:" />
+					</p:outputPanel>
+				</f:facet>
+
+
+              
+				<p:column headerText="Id" style="width:30px;">
+					<h:outputText value="#{list.empId}" />
+				</p:column>
+
+				<p:column headerText="Name">
+					<h:outputText value="#{fn:replace(list.name,',','&lt;br/&gt;')}" styleClass="borderedTableData" escape = "false" />
+				</p:column>
+
+				<p:column headerText="Department">
+					<p:selectOneMenu id="select" value="#{list.department}"
+						onchange="changeSel(this, #{index})">
+						<f:selectItem itemLabel="Sales" itemValue="1" />
+						<f:selectItem itemLabel="Business" itemValue="2" />
+						<f:selectItem itemLabel="Technology" itemValue="3" />
+						<f:selectItem itemLabel="HR" itemValue="HR" />
+						<f:selectItem itemLabel="Training" itemValue="5" />
+
+						<p:ajax event="change" />
+					</p:selectOneMenu>
+
+				</p:column>
+
+				<p:column headerText="Vehicle">
+					<h:inputText value="#{list.vehicle}" id="v" widgetVar="sss">
+					</h:inputText>
+
+				</p:column>
+
+
+
+
+				<p:column headerText="Phone">
+					<h:outputText value="#{list.phone}" id='ttt' />
+				</p:column>
+
+
+				<p:column headerText="Phone">
+					<h:outputText value="#{list.department} plus  #{list.vehicle}" />
+				</p:column>
+
+				<p:column styleClass="table-icon" headerText="Select"
+					style="width:5%" toggleable="false">
+					<p:commandButton value="SELECT " action="#{standard.checked()}" />
+				</p:column>
+
+			</p:dataTable>
+			-->
+			
+			
+			<p:dataTable var="list" id="empList" value="#{standard.list}">
+				 <p:columnGroup type="header">
+				
+			<p:row >	       
+            	<p:column headerText="Id" ></p:column>			
+                <p:column headerText="Id"></p:column>
+                <p:column headerText="Id"></p:column>
+               <p:column headerText="Id" ></p:column>			
+			</p:row>
+			
+			<p:row>	       
+            	<p:column headerText="Id" ></p:column>		
+                              
+			</p:row>
+			</p:columnGroup>
+               
+				     
+						
+			<p:row>
+            <p:column headerText="Id" style="width:30px;">
+					<h:outputText value="#{list.empId}" />
+				</p:column>
+                <p:column><h:outputText value="#{list.phone}" /></p:column>
+                <p:column><h:outputText value="#{list.department}" /></p:column>
+                <p:column headerText="Name">
+					<h:outputText value="#{fn:replace(list.name,',','&lt;br/&gt;')}" styleClass="borderedTableData" escape = "false" />
+				</p:column>
+			    <p:column><h:outputText value="#{list.vehicle}" /></p:column>
+           </p:row> 
+</p:dataTable>
+
+
+
+			<p:dataList var="list" id="empList1" value="#{standard.list}"
+			paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}"
+				rows="5"
+				paginator="true" rowIndexVar="index"
+				>
+      <div class="card data-row" style="cursor: pointer;" >
+					
+				<p:panelGrid id="dataRow">
+					<p:row>
+						<p:column headerText="Id" >
+							<h:outputText value="#{list.empId}" />
+						</p:column>
+						<p:column headerText="Id">
+							<h:outputText value="#{list.phone}" />
+						</p:column>
+						<p:column headerText="Id">
+							<h:outputText value="#{list.department}" />
+						</p:column>
+						<p:column headerText="Name">
+							<h:outputText value="#{fn:replace(list.name,',','&lt;br/&gt;')}"
+								styleClass="borderedTableData" escape="false" />
+						</p:column>
+					</p:row>
+					<p:row>
+						<p:column headerText="Id" />
+						<p:column colspan="4" headerText="Id">
+							<h:outputText value="#{list.vehicle}" />
+						</p:column>
+					</p:row>
+				</p:panelGrid>
+				</div>
+			</p:dataList>
+
+
+
+
+
+
+
+			<p:commandButton id="saty1" icon="ui-icon-check"
+				styleClass="ui-priority-primary" value="Save"
+				actionListener="${standard.updateCars}" update="empList two"></p:commandButton>
+
+
+			<p:button id="two" icon="ui-icon-check"
+				styleClass="ui-priority-primary" value="Execute Js"
+				onclick="testCall()"></p:button>
+
+
+
+
+		</h:form>
+
+		<script>
+		
+		
+		
+			function testCall() {
+				obj = document.getElementById("form:sss:3");
+				alert(obj.value);
+			}
+		
+		
+			function changeSel(obj, index) {
+				obj = document.getElementById("form:empList:" + index + ":ttt");
+				alert(obj);
+				obj.innerHTML = '100';
+			}
+		
+		
+			function seethis(item) {
+				alert(item.name);
+			}
+		</script>
+
+	</ui:define>
+
+</ui:composition>
+
+
+
