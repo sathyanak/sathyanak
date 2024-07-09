@@ -9,10 +9,10 @@
 		
 		<exclude-unlisted-classes>false</exclude-unlisted-classes>
 		<properties>
-			<property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@pmuw2-stdbd001.corp.trueblueinc.com/stndev"/>
-			<property name="javax.persistence.jdbc.user" value="st_web"></property>
+			<property name="javax.persistence.jdbc.url" value="****"/>
+			<property name="javax.persistence.jdbc.user" value="*****"></property>
 			<property name="javax.persistence.jdbc.driver" value="oracle.jdbc.driver.OracleDriver"/>
-			<property name="javax.persistence.jdbc.password" value="JDP7ArWepa68jCeS#"/>
+			<property name="javax.persistence.jdbc.password" value="*******"/>
 			<property name="eclipselink.logging.level.sql" value="FINE"/>
 			
 			
